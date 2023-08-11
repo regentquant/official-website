@@ -32,6 +32,7 @@
   <div id="regentlogo">
     丽晶基金参考净值（发行价格 100 美元）
   </div>
+<button id="colorButton">切换：红涨绿跌</button>
   <div id="chart-container"></div>
 
   <script>
@@ -163,6 +164,21 @@
     }
 
     window.addEventListener('resize', resizeChart);
+
+    var colorButton = document.getElementById('colorButton');
+
+colorButton.addEventListener('click', function() {
+  // Update series itemStyle colors
+  option.series[0].itemStyle.borderColor = '#FF1674';
+  option.series[0].itemStyle.color0 = '#00AF9D';
+  option.series[0].itemStyle.borderColor0 = '#00AF9D';
+
+  // Redraw the chart with updated colors
+  chart.setOption(option);
+});
+
+
+
   </script>
 </body>
 </html>

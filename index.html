@@ -24,8 +24,12 @@
 
   <script>
     var rawData = [
-['2023-07-03','100','100','0','0','100','100'],
-['2023-07-05','98.64','99.93','0','0','98.62','101.36'],
+  ['2023-06-26','100','100','0','0','100','100'],
+  ['2023-07-03','100.49','97.24','0','0','95.83','102.05'],
+  ['2023-07-10','96.98','107.37','0','0','94.95','110.63'],
+  ['2023-07-17','108','104.12','0','0','103.68','114.98'],
+  ['2023-07-24','104.83','110.29','0','0','102.93','111.44'],
+  ['2023-07-31','110.56','100.34','0','0','99.93','111.49'],
 // ... Add more data here if needed
     ];
 
@@ -56,7 +60,7 @@
     var option = {
       backgroundColor: '#1A253A',
       legend: {
-        data: ['日K', 'MA5', 'MA10', 'MA20', 'MA30', 'MA60', 'MA120'],
+        data: ['Weekly Candlestick (周K)', 'MA5', 'MA10', 'MA20', 'MA30', 'MA60', 'MA120'],
         inactiveColor: '#777',
         textStyle: {
           color: '#fff'
@@ -120,7 +124,7 @@
       series: [
         {
           type: 'candlestick',
-          name: '日K',
+          name: 'Weekly Candlestick (周K)',
           data: data,
           barWidth: '85%', // Adjust the width of the candlestick bars
           barGap: '10%', // Adjust the spacing between candlesticks

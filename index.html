@@ -1,497 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta property="og:title" content="丽晶量化参考净值">
-        <meta property="og:description" content="REGENT QUANT(NAV)">
-        <meta property="og:image" content="https://github.com/RegentInvest/regent.github.io/blob/c9dbaa708318733cdb04466756f255ca591120a0/Group%201.png">
-        <meta property="og:url" content="https://regentinvest.github.io/regent.github.io/">
-        <meta property="og:type" content="website">
-        <meta property="og:site_name" content="REGENT QUANT">
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-        <meta http-equiv="Pragma" content="no-cache">
-        <meta http-equiv="Expires" content="0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <title>丽晶基金参考净值（发行价格 100 美元）</title>
-        <!-- Include ECharts library -->
-        <script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.min.js?v=2"></script>
-        <style>
-            /*********footer*******************/
-            . kilimanjaro_area {
-            position: relative;
-            z-index: 1;
-            }
-            .foo_top_header_one {
-            background-color: #15151e;
-            color: #fff;
-            }
-            .section_padding_100_70 {
-            padding-top: 100px;
-            padding-bottom: 70px;
-            }
-            .foo_top_header_one {
-            color: #fff;
-            }.kilimanjaro_part {
-            margin-bottom: 30px;
-            }
-            .foo_top_header_one .kilimanjaro_part > h5 {
-            color: #fff;
-            }
-            .kilimanjaro_part h4, .kilimanjaro_part h5 {
-            margin-bottom: 30px;
-            }
-            .kilimanjaro_single_contact_info > p, .kilimanjaro_single_contact_info > h5, .kilimanjaro_blog_area > a, .foo_top_header_one .kilimanjaro_part > p {
-            color: rgba(255,255,255,.5);
-            }
-            p, ul li, ol li {
-            font-weight: 300;
-            }
-            ul {
-            margin: 0;
-            padding: 0;
-            }
-            .kilimanjaro_bottom_header_one {
-            background-color: #111;
-            }
-            .section_padding_50 {
-            padding: 50px 0;
-            }
-            .kilimanjaro_bottom_header_one p {
-            color: #fff;
-            margin: 0;
-            }
-            p, ul li, ol li {
-            font-weight: 300;
-            }
-            .kilimanjaro_bottom_header_one a {
-            color: inherit;
-            font-size: 14px;
-            }
-            a, h1, h2, h3, h4, h5, h6 {
-            font-weight: 400;
-            }
-            .m-top-15 {
-            margin-top: 15px;
-            }
-            ul {
-            margin: 0;
-            padding: 0;
-            }
-            .kilimanjaro_widget > li {
-            display: inline-block;
-            }
-            p, ul li, ol li {
-            font-weight: 300;
-            }
-            ol li, ul li {
-            list-style: outside none none;
-            }
-            .kilimanjaro_widget a {
-            border: 1px solid #333;
-            border-radius: 6px;
-            color: #888;
-            display: inline-block;
-            font-size: 13px;
-            margin-bottom: 4px;
-            padding: 7px 12px;
-            }
-            ul {
-            margin: 0;
-            padding: 0;
-            }
-            .kilimanjaro_links a {
-            border-bottom: 1px solid #333;
-            color: rgba(255,255,255,.5);
-            display: block;
-            font-size: 13px;
-            margin-bottom: 5px;
-            padding-bottom: 10px;
-            }
-            .kilimanjaro_links a {
-            color: rgba(255,255,255,.5);
-            font-size: 13px;
-            }
-            top-15 {
-            margin-top: 15px;
-            }
-            .foo_top_header_one .kilimanjaro_part > h5 {
-            color: #fff;
-            }
-            .kilimanjaro_part h4, .kilimanjaro_part h5 {
-            margin-bottom: 30px;
-            }
-            .kilimanjaro_social_links > li {
-            display: inline-block;
-            }
-            p, ul li, ol li {
-            font-weight: 300;
-            }
-            .kilimanjaro_social_links a {
-            border: 1px solid #333;
-            border-radius: 6px;
-            color: #888;
-            display: inline-block;
-            font-size: 13px;
-            margin-bottom: 3px;
-            padding: 7px 12px;
-            }
-            .kilimanjaro_blog_area .kilimanjaro_date {
-            color: #27ae60;
-            font-size: 13px;
-            margin-bottom: 5px;
-            }
-            .kilimanjaro_blog_area > p {
-            color: rgba(255,255,255,.5);
-            line-height: 1.3;
-            margin-bottom: 0;
-            }
-            .kilimanjaro_works > a {
-            display: inline-block;
-            float: left;
-            position: relative;
-            width: 33.33333333%;
-            z-index: 1;
-            }
-            .kilimanjaro_thumb {
-            left: 0;
-            position: absolute;
-            top: 0;
-            width: 75px;
-            }
-            .kilimanjaro_links a i {
-            padding-right: 10px;
-            }
-            /* :: 18.0 Footer Area CSS */
-            .footer_area {
-            position: relative;
-            z-index: 1;
-            }
-            .footer_bottom p > i,
-            .footer_bottom p > a:hover {
-            color: #27ae60;
-            }
-            .social_links_area {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 50px 0 30px 0;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-            }
-            .social_links_area > a:hover {
-            color: #27ae60;
-            }
-            .inline-style .social_links_area > a:hover {
-            background-color: transparent;
-            color: #27ae60;
-            border: 0px solid transparent;
-            }
-            .single_feature:hover .feature_text h4 {
-            color: #27ae60;
-            }
-            .kilimanjaro_blog_area {
-            border-bottom: 1px solid #333;
-            margin-bottom: 15px;
-            padding: 0 0 15px 90px;
-            position: relative;
-            z-index: 1;
-            }
-            .kilimanjaro_links a {
-            border-bottom: 1px solid #333;
-            color: rgba(255,255,255,.5);
-            display: block;
-            font-size: 13px;
-            margin-bottom: 5px;
-            padding-bottom: 10px;
-            }
-            /* Credit to https://bootsnipp.com/snippets/X2XOv */
-            body,
-            html {
-            margin: 0;
-            padding: 0;
-            }
-            #chart-container {
-            width: 100vw;
-            height: 80vh;
-            padding: 20px;
-            }
-            #regentlogotext {
-            text-align: center;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            }
-            #button {
-            padding-bottom: 20px;
-            }
-            #regentlogo {
-            margin-top: -50px;
-            margin-bottom: -100px;
-            text-align: center;
-            padding-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            }
-            .bi {
-            margin-bottom: 3px;
-            margin-left: 3px;
-            }
-        </style>
-    </head>
-    <body>
-        <nav class="navbar bg-body-tertiary">
-            <div class="container" style="">
-                <a class="navbar-brand" href="#" style="margin: auto">
-                <img src="regentlogo.svg" alt="My Happy SVG" width="100" height="30" style="margin: auto"/>
-                </a>
-            </div>
-        </nav>
-        <i class="bi bi-0-square"></i>
-        <!-- Container for the chart -->
-        <div id="regentlogotext">REGENT NAV (Reference Only)</div>
-        <div id="button" style="text-align: center; padding-top: 20px">
-            <button type="button" class="btn btn-light" id="colorButton" value="红涨绿跌" style="font-size: small">
-                红涨绿跌<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16"  style="color: #FF1674">
-                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
-                </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16" style="color: #00AF9D">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
-                </svg>
-            </button>
-        </div>
-        <div id="chart-container"></div>
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!------ Include the above in your HEAD tag ---------->
-        <!--footer-->
-        <footer class="kilimanjaro_area">
-            <!-- Top Footer Area Start -->
-            <div class="foo_top_header_one section_padding_100_70">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="kilimanjaro_part">
-                                <h5>About Us</h5>
-                                <p>Regent Quantitaitve</p>
-                            </div>
-
+   <head>
+      <meta charset="UTF-8">
+      <meta property="og:title" content="丽晶量化参考净值">
+      <meta property="og:description" content="REGENT QUANT(NAV)">
+      <meta property="og:image" content="https://github.com/RegentInvest/regent.github.io/blob/c9dbaa708318733cdb04466756f255ca591120a0/Group%201.png">
+      <meta property="og:url" content="https://regentinvest.github.io/regent.github.io/">
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="REGENT QUANT">
+      <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+      <meta http-equiv="Pragma" content="no-cache">
+      <meta http-equiv="Expires" content="0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+      <title>丽晶基金参考净值（发行价格 100 美元）</title>
+      <!-- Include ECharts library -->
+      <script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.min.js?v=2"></script>
+      <style>
+         /*********footer*******************/
+         . kilimanjaro_area {
+         position: relative;
+         z-index: 1;
+         }
+         .foo_top_header_one {
+         background-color: #15151e;
+         color: #fff;
+         }
+         .section_padding_100_70 {
+         padding-top: 100px;
+         padding-bottom: 70px;
+         }
+         .foo_top_header_one {
+         color: #fff;
+         }.kilimanjaro_part {
+         margin-bottom: 30px;
+         }
+         .foo_top_header_one .kilimanjaro_part > h5 {
+         color: #fff;
+         }
+         .kilimanjaro_part h4, .kilimanjaro_part h5 {
+         margin-bottom: 30px;
+         }
+         .kilimanjaro_single_contact_info > p, .kilimanjaro_single_contact_info > h5, .kilimanjaro_blog_area > a, .foo_top_header_one .kilimanjaro_part > p {
+         color: rgba(255,255,255,.5);
+         }
+         p, ul li, ol li {
+         font-weight: 300;
+         }
+         ul {
+         margin: 0;
+         padding: 0;
+         }
+         .kilimanjaro_bottom_header_one {
+         background-color: #111;
+         }
+         .section_padding_50 {
+         padding: 50px 0;
+         }
+         .kilimanjaro_bottom_header_one p {
+         color: #fff;
+         margin: 0;
+         }
+         p, ul li, ol li {
+         font-weight: 300;
+         }
+         .kilimanjaro_bottom_header_one a {
+         color: inherit;
+         font-size: 14px;
+         }
+         a, h1, h2, h3, h4, h5, h6 {
+         font-weight: 400;
+         }
+         .m-top-15 {
+         margin-top: 15px;
+         }
+         ul {
+         margin: 0;
+         padding: 0;
+         }
+         .kilimanjaro_widget > li {
+         display: inline-block;
+         }
+         p, ul li, ol li {
+         font-weight: 300;
+         }
+         ol li, ul li {
+         list-style: outside none none;
+         }
+         .kilimanjaro_widget a {
+         border: 1px solid #333;
+         border-radius: 6px;
+         color: #888;
+         display: inline-block;
+         font-size: 13px;
+         margin-bottom: 4px;
+         padding: 7px 12px;
+         }
+         ul {
+         margin: 0;
+         padding: 0;
+         }
+         .kilimanjaro_links a {
+         border-bottom: 1px solid #333;
+         color: rgba(255,255,255,.5);
+         display: block;
+         font-size: 13px;
+         margin-bottom: 5px;
+         padding-bottom: 10px;
+         }
+         .kilimanjaro_links a {
+         color: rgba(255,255,255,.5);
+         font-size: 13px;
+         }
+         top-15 {
+         margin-top: 15px;
+         }
+         .foo_top_header_one .kilimanjaro_part > h5 {
+         color: #fff;
+         }
+         .kilimanjaro_part h4, .kilimanjaro_part h5 {
+         margin-bottom: 30px;
+         }
+         .kilimanjaro_social_links > li {
+         display: inline-block;
+         }
+         p, ul li, ol li {
+         font-weight: 300;
+         }
+         .kilimanjaro_social_links a {
+         border: 1px solid #333;
+         border-radius: 6px;
+         color: #888;
+         display: inline-block;
+         font-size: 13px;
+         margin-bottom: 3px;
+         padding: 7px 12px;
+         }
+         .kilimanjaro_blog_area .kilimanjaro_date {
+         color: #27ae60;
+         font-size: 13px;
+         margin-bottom: 5px;
+         }
+         .kilimanjaro_blog_area > p {
+         color: rgba(255,255,255,.5);
+         line-height: 1.3;
+         margin-bottom: 0;
+         }
+         .kilimanjaro_works > a {
+         display: inline-block;
+         float: left;
+         position: relative;
+         width: 33.33333333%;
+         z-index: 1;
+         }
+         .kilimanjaro_thumb {
+         left: 0;
+         position: absolute;
+         top: 0;
+         width: 75px;
+         }
+         .kilimanjaro_links a i {
+         padding-right: 10px;
+         }
+         /* :: 18.0 Footer Area CSS */
+         .footer_area {
+         position: relative;
+         z-index: 1;
+         }
+         .footer_bottom p > i,
+         .footer_bottom p > a:hover {
+         color: #27ae60;
+         }
+         .social_links_area {
+         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+         padding: 50px 0 30px 0;
+         text-align: center;
+         position: relative;
+         z-index: 1;
+         }
+         .social_links_area > a:hover {
+         color: #27ae60;
+         }
+         .inline-style .social_links_area > a:hover {
+         background-color: transparent;
+         color: #27ae60;
+         border: 0px solid transparent;
+         }
+         .single_feature:hover .feature_text h4 {
+         color: #27ae60;
+         }
+         .kilimanjaro_blog_area {
+         border-bottom: 1px solid #333;
+         margin-bottom: 15px;
+         padding: 0 0 15px 90px;
+         position: relative;
+         z-index: 1;
+         }
+         .kilimanjaro_links a {
+         border-bottom: 1px solid #333;
+         color: rgba(255,255,255,.5);
+         display: block;
+         font-size: 13px;
+         margin-bottom: 5px;
+         padding-bottom: 10px;
+         }
+         /* Credit to https://bootsnipp.com/snippets/X2XOv */
+         body,
+         html {
+         margin: 0;
+         padding: 0;
+         }
+         #chart-container {
+         width: 100vw;
+         height: 80vh;
+         padding: 20px;
+         }
+         #regentlogotext {
+         padding-top: 20px;
+         padding-left: 50px;
+         padding-bottom: 20px;
+         }
+         #button {
+         padding-bottom: 20px;
+         }
+         #regentlogo {
+         margin-top: -50px;
+         margin-bottom: -100px;
+         text-align: center;
+         padding-bottom: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         }
+         .bi {
+         margin-bottom: 3px;
+         margin-left: 3px;
+         }
+      </style>
+   </head>
+   <body>
+      <nav class="navbar bg-body-tertiary">
+         <div class="container" style="">
+            <a class="navbar-brand" href="#" style="margin: auto">
+            <img src="regentlogo.svg" alt="My Happy SVG" width="100" height="30" style="margin: auto"/>
+            </a>
+         </div>
+      </nav>
+      <i class="bi bi-0-square"></i>
+      <!-- Container for the chart -->
+      <div id="button" style="text-align: center; padding-top: 20px">
+         <button type="button" class="btn btn-light" id="colorButton" value="红涨绿跌" style="font-size: small">
+            红涨绿跌
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16"  style="color: #FF1674">
+               <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16" style="color: #00AF9D">
+               <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+            </svg>
+         </button>
+      </div>
+      <div id="chart-container"></div>
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!------ Include the above in your HEAD tag ---------->
+      <!--footer-->
+      <footer class="kilimanjaro_area">
+         <!-- Top Footer Area Start -->
+         <div class="foo_top_header_one section_padding_100_70">
+            <div class="container">
+               <div class="row">
+                  <div class="col-12 col-md-6 col-lg-3">
+                     <div class="kilimanjaro_part">
+                        <h5>About Us</h5>
+                        <p>Regent Quantitaitve</p>
+                     </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-3">
+                     <div class="kilimanjaro_part">
+                        <h5>Quick Contact</h5>
+                        <div class="kilimanjaro_single_contact_info">
+                           <h5>Phone:</h5>
+                           <p>+1 415-652-7204<br>+86 166-0122-0552</p>
                         </div>
-
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="kilimanjaro_part">
-                                <h5>Quick Contact</h5>
-                                <div class="kilimanjaro_single_contact_info">
-                                    <h5>Phone:</h5>
-                                    <p>+1 415-652-7204<br>+86 166-0122-0552</p>
-                                </div>
-                                <div class="kilimanjaro_single_contact_info">
-                                    <h5>Email:</h5>
-                                    <p>curry_yao@outlook.com</p>
-                                </div>
-                            </div>
+                        <div class="kilimanjaro_single_contact_info">
+                           <h5>Email:</h5>
+                           <p>curry_yao@outlook.com</p>
                         </div>
-                    </div>
-                </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <!-- Footer Bottom Area Start -->
-            <div class=" kilimanjaro_bottom_header_one section_padding_50 text-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <p>© All Rights Reserved by <a href="#"><img src="Vector.svg" alt="My Happy SVG" width="70" height="30" style="margin: auto; padding-bottom: 3px"/>
-<i class="fa fa-love"></i></a></p>
-                        </div>
-                    </div>
-                </div>
+         </div>
+         <!-- Footer Bottom Area Start -->
+         <div class=" kilimanjaro_bottom_header_one section_padding_50 text-center">
+            <div class="container">
+               <div class="row">
+                  <div class="col-12">
+                     <p>© All Rights Reserved by <a href="#"><img src="Vector.svg" alt="My Happy SVG" width="70" height="30" style="margin: auto; padding-bottom: 3px"/>
+                        <i class="fa fa-love"></i></a>
+                     </p>
+                  </div>
+               </div>
             </div>
-        </footer>
-        <!-- Credit to https://bootsnipp.com/snippets/X2XOv -->
-        <!-- ------------->
-        <script>
-            var rawData = [
-            ['2023-06-26','100','100','0','0','100','100'],
-            ['2023-07-03','100.49','97.24','0','0','95.83','102.05'],
-            ['2023-07-10','96.98','107.37','0','0','94.95','110.63'],
-            ['2023-07-17','108','104.12','0','0','103.68','114.98'],
-            ['2023-07-24','104.83','110.29','0','0','102.93','111.44'],
-            ['2023-07-31','110.56','100.34','0','0','99.93','111.49'],
-            ['2023-08-07','101.78','95.34','0','0','94.15','102.93'],
-            ['2023-08-14','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-08-21','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-08-28','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-09-04','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-09-11','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-09-18','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-09-25','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-10-02','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-10-09','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-10-16','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-10-23','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-10-30','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-11-06','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-11-13','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-11-20','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-11-27','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-12-04','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-12-11','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-12-18','95.34','95.34','0','0','95.34','95.34'],
-            ['2023-12-25','95.34','95.34','0','0','95.34','95.34'],
-            	// ... Add more data here if needed
-            ];
-
-            function calculateMA(dayCount, data) {
-            	var result = [];
-            	for(var i = 0, len = data.length; i < len; i++) {
-            		if(i < dayCount) {
-            			result.push('-');
-            			continue;
-            		}
-            		var sum = 0;
-            		for(var j = 0; j < dayCount; j++) {
-            			sum += data[i - j][1];
-            		}
-            		result.push(sum / dayCount);
-            	}
-            	return result;
-            }
-            var dates = rawData.map(function(item) {
-            	return item[0];
-            });
-            var data = rawData.map(function(item) {
-            	return [+item[1], +item[2], +item[5], +item[6]];
-            });
-            var option = {
-            	backgroundColor: '#161A25',
-            	legend: {
-            		data: ['Weekly Candlestick (周K)', 'MA5', 'MA10', 'MA20', 'MA30', 'MA60', 'MA120'],
-            		inactiveColor: '#777',
-            		textStyle: {
-            			color: '#fff'
-            		}
-            	},
-            	tooltip: {
-            		trigger: 'axis',
-            		axisPointer: {
-            			animation: false,
-            			type: 'cross',
-            			lineStyle: {
-            				color: '#376df4',
-            				width: 2,
-            				opacity: 1
-            			}
-            		}
-            	},
-            	xAxis: {
-            		type: 'category',
-            		data: dates,
-            		axisLine: {
-            			lineStyle: {
-            				color: '#8392A5'
-            			}
-            		}
-            	},
-            	yAxis: {
-            		scale: true,
-            		axisLine: {
-            			lineStyle: {
-            				color: '#8392A5'
-            			}
-            		},
-            		splitLine: {
-            			show: true,
-            			lineStyle: {
-            				color: '#22314D'
-            			}
-            		}
-            	},
-            	grid: {
-            		bottom: 80
-            	},
-            	dataZoom: [{
-            		textStyle: {
-            			color: '#8392A5'
-            		},
-            		handleIcon: 'M10.,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
-            		handleSize: '80%',
-            		dataBackground: {
-            			areaStyle: {
-            				color: '#8392A5'
-            			},
-            			lineStyle: {
-            				opacity: 0.8,
-            				color: '#8392A5'
-            			}
-            		},
-            		handleStyle: {
-            			color: '#fff',
-            			shadowBlur: 3,
-            			shadowColor: 'rgba(0, 0, 0, 0.6)',
-            			shadowOffsetX: 2,
-            			shadowOffsetY: 2
-            		}
-            	}, {
-            		type: 'inside'
-            	}],
-            	animation: true,
-            	  series: [
-               {
-                 type: 'candlestick',
-                 name: 'Weekly Candlestick (周K)',
-                 data: data,
-                 barWidth: '90%',
-                 barGap: '10%',
-                 barCategoryGap: '10%',
-                 itemStyle: {
-                   color: '#161A25',
-                   color0: '#FF1674',
-                   borderColor: '#00AF9D',
-                   borderColor0: '#FF1674',
-                   borderWidth: 1,
-                   barBorderRadius: [5, 5, 0, 0], // Rounded corners: top-left, top-right, bottom-right, bottom-left
-                 },
-               },
-             ],
-
-            };
-            // Render the chart using ECharts
-            var chart = echarts.init(document.getElementById('chart-container'));
-            chart.setOption(option);
-            // Update chart size when window is resized
-            function resizeChart() {
-            	chart.resize();
-            }
-
-            window.addEventListener('resize', resizeChart);
-
-            var colorButton = document.getElementById('colorButton');
-            colorButton.addEventListener('click', function() {
-            	var buttonValue = colorButton.value
-            	console.log(buttonValue)
-
-            	if (buttonValue === "红涨绿跌") {
-            		colorButton.textContent = "绿涨红跌"
-                    colorButton.innerHTML = '绿涨红跌<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16" style="color: #00AF9D"><path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16" style="color: #FF1674"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></svg>';
-            		colorButton.value = "绿涨红跌"
-            		// Update series itemStyle colors
-            	option.series[0].itemStyle.borderColor = '#FF1674';
-            	option.series[0].itemStyle.color0 = '#00AF9D';
-            	option.series[0].itemStyle.borderColor0 = '#00AF9D';
-            	} else {
-            		colorButton.textContent = "红涨绿跌"
-                                        colorButton.innerHTML = '红涨绿跌<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16" style="color: #FF1674"><path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16" style="color: #00AF9D"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></svg>';
-
-            					colorButton.value = "红涨绿跌"
-
-            		       option.series[0].itemStyle.borderColor = '#00AF9D';
-                   option.series[0].itemStyle.color0 = '#FF1674';
-                   option.series[0].itemStyle.borderColor0 = '#FF1674';
-            	}
-
-
-            	// Redraw the chart with updated colors
-            	chart.setOption(option);
-            });
-        </script>
-    </body>
+         </div>
+      </footer>
+      <!-- Credit to https://bootsnipp.com/snippets/X2XOv -->
+      <!-- ------------->
+      <script>
+         var rawData = [
+         ['2023-06-26','100','100','0','0','100','100'],
+         ['2023-07-03','100.49','97.24','0','0','95.83','102.05'],
+         ['2023-07-10','96.98','107.37','0','0','94.95','110.63'],
+         ['2023-07-17','108','104.12','0','0','103.68','114.98'],
+         ['2023-07-24','104.83','110.29','0','0','102.93','111.44'],
+         ['2023-07-31','110.56','100.34','0','0','99.93','111.49'],
+         ['2023-08-07','101.78','95.34','0','0','94.15','102.93'],
+         ['2023-08-14','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-08-21','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-08-28','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-09-04','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-09-11','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-09-18','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-09-25','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-10-02','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-10-09','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-10-16','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-10-23','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-10-30','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-11-06','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-11-13','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-11-20','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-11-27','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-12-04','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-12-11','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-12-18','95.34','95.34','0','0','95.34','95.34'],
+         ['2023-12-25','95.34','95.34','0','0','95.34','95.34'],
+         	// ... Add more data here if needed
+         ];
+         
+         function calculateMA(dayCount, data) {
+         	var result = [];
+         	for(var i = 0, len = data.length; i < len; i++) {
+         		if(i < dayCount) {
+         			result.push('-');
+         			continue;
+         		}
+         		var sum = 0;
+         		for(var j = 0; j < dayCount; j++) {
+         			sum += data[i - j][1];
+         		}
+         		result.push(sum / dayCount);
+         	}
+         	return result;
+         }
+         var dates = rawData.map(function(item) {
+         	return item[0];
+         });
+         var data = rawData.map(function(item) {
+         	return [+item[1], +item[2], +item[5], +item[6]];
+         });
+         var option = {
+         	backgroundColor: '#fff',
+         	legend: {
+         		data: ['Weekly Candlestick (周K)', 'MA5', 'MA10', 'MA20', 'MA30', 'MA60', 'MA120'],
+         		inactiveColor: '#777',
+         		textStyle: {
+         			color: '#000000'
+         		}
+         	},
+         	tooltip: {
+         		trigger: 'axis',
+         		axisPointer: {
+         			animation: false,
+         			type: 'cross',
+         			lineStyle: {
+         				color: '#376df4',
+         				width: 2,
+         				opacity: 1
+         			}
+         		}
+         	},
+         	xAxis: {
+         		type: 'category',
+         		data: dates,
+         		axisLine: {
+         			lineStyle: {
+         				color: '#8392A5'
+         			}
+         		}
+         	},
+         	yAxis: {
+         		scale: true,
+         		axisLine: {
+         			lineStyle: {
+         				color: '#8392A5'
+         			}
+         		},
+         		splitLine: {
+         			show: true,
+         			lineStyle: {
+         				color: '#EEEEEE'
+         			}
+         		}
+         	},
+         	grid: {
+         		bottom: 80
+         	},
+         	dataZoom: [{
+         		textStyle: {
+         			color: '#8392A5'
+         		},
+         		handleIcon: 'M10.,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
+         		handleSize: '80%',
+         		dataBackground: {
+         			areaStyle: {
+         				color: '#8392A5'
+         			},
+         			lineStyle: {
+         				opacity: 0.8,
+         				color: '#8392A5'
+         			}
+         		},
+         		handleStyle: {
+         			color: '#fff',
+         			shadowBlur: 3,
+         			shadowColor: 'rgba(0, 0, 0, 0)',
+         			shadowOffsetX: 2,
+         			shadowOffsetY: 2
+         		}
+         	}, {
+         		type: 'inside'
+         	}],
+         	animation: true,
+         	  series: [
+            {
+              type: 'candlestick',
+              name: 'Weekly Candlestick (周K)',
+              data: data,
+              barWidth: '90%',
+              barGap: '10%',
+              barCategoryGap: '10%',
+              itemStyle: {
+                color: 'rgba(255, 255, 255, 0)',
+                color0: '#FF1674',
+                borderColor: '#00AF9D',
+                borderColor0: '#FF1674',
+                borderWidth: 2,
+              },
+            },
+          ],
+         
+         };
+         // Render the chart using ECharts
+         var chart = echarts.init(document.getElementById('chart-container'));
+         chart.setOption(option);
+         // Update chart size when window is resized
+         function resizeChart() {
+         	chart.resize();
+         }
+         
+         window.addEventListener('resize', resizeChart);
+         
+         var colorButton = document.getElementById('colorButton');
+         colorButton.addEventListener('click', function() {
+         	var buttonValue = colorButton.value
+         	console.log(buttonValue)
+         
+         	if (buttonValue === "红涨绿跌") {
+         		colorButton.textContent = "绿涨红跌"
+                 colorButton.innerHTML = '绿涨红跌<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16" style="color: #00AF9D"><path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16" style="color: #FF1674"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></svg>';
+         		colorButton.value = "绿涨红跌"
+         		// Update series itemStyle colors
+         	option.series[0].itemStyle.borderColor = '#FF1674';
+         	option.series[0].itemStyle.color0 = '#00AF9D';
+         	option.series[0].itemStyle.borderColor0 = '#00AF9D';
+         	} else {
+         		colorButton.textContent = "红涨绿跌"
+                                     colorButton.innerHTML = '红涨绿跌<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16" style="color: #FF1674"><path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16" style="color: #00AF9D"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></svg>';
+         
+         					colorButton.value = "红涨绿跌"
+         
+         		       option.series[0].itemStyle.borderColor = '#00AF9D';
+                option.series[0].itemStyle.color0 = '#FF1674';
+                option.series[0].itemStyle.borderColor0 = '#FF1674';
+         	}
+         
+         
+         	// Redraw the chart with updated colors
+         	chart.setOption(option);
+         });
+      </script>
+   </body>
 </html>

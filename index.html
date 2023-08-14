@@ -339,7 +339,7 @@
          ['2023-12-25','95.34','95.34','0','0','95.34','95.34'],
          	// ... Add more data here if needed
          ];
-         
+
          function calculateMA(dayCount, data) {
          	var result = [];
          	for(var i = 0, len = data.length; i < len; i++) {
@@ -447,11 +447,11 @@
                 color0: '#FF1674',
                 borderColor: '#00AF9D',
                 borderColor0: '#FF1674',
-                borderWidth: 2,
+                borderWidth: 1,
               },
             },
           ],
-         
+
          };
          // Render the chart using ECharts
          var chart = echarts.init(document.getElementById('chart-container'));
@@ -460,14 +460,14 @@
          function resizeChart() {
          	chart.resize();
          }
-         
+
          window.addEventListener('resize', resizeChart);
-         
+
          var colorButton = document.getElementById('colorButton');
          colorButton.addEventListener('click', function() {
          	var buttonValue = colorButton.value
          	console.log(buttonValue)
-         
+
          	if (buttonValue === "红涨绿跌") {
          		colorButton.textContent = "绿涨红跌"
                  colorButton.innerHTML = '绿涨红跌<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16" style="color: #00AF9D"><path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16" style="color: #FF1674"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></svg>';
@@ -479,15 +479,15 @@
          	} else {
          		colorButton.textContent = "红涨绿跌"
                                      colorButton.innerHTML = '红涨绿跌<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16" style="color: #FF1674"><path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16" style="color: #00AF9D"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></svg>';
-         
+
          					colorButton.value = "红涨绿跌"
-         
+
          		       option.series[0].itemStyle.borderColor = '#00AF9D';
                 option.series[0].itemStyle.color0 = '#FF1674';
                 option.series[0].itemStyle.borderColor0 = '#FF1674';
          	}
-         
-         
+
+
          	// Redraw the chart with updated colors
          	chart.setOption(option);
          });

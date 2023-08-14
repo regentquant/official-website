@@ -18,30 +18,43 @@
 		padding: 0;
 		overflow: hidden;
 	}
-	
+
 	#chart-container {
 		width: 100vw;
 		height: 80vh;
+        padding: 20px;
 	}
-	
-	#regentlogo {
+
+	#regentlogotext {
 		text-align: center;
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
-	
+
 	#button {
 		padding-bottom: 20px;
-		padding-left: 20px;
 	}
+	        #regentlogo {
+				margin-top: -50px;
+				margin-bottom: -100px;
+            text-align: center;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
 	</style>
 </head>
 
 <body>
 	<!-- Container for the chart -->
-	<div id="regentlogo"> 丽晶基金参考净值（发行价格 100 美元） </div>
-	<div id="button">
-		<button type="button" class="btn btn-dark" id="colorButton">切换：红涨绿跌</button>
+    <div id="regentlogo">
+        <img src="regentlogo.svg" alt="My Happy SVG" width="200" height="200"/>
+    </div>
+	<div id="regentlogotext">REGENT NAV (Reference Only)</div>
+	<div id="button" style="text-align: center">
+		<button type="button" class="btn btn-light" id="colorButton">红涨绿跌</button>
 	</div>
 	<div id="chart-container"></div>
 	<script>
@@ -162,21 +175,25 @@
 			type: 'inside'
 		}],
 		animation: true,
-		series: [{
-			type: 'candlestick',
-			name: 'Weekly Candlestick (周K)',
-			data: data,
-			barWidth: '90%', // Adjust the width of the candlestick bars
-			barGap: '10%', // Adjust the spacing between candlesticks
-			barCategoryGap: '10%', // Adjust the spacing between categories
-			itemStyle: {
-				color: '#161A25',
-				color0: '#FF1674',
-				borderColor: '#00AF9D',
-				borderColor0: '#FF1674',
-				borderWidth: 1,
-			}
-		}, ]
+		  series: [
+    {
+      type: 'candlestick',
+      name: 'Weekly Candlestick (周K)',
+      data: data,
+      barWidth: '90%',
+      barGap: '10%',
+      barCategoryGap: '10%',
+      itemStyle: {
+        color: '#161A25',
+        color0: '#FF1674',
+        borderColor: '#00AF9D',
+        borderColor0: '#FF1674',
+        borderWidth: 1,
+        barBorderRadius: [5, 5, 0, 0], // Rounded corners: top-left, top-right, bottom-right, bottom-left
+      },
+    },
+  ],
+
 	};
 	// Render the chart using ECharts
 	var chart = echarts.init(document.getElementById('chart-container'));

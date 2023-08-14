@@ -2,13 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-         <meta property="og:title" content="丽晶量化参考净值">
-    <meta property="og:description" content="REGENT QUANT(NAV)">
-    <meta property="og:image" content="https://github.com/RegentInvest/regent.github.io/blob/c9dbaa708318733cdb04466756f255ca591120a0/Group%201.png">
-    <meta property="og:url" content="https://regentinvest.github.io/regent.github.io/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="REGENT QUANT">
-
+        <meta property="og:title" content="丽晶量化参考净值">
+        <meta property="og:description" content="REGENT QUANT(NAV)">
+        <meta property="og:image" content="https://github.com/RegentInvest/regent.github.io/blob/c9dbaa708318733cdb04466756f255ca591120a0/Group%201.png">
+        <meta property="og:url" content="https://regentinvest.github.io/regent.github.io/">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="REGENT QUANT">
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
@@ -333,28 +332,36 @@
         <!-- ------------->
         <script>
             var rawData = [
-            	['2023-06-26','100','100','0','0','100','100'],
-            	['2023-07-03','100.49','97.24','0','0','95.83','102.05'],
-            	['2023-07-10','96.98','107.37','0','0','94.95','110.63'],
-            	['2023-07-17','108','104.12','0','0','103.68','114.98'],
-            	['2023-07-24','104.83','110.29','0','0','102.93','111.44'],
-            	['2023-07-31','110.56','100.34','0','0','99.93','111.49'],
-            	['2023-08-07','101.78','95.34','0','0','94.15','102.93'],
-            	['2023-08-14','95.34','95.34','0','0','95.34','95.34'],
-            	['2023-08-21','95.34','95.34','0','0','95.34','95.34'],
-            	['2023-08-28','95.34','95.34','0','0','95.34','95.34'],
-            	['2023-09-04','95.34','95.34','0','0','95.34','95.34'],
-            	['2023-09-11','95.34','95.34','0','0','95.34','95.34'],
-            	['2023-09-18','95.34','95.34','0','0','95.34','95.34'],
-            	['2023-09-25','95.34','95.34','0','0','95.34','95.34'],
-            	['2023-10-02','95.34','95.34','0','0','95.34','95.34'],
-            	['2023-10-09','95.34','95.34','0','0','95.34','95.34'],
-            	['2023-10-16','95.34','95.34','0','0','95.34','95.34'],
-            	['2023-10-23','95.34','95.34','0','0','95.34','95.34'],
-            	['2023-10-30','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-06-26','100','100','0','0','100','100'],
+            ['2023-07-03','100.49','97.24','0','0','95.83','102.05'],
+            ['2023-07-10','96.98','107.37','0','0','94.95','110.63'],
+            ['2023-07-17','108','104.12','0','0','103.68','114.98'],
+            ['2023-07-24','104.83','110.29','0','0','102.93','111.44'],
+            ['2023-07-31','110.56','100.34','0','0','99.93','111.49'],
+            ['2023-08-07','101.78','95.34','0','0','94.15','102.93'],
+            ['2023-08-14','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-08-21','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-08-28','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-09-04','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-09-11','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-09-18','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-09-25','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-10-02','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-10-09','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-10-16','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-10-23','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-10-30','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-11-06','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-11-13','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-11-20','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-11-27','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-12-04','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-12-011','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-12-18','95.34','95.34','0','0','95.34','95.34'],
+            ['2023-12-25','95.34','95.34','0','0','95.34','95.34'],
             	// ... Add more data here if needed
             ];
-
+            
             function calculateMA(dayCount, data) {
             	var result = [];
             	for(var i = 0, len = data.length; i < len; i++) {
@@ -467,7 +474,7 @@
                  },
                },
              ],
-
+            
             };
             // Render the chart using ECharts
             var chart = echarts.init(document.getElementById('chart-container'));
@@ -476,14 +483,14 @@
             function resizeChart() {
             	chart.resize();
             }
-
+            
             window.addEventListener('resize', resizeChart);
-
+            
             var colorButton = document.getElementById('colorButton');
             colorButton.addEventListener('click', function() {
             	var buttonValue = colorButton.value
             	console.log(buttonValue)
-
+            
             	if (buttonValue === "红涨绿跌") {
             		colorButton.textContent = "绿涨红跌"
                     colorButton.innerHTML = '绿涨红跌<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16" style="color: #00AF9D"><path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16" style="color: #FF1674"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></svg>';
@@ -495,15 +502,15 @@
             	} else {
             		colorButton.textContent = "红涨绿跌"
                                         colorButton.innerHTML = '红涨绿跌<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16" style="color: #FF1674"><path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16" style="color: #00AF9D"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></svg>';
-
+            
             					colorButton.value = "红涨绿跌"
-
+            
             		       option.series[0].itemStyle.borderColor = '#00AF9D';
                    option.series[0].itemStyle.color0 = '#FF1674';
                    option.series[0].itemStyle.borderColor0 = '#FF1674';
             	}
-
-
+            
+            
             	// Redraw the chart with updated colors
             	chart.setOption(option);
             });

@@ -269,8 +269,8 @@
   </tr>
   <tr>
     <td style="font-weight: 300">QQQ</td>
-    <td style="font-weight: 300" id="tqqqPrice">NaN</td>
-    <td style="font-weight: 300" id="tqqqChange">0.00%</td>
+    <td style="font-weight: 300" id="qqqPrice">NaN</td>
+    <td style="font-weight: 300" id="qqqChange">0.00%</td>
   </tr>
 
 
@@ -521,10 +521,25 @@
          	chart.setOption(option);
          });
 
-         const fetch = require('node-fetch');
+  const priceContainer = document.getElementById('qqqPrice');
 
+        // Function to fetch and update the price data
+        function fetchAndUpdatePrice() {
+            fetch('price.txt')
+                .then(response => response.text())
+                .then(data => {
+                    priceContainer.textContent = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching price data:', error);
+                });
+        }
 
+        // Initial fetch and update
+        fetchAndUpdatePrice();
 
+        // Update every 3 seconds
+        setInterval(fetchAndUpdatePrice, 3000);
 
       </script>
    </body>

@@ -15,7 +15,9 @@
       <meta http-equiv="Expires" content="0">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
              <link rel="icon" type="image/x-icon" href="favicon.png">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@200&display=swap" rel="stylesheet">
       <title>丽晶量化 REGENT Quant</title>
        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
       <!-- Include ECharts library -->
@@ -282,18 +284,15 @@
   </tr>
 
 </table>    </div>  <!-- Container for the chart -->
-      <div id="button" style="text-align: center; padding-top: 20px">
-         <button type="button" class="btn btn-light" id="colorButton" value="红涨绿跌" style="font-size: small">
-            红涨绿跌
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16"  style="color: #FF1674">
-               <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16" style="color: #00AF9D">
-               <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
-            </svg>
-         </button>
-      </div>
-      <div id="chart-container"></div>
+<div style="margin-left: 20px">
+<h1 style="font-family: 'Poppins', sans-serif;">Fund NAV Report (September 1, 2023)</h1>
+</div>
+    <!-- Using <embed> tag -->
+    <embed src="[NAV Report] Sep 1, 2023 · USD · REGENT PRIVATE EQUITY.pdf" type="application/pdf" width="100%" height="600px">
+
+    <!-- Using <iframe> tag -->
+
+
       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -344,219 +343,6 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/bootstrap.min.js"></script>
       <script>
-         var rawData = [
-['2023-01-02','100.0000','94.5665','0.0000','0.0000','94.1040','104.2746'],
-['2023-01-09','94.5665','96.4377','0.0000','0.0000','91.6398','96.7735'],
-['2023-01-16','96.4377','97.8290','0.0000','0.0000','89.1449','100.3000'],
-['2023-01-23','98.5967','111.9348','0.0000','0.0000','95.8619','114.2858'],
-['2023-01-30','108.1925','105.2178','0.0000','0.0000','104.8340','109.8718'],
-['2023-02-06','105.2178','105.2178','0.0000','0.0000','105.2178','105.2178'],
-['2023-02-13','105.2178','102.9481','0.0000','0.0000','99.7792','105.2178'],
-['2023-02-20','102.9481','93.1438','0.0000','0.0000','91.3468','102.9481'],
-['2023-02-27','96.1816','100.3745','0.0000','0.0000','89.6354','100.6740'],
-['2023-03-06','101.6581','89.3359','0.0000','0.0000','88.2235','104.7387'],
-['2023-03-13','87.5817','106.7068','0.0000','0.0000','86.1270','107.0919'],
-['2023-03-20','106.0988','104.4867','0.0000','0.0000','100.5209','112.9901'],
-['2023-03-27','105.1544','114.3607','0.0000','0.0000','98.2952','114.6035'],
-['2023-04-03','112.0136','111.0019','0.0000','0.0000','105.6602','115.0487'],
-['2023-04-10','107.8050','111.1638','0.0000','0.0000','105.2151','113.0253'],
-['2023-04-17','110.6782','108.7358','0.0000','0.0000','106.2268','114.0370'],
-['2023-04-24','108.4930','114.3203','0.0000','0.0000','101.8563','114.4417'],
-['2023-05-01','113.8751','114.1584','0.0000','0.0000','106.3644','115.4533'],
-['2023-05-08','113.7132','116.2627','0.0000','0.0000','112.5195','118.5693'],
-['2023-05-15','116.7483','128.4434','0.0000','0.0000','115.0487','130.4667'],
-['2023-05-22','128.2006','141.5548','0.0000','0.0000','120.4713','142.6474'],
-['2023-05-29','141.5548','149.0008','0.0000','0.0000','139.2077','150.4981'],
-['2023-06-05','148.7580','148.1914','0.0000','0.0000','140.7050','152.5619'],
-['2023-06-12','150.3362','165.1068','0.0000','0.0000','149.0821','171.7434'],
-['2023-06-19','165.1068','158.1172','0.0000','0.0000','155.2317','166.2399'],
-['2023-06-26','157.3459','166.4391','0.0000','0.0000','151.5814','167.8600'],
-['2023-07-03','167.2510','161.8519','0.0000','0.0000','159.4974','169.8491'],
-['2023-07-10','161.4054','178.6988','0.0000','0.0000','158.0360','184.1385'],
-['2023-07-17','179.7543','173.2997','0.0000','0.0000','172.5690','191.3644'],
-['2023-07-24','174.4769','183.5702','0.0000','0.0000','171.3235','185.4782'],
-['2023-07-31','184.0167','167.0075','0.0000','0.0000','166.3174','185.5593'],
-['2023-08-07','169.4026','158.6855','0.0000','0.0000','156.6964','171.3105'],
-['2023-08-14','157.6300','147.7655','0.0000','0.0000','143.5842','164.1658'],
-['2023-08-21','149.6734','150.0388','0.0000','0.0000','147.5625','166.0535'],
-
-
-
-         	// ... Add more data here if needed
-         ];
-
-         function calculateMA(dayCount, data) {
-         	var result = [];
-         	for(var i = 0, len = data.length; i < len; i++) {
-         		if(i < dayCount) {
-         			result.push('-');
-         			continue;
-         		}
-         		var sum = 0;
-         		for(var j = 0; j < dayCount; j++) {
-         			sum += data[i - j][1];
-         		}
-         		result.push(sum / dayCount);
-         	}
-         	return result;
-         }
-         var dates = rawData.map(function(item) {
-         	return item[0];
-         });
-         var data = rawData.map(function(item) {
-         	return [+item[1], +item[2], +item[5], +item[6]];
-         });
-         var option = {
-         	backgroundColor: '#fff',
-         	legend: {
-         		data: ['Weekly Candlestick (周K)', 'MA5', 'MA10', 'MA20', 'MA30', 'MA60', 'MA120'],
-         		inactiveColor: '#777',
-         		textStyle: {
-         			color: '#000000'
-         		}
-         	},
-         	tooltip: {
-         		trigger: 'axis',
-         		axisPointer: {
-         			animation: false,
-         			type: 'cross',
-         			lineStyle: {
-         				color: '#376df4',
-         				width: 2,
-         				opacity: 1
-         			}
-         		}
-         	},
-         	xAxis: {
-         		type: 'category',
-         		data: dates,
-         		axisLine: {
-         			lineStyle: {
-         				color: '#8392A5'
-         			}
-         		}
-         	},
-
-         	yAxis: {
-         		scale: true,
-         		axisLine: {
-         			lineStyle: {
-         				color: '#8392A5'
-         			}
-         		},
-         		splitLine: {
-         			show: true,
-         			lineStyle: {
-         				color: '#EEEEEE'
-         			}
-         		}
-         	},
-         	grid: {
-         		bottom: 80
-         	},
-         	dataZoom: [{
-         		textStyle: {
-         			color: '#8392A5'
-         		},
-         		handleIcon: 'M10.,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
-         		handleSize: '80%',
-         		dataBackground: {
-         			areaStyle: {
-         				color: '#8392A5'
-         			},
-         			lineStyle: {
-         				opacity: 0.8,
-         				color: '#8392A5'
-         			}
-         		},
-         		handleStyle: {
-         			color: '#fff',
-         			shadowBlur: 3,
-         			shadowColor: 'rgba(0, 0, 0, 0)',
-         			shadowOffsetX: 2,
-         			shadowOffsetY: 2
-         		}
-         	}, {
-         		type: 'inside'
-         	}],
-         	animation: true,
-         	  series: [
-            {
-              type: 'candlestick',
-              name: 'Weekly Candlestick (周K)',
-              data: data,
-              barWidth: '80%',
-              barGap: '10%',
-              barCategoryGap: '10%',
-              itemStyle: {
-                color: 'rgba(255, 255, 255, 0)',
-                color0: '#FF1674',
-                borderColor: '#00AF9D',
-                borderColor0: '#FF1674',
-                borderWidth: 1,
-              },
-            },
-          ],
-
-         };
-         // Render the chart using ECharts
-         var chart = echarts.init(document.getElementById('chart-container'));
-         chart.setOption(option);
-         // Update chart size when window is resized
-         function resizeChart() {
-         	chart.resize();
-         }
-
-         window.addEventListener('resize', resizeChart);
-
-         var colorButton = document.getElementById('colorButton');
-         colorButton.addEventListener('click', function() {
-         	var buttonValue = colorButton.value
-         	console.log(buttonValue)
-
-         	if (buttonValue === "红涨绿跌") {
-         		colorButton.textContent = "绿涨红跌"
-                 colorButton.innerHTML = '绿涨红跌 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16" style="color: #00AF9D"><path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16" style="color: #FF1674"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></svg>';
-         		colorButton.value = "绿涨红跌"
-         		// Update series itemStyle colors
-         	option.series[0].itemStyle.borderColor = '#FF1674';
-         	option.series[0].itemStyle.color0 = '#00AF9D';
-         	option.series[0].itemStyle.borderColor0 = '#00AF9D';
-         	} else {
-         		colorButton.textContent = "红涨绿跌"
-                                     colorButton.innerHTML = '红涨绿跌 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16" style="color: #FF1674"><path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16" style="color: #00AF9D"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/></svg>';
-
-         					colorButton.value = "红涨绿跌"
-
-         		       option.series[0].itemStyle.borderColor = '#00AF9D';
-                option.series[0].itemStyle.color0 = '#FF1674';
-                option.series[0].itemStyle.borderColor0 = '#FF1674';
-         	}
-
-
-         	// Redraw the chart with updated colors
-         	chart.setOption(option);
-         });
-
-  const priceContainer = document.getElementById('qqqPrice');
-
-        // Function to fetch and update the price data
-        function fetchAndUpdatePrice() {
-            fetch('price.txt')
-                .then(response => response.text())
-                .then(data => {
-                    priceContainer.textContent = data;
-                })
-                .catch(error => {
-                    console.error('Error fetching price data:', error);
-                });
-        }
-
-        // Initial fetch and update
-        fetchAndUpdatePrice();
-
-        // Update every 3 seconds
-        setInterval(fetchAndUpdatePrice, 3000);
 
       </script>
    </body>

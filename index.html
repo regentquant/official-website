@@ -23,6 +23,22 @@
       <!-- Include ECharts library -->
       <script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.min.js?v=2"></script>
       <style>
+          @font-face {
+            font-family: 'SuperiorTitle-Regular';
+            src: url('SF-Pro-Text-Light.otf') format('opentype');
+        }
+          @font-face {
+              font-family: "SF Pro";
+              src: url("SF-Pro-Text-Medium.otf") format('opentype');
+          }
+          a {
+            font-family: 'SF Pro', monospace;
+          }
+        .written {
+            font-family: 'SuperiorTitle-Regular', monospace;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
          /*********footer*******************/
           table {
               padding-top: 20px;
@@ -256,97 +272,84 @@
          }
          .btn {
              margin-top: 10px;
-             width: 70%;
          }
       </style>
    </head>
-   <body>
-      <nav class="navbar bg-body-tertiary">
-         <div class="container" style="">
-            <a class="navbar-brand" href="#" style="margin: auto">
-            <img src="regentlogo.svg" alt="My Happy SVG" width="100" height="30" style="margin: auto"/>
-            </a>
-         </div>
-      </nav>
-      <div style="padding-top: 20px">
-          <div style="text-align: center; padding-top: 20px; padding-bottom:20px">
-   <a href="[NAV Report] Sep 12, 2023 · USD · REGENT PRIVATE EQUITY.pdf" class="btn btn-primary" target="_blank" style="font-size: small">Download Sep 12 NAV Report / 下载9月12日净值报告</a><br>
-                <a href="【贝莱德】2023年下半年全球投资展望.pdf" class="btn btn-dark" target="_blank" style="font-size: small">【贝莱德】2023年下半年全球投资展望</a><br>
-                <a href="【Blackrock】2023 Midyear Outlook.pdf" class="btn btn-dark" target="_blank" style="font-size: small">【Blackrock】2023 Midyear Outlook</a>
-</div>
+   <nav class="navbar bg-body-tertiary">
+       <div class="container" style="">
+           <a class="navbar-brand" href="#" style="margin: auto">
+               <img src="regentlogo.svg" alt="My Happy SVG" width="100" height="30" style="margin: auto"/>
+           </a>
+       </div>
+   </nav>
+   <div style="padding-top: 20px">
+       <div style="text-align: center; padding-top: 20px; padding-bottom:20px">
+           <a href="[NAV Report] Sep 12, 2023 · USD · REGENT PRIVATE EQUITY.pdf" class="btn btn-primary" target="_blank" style="font-size: small">Download Sep 12 NAV Report / 下载9月12日净值报告</a><br>
+       </div>
+<p class="written" style="margin-left: 20px; margin-right: 20px">Regent Quant is a hedge fund employing advanced quantitative methodologies to optimize alpha returns.</p>
+<p class="written" style="margin-left: 20px; margin-right: 20px">Regent currently manages over $700,000 and primarily focuses on investments in the US stock market.</p>
+       <p class="written" style="margin-left: 20px; margin-right: 20px">Our premier fund, the Regent Aggressive Growth Fund, is designed to outperform the market by harnessing mega forces.</p>
 
-<table style="padding-top: 20px">
-  <tr>
-    <th style="font-weight: 500">Ticker</th>
-    <th style="font-weight: 500">Price</th>
-    <th style="font-weight: 500">Chang</th>
-  </tr>
-  <tr>
-    <td style="font-weight: 300">SPY</td>
-    <td style="font-weight: 300" id="qqqPricea">NaN</td>
-    <td style="font-weight: 300" id="qqqChange">NaN</td>
-  </tr>
+       <div class="list-group" style="margin-left: 20px; margin-right: 20px; margin-bottom: 100px">
+           <a href="【贝莱德】2023年下半年全球投资展望.pdf" class="list-group-item list-group-item-actionr" style="color: #3c3c3c" aria-current="true">【贝莱德】2023年下半年全球投资展望.pdf</a>
+           <a href="【Blackrock】2023 Midyear Outlook.pdf" class="list-group-item list-group-item-action" style="color: #3c3c3c">【Blackrock】2023 Midyear Outlook.pdf</a>
 
-</table>    </div>  <!-- Container for the chart -->
-<div style="margin-left: 20px">
-<h1 style="font-family: 'Poppins', sans-serif;">Fund NAV Report (September 12, 2023)</h1>
-</div>
-    <!-- Using <embed> tag -->
+       </div>
 
-    <!-- Using <iframe> tag -->
-<iframe src="[NAV Report] Sep 12, 2023 · USD · REGENT PRIVATE EQUITY.pdf" width=”100%” height="1000px"></iframe>
+       <!-- Using <embed> tag -->
 
-      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <!------ Include the above in your HEAD tag ---------->
-      <!--footer-->
-      <footer class="kilimanjaro_area">
-         <!-- Top Footer Area Start -->
-         <div class="foo_top_header_one section_padding_100_70">
-            <div class="container">
-               <div class="row">
-                  <div class="col-12 col-md-6 col-lg-3">
-                     <div class="kilimanjaro_part">
-                        <h5>About Us</h5>
-                        <p>Regent Quantitaitve</p>
-                     </div>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-3">
-                     <div class="kilimanjaro_part">
-                        <h5>Quick Contact</h5>
-                        <div class="kilimanjaro_single_contact_info">
-                           <h5>Phone:</h5>
-                           <p>+1 415-652-7204<br>+86 166-0122-0552</p>
-                        </div>
-                        <div class="kilimanjaro_single_contact_info">
-                           <h5>Email:</h5>
-                           <p>curry_yao@outlook.com</p>
-                        </div>
-                     </div>
-                  </div>
+       <!-- Using <iframe> tag -->
+
+       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <!------ Include the above in your HEAD tag ---------->
+       <!--footer-->
+       <footer class="kilimanjaro_area">
+           <!-- Top Footer Area Start -->
+           <div class="foo_top_header_one section_padding_100_70">
+               <div class="container">
+                   <div class="row">
+                       <div class="col-12 col-md-6 col-lg-3">
+                           <div class="kilimanjaro_part">
+                               <h5>About Us</h5>
+                               <p>Regent Quantitaitve</p>
+                           </div>
+                       </div>
+                       <div class="col-12 col-md-6 col-lg-3">
+                           <div class="kilimanjaro_part">
+                               <h5>Quick Contact</h5>
+                               <div class="kilimanjaro_single_contact_info">
+                                   <h5>Phone:</h5>
+                                   <p>+1 415-652-7204<br>+86 166-0122-0552</p>
+                               </div>
+                               <div class="kilimanjaro_single_contact_info">
+                                   <h5>Email:</h5>
+                                   <p>curry_yao@outlook.com</p>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
                </div>
-            </div>
-         </div>
-         <!-- Footer Bottom Area Start -->
-         <div class=" kilimanjaro_bottom_header_one section_padding_50 text-center">
-            <div class="container">
-               <div class="row">
-                  <div class="col-12">
-                     <p>© All Rights Reserved by <a href="#"><img src="Vector.svg" alt="My Happy SVG" width="70" height="30" style="margin: auto; padding-bottom: 3px"/>
-                        <i class="fa fa-love"></i></a>
-                     </p>
-                  </div>
+           </div>
+           <!-- Footer Bottom Area Start -->
+           <div class=" kilimanjaro_bottom_header_one section_padding_50 text-center">
+               <div class="container">
+                   <div class="row">
+                       <div class="col-12">
+                           <p>© All Rights Reserved by <a href="#"><img src="Vector.svg" alt="My Happy SVG" width="70" height="30" style="margin: auto; padding-bottom: 3px"/>
+                               <i class="fa fa-love"></i></a>
+                           </p>
+                       </div>
+                   </div>
                </div>
-            </div>
-         </div>
-      </footer>
-      <!-- Credit to https://bootsnipp.com/snippets/X2XOv -->
-      <!-- ------------->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/bootstrap.min.js"></script>
-      <script>
+           </div>
+       </footer>
+       <!-- Credit to https://bootsnipp.com/snippets/X2XOv -->
+       <!-- ------------->
+       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/bootstrap.min.js"></script>
+       <script>
 
-      </script>
-   </body>
+       </script>
 </html>

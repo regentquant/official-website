@@ -1,371 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta property="og:title" content="丽晶量化官方网站">
-      <meta property="og:description" content="Our Flagship Product: Regent Aggressive Growth Fund —— 我们的旗舰产品：丽晶激进增长基金">
-      <meta property="og:image" content="https://i.ibb.co/pR7v31d/Group-1.png">
-      <meta property="og:url" content="https://regentinvest.github.io/regent.github.io/">
-      <meta property="og:type" content="website">
-      <meta property="og:site_name" content="REGENT QUANT">
-      <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-      <meta http-equiv="Pragma" content="no-cache">
-      <meta http-equiv="Expires" content="0">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-             <link rel="icon" type="image/x-icon" href="favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@200&display=swap" rel="stylesheet">
-      <title>Regent Quant</title>
-       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <!-- Include ECharts library -->
-      <script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.min.js?v=2"></script>
-      <style>
-
-
-        .written {
+    <head>
+        <meta charset="UTF-8">
+        <meta property="og:title" content="丽晶量化官方网站">
+        <meta property="og:description" content="Our Flagship Product: Regent Aggressive Growth Fund —— 我们的旗舰产品：丽晶激进增长基金">
+        <meta property="og:image" content="https://i.ibb.co/pR7v31d/Group-1.png">
+        <meta property="og:url" content="https://regentinvest.github.io/regent.github.io/">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="REGENT QUANT">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@200&display=swap" rel="stylesheet">
+        <title>Regent Quant</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Include ECharts library -->
+        <script src="https://cdn.jsdelivr.net/npm/echarts@5.1.2/dist/echarts.min.js?v=2"></script>
+        <style>
+            .written {
             margin-left: 20px;
             margin-right: 20px;
-        }
-         /*********footer*******************/
-          table {
-              padding-top: 20px;
+            }
+            /*********footer*******************/
+            table {
+            padding-top: 20px;
             margin: auto;
             width: 60%;
             border-collapse: collapse;
             text-align: center;
             font-size: small;
-          }
-        th, td {
+            }
+            th, td {
             padding: 10px;
             border: 0px solid #ddd;
-        }
-         . kilimanjaro_area {
-         position: relative;
-         z-index: 1;
-         }
-         .foo_top_header_one {
-         background-color: #15151e;
-         color: #fff;
-         }
-         .section_padding_100_70 {
-         padding-top: 100px;
-         padding-bottom: 70px;
-         }
-         .foo_top_header_one {
-         color: #fff;
-         }.kilimanjaro_part {
-         margin-bottom: 30px;
-         }
-         .foo_top_header_one .kilimanjaro_part > h5 {
-         color: #fff;
-         }
-         .kilimanjaro_part h4, .kilimanjaro_part h5 {
-         margin-bottom: 30px;
-         }
-         .kilimanjaro_single_contact_info > p, .kilimanjaro_single_contact_info > h5, .kilimanjaro_blog_area > a, .foo_top_header_one .kilimanjaro_part > p {
-         color: rgba(255,255,255,.5);
-         }
-         p, ul li, ol li {
-         font-weight: 300;
-         }
-         ul {
-         margin: 0;
-         padding: 0;
-         }
-         .kilimanjaro_bottom_header_one {
-         background-color: #111;
-         }
-         .section_padding_50 {
-         padding: 50px 0;
-         }
-         .kilimanjaro_bottom_header_one p {
-         color: #fff;
-         margin: 0;
-         }
-         p, ul li, ol li {
-         font-weight: 300;
-         }
-         .kilimanjaro_bottom_header_one a {
-         color: inherit;
-         font-size: 14px;
-         }
-         a, h1, h2, h3, h4, h5, h6 {
-         font-weight: 400;
-         }
-         .m-top-15 {
-         margin-top: 15px;
-         }
-         ul {
-         margin: 0;
-         padding: 0;
-         }
-         .kilimanjaro_widget > li {
-         display: inline-block;
-         }
-         p, ul li, ol li {
-         font-weight: 300;
-         }
-         ol li, ul li {
-         list-style: outside none none;
-         }
-         .kilimanjaro_widget a {
-         border: 1px solid #333;
-         border-radius: 6px;
-         color: #888;
-         display: inline-block;
-         font-size: 13px;
-         margin-bottom: 4px;
-         padding: 7px 12px;
-         }
-         ul {
-         margin: 0;
-         padding: 0;
-         }
-         .kilimanjaro_links a {
-         border-bottom: 1px solid #333;
-         color: rgba(255,255,255,.5);
-         display: block;
-         font-size: 13px;
-         margin-bottom: 5px;
-         padding-bottom: 10px;
-         }
-         .kilimanjaro_links a {
-         color: rgba(255,255,255,.5);
-         font-size: 13px;
-         }
-         top-15 {
-         margin-top: 15px;
-         }
-         .foo_top_header_one .kilimanjaro_part > h5 {
-         color: #fff;
-         }
-         .kilimanjaro_part h4, .kilimanjaro_part h5 {
-         margin-bottom: 30px;
-         }
-         .kilimanjaro_social_links > li {
-         display: inline-block;
-         }
-         p, ul li, ol li {
-         font-weight: 300;
-         }
-         .kilimanjaro_social_links a {
-         border: 1px solid #333;
-         border-radius: 6px;
-         color: #888;
-         display: inline-block;
-         font-size: 13px;
-         margin-bottom: 3px;
-         padding: 7px 12px;
-         }
-         .kilimanjaro_blog_area .kilimanjaro_date {
-         color: #27ae60;
-         font-size: 13px;
-         margin-bottom: 5px;
-         }
-         .kilimanjaro_blog_area > p {
-         color: rgba(255,255,255,.5);
-         line-height: 1.3;
-         margin-bottom: 0;
-         }
-         .kilimanjaro_works > a {
-         display: inline-block;
-         float: left;
-         position: relative;
-         width: 33.33333333%;
-         z-index: 1;
-         }
-         .kilimanjaro_thumb {
-         left: 0;
-         position: absolute;
-         top: 0;
-         width: 75px;
-         }
-         .kilimanjaro_links a i {
-         padding-right: 10px;
-         }
-         /* :: 18.0 Footer Area CSS */
-         .footer_area {
-         position: relative;
-         z-index: 1;
-         }
-         .footer_bottom p > i,
-         .footer_bottom p > a:hover {
-         color: #27ae60;
-         }
-         .social_links_area {
-         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-         padding: 50px 0 30px 0;
-         text-align: center;
-         position: relative;
-         z-index: 1;
-         }
-         .social_links_area > a:hover {
-         color: #27ae60;
-         }
-         .inline-style .social_links_area > a:hover {
-         background-color: transparent;
-         color: #27ae60;
-         border: 0px solid transparent;
-         }
-         .single_feature:hover .feature_text h4 {
-         color: #27ae60;
-         }
-         .kilimanjaro_blog_area {
-         border-bottom: 1px solid #333;
-         margin-bottom: 15px;
-         padding: 0 0 15px 90px;
-         position: relative;
-         z-index: 1;
-         }
-         .kilimanjaro_links a {
-         border-bottom: 1px solid #333;
-         color: rgba(255,255,255,.5);
-         display: block;
-         font-size: 13px;
-         margin-bottom: 5px;
-         padding-bottom: 10px;
-         }
-         /* Credit to https://bootsnipp.com/snippets/X2XOv */
-         body,
-         html {
-         margin: 0;
-         padding: 0;
-         }
-         #chart-container {
-         width: 100vw;
-         height: 80vh;
-         padding: 20px;
-         }
-         #regentlogotext {
-         padding-top: 20px;
-         padding-left: 50px;
-         padding-bottom: 20px;
-         }
-         #button {
-         padding-bottom: 20px;
-         }
-         #regentlogo {
-         margin-top: -50px;
-         margin-bottom: -100px;
-         text-align: center;
-         padding-bottom: 20px;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         }
-         .bi {
-         margin-bottom: 3px;
-         margin-left: 3px;
-         }
-         .btn {
-             margin-top: 10px;
-         }
-         .badge {
+            }
+            . kilimanjaro_area {
+            position: relative;
+            z-index: 1;
+            }
+            .foo_top_header_one {
+            background-color: #15151e;
+            color: #fff;
+            }
+            .section_padding_100_70 {
+            padding-top: 100px;
+            padding-bottom: 70px;
+            }
+            .foo_top_header_one {
+            color: #fff;
+            }.kilimanjaro_part {
+            margin-bottom: 30px;
+            }
+            .foo_top_header_one .kilimanjaro_part > h5 {
+            color: #fff;
+            }
+            .kilimanjaro_part h4, .kilimanjaro_part h5 {
+            margin-bottom: 30px;
+            }
+            .kilimanjaro_single_contact_info > p, .kilimanjaro_single_contact_info > h5, .kilimanjaro_blog_area > a, .foo_top_header_one .kilimanjaro_part > p {
+            color: rgba(255,255,255,.5);
+            }
+            p, ul li, ol li {
+            font-weight: 300;
+            }
+            ul {
+            margin: 0;
+            padding: 0;
+            }
+            .kilimanjaro_bottom_header_one {
+            background-color: #111;
+            }
+            .section_padding_50 {
+            padding: 50px 0;
+            }
+            .kilimanjaro_bottom_header_one p {
+            color: #fff;
+            margin: 0;
+            }
+            p, ul li, ol li {
+            font-weight: 300;
+            }
+            .kilimanjaro_bottom_header_one a {
+            color: inherit;
+            font-size: 14px;
+            }
+            a, h1, h2, h3, h4, h5, h6 {
+            font-weight: 400;
+            }
+            .m-top-15 {
+            margin-top: 15px;
+            }
+            ul {
+            margin: 0;
+            padding: 0;
+            }
+            .kilimanjaro_widget > li {
+            display: inline-block;
+            }
+            p, ul li, ol li {
+            font-weight: 300;
+            }
+            ol li, ul li {
+            list-style: outside none none;
+            }
+            .kilimanjaro_widget a {
+            border: 1px solid #333;
+            border-radius: 6px;
+            color: #888;
+            display: inline-block;
+            font-size: 13px;
+            margin-bottom: 4px;
+            padding: 7px 12px;
+            }
+            ul {
+            margin: 0;
+            padding: 0;
+            }
+            .kilimanjaro_links a {
+            border-bottom: 1px solid #333;
+            color: rgba(255,255,255,.5);
+            display: block;
+            font-size: 13px;
+            margin-bottom: 5px;
+            padding-bottom: 10px;
+            }
+            .kilimanjaro_links a {
+            color: rgba(255,255,255,.5);
+            font-size: 13px;
+            }
+            top-15 {
+            margin-top: 15px;
+            }
+            .foo_top_header_one .kilimanjaro_part > h5 {
+            color: #fff;
+            }
+            .kilimanjaro_part h4, .kilimanjaro_part h5 {
+            margin-bottom: 30px;
+            }
+            .kilimanjaro_social_links > li {
+            display: inline-block;
+            }
+            p, ul li, ol li {
+            font-weight: 300;
+            }
+            .kilimanjaro_social_links a {
+            border: 1px solid #333;
+            border-radius: 6px;
+            color: #888;
+            display: inline-block;
+            font-size: 13px;
+            margin-bottom: 3px;
+            padding: 7px 12px;
+            }
+            .kilimanjaro_blog_area .kilimanjaro_date {
+            color: #27ae60;
+            font-size: 13px;
+            margin-bottom: 5px;
+            }
+            .kilimanjaro_blog_area > p {
+            color: rgba(255,255,255,.5);
+            line-height: 1.3;
+            margin-bottom: 0;
+            }
+            .kilimanjaro_works > a {
+            display: inline-block;
+            float: left;
+            position: relative;
+            width: 33.33333333%;
+            z-index: 1;
+            }
+            .kilimanjaro_thumb {
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 75px;
+            }
+            .kilimanjaro_links a i {
+            padding-right: 10px;
+            }
+            /* :: 18.0 Footer Area CSS */
+            .footer_area {
+            position: relative;
+            z-index: 1;
+            }
+            .footer_bottom p > i,
+            .footer_bottom p > a:hover {
+            color: #27ae60;
+            }
+            .social_links_area {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 50px 0 30px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            }
+            .social_links_area > a:hover {
+            color: #27ae60;
+            }
+            .inline-style .social_links_area > a:hover {
+            background-color: transparent;
+            color: #27ae60;
+            border: 0px solid transparent;
+            }
+            .single_feature:hover .feature_text h4 {
+            color: #27ae60;
+            }
+            .kilimanjaro_blog_area {
+            border-bottom: 1px solid #333;
+            margin-bottom: 15px;
+            padding: 0 0 15px 90px;
+            position: relative;
+            z-index: 1;
+            }
+            .kilimanjaro_links a {
+            border-bottom: 1px solid #333;
+            color: rgba(255,255,255,.5);
+            display: block;
+            font-size: 13px;
+            margin-bottom: 5px;
+            padding-bottom: 10px;
+            }
+            /* Credit to https://bootsnipp.com/snippets/X2XOv */
+            body,
+            html {
+            margin: 0;
+            padding: 0;
+            }
+            #chart-container {
+            width: 100vw;
+            height: 80vh;
+            padding: 20px;
+            }
+            #regentlogotext {
+            padding-top: 20px;
+            padding-left: 50px;
+            padding-bottom: 20px;
+            }
+            #button {
+            padding-bottom: 20px;
+            }
+            #regentlogo {
+            margin-top: -50px;
+            margin-bottom: -100px;
+            text-align: center;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+            .bi {
+            margin-bottom: 3px;
+            margin-left: 3px;
+            }
+            .btn {
+            margin-top: 10px;
+            }
+            .badge {
             padding-top: 12px; !important;
-             padding-bottom: 12px; !important;
-         }
-      </style>
-   </head>
-   <nav class="navbar bg-body-tertiary">
-       <div class="container" style="">
-           <a class="navbar-brand" href="#" style="margin: auto">
-               <img src="regentlogo.svg" alt="My Happy SVG" width="100" height="30" style="margin: auto"/>
-           </a>
-       </div>
-   </nav>
-   <div style="padding-top: 20px">
-
-<div class="card mb-3" style="margin-left: 20px; margin-right: 20px; margin-bottom: 100px;">
-  <div style="height: 300px; overflow: hidden;">
-    <img src="goldengate.jpg" class="card-img-top" alt="..." style="object-fit: cover; width: 100%; height: 100%;">
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Flagship Fund's NAV Report Weekly Edition (2023-09-22)</h5>
-    <p class="card-text">Regent Aggressive Growth Private Fund is backed by an astonishing strategy that has proven to maintain an average CAGR of 45% over the past 20 years.</p>
-    <p class="card-text"><small class="text-body-secondary">Last updated: September 22, 2023</small></p>
-<a href="[NAV Report] Sep 22, 2023 · USD · REGENT PRIVATE EQUITY.pdf" class="btn btn-dark" target="_blank" style="font-size: small">Download</a>
-
-  </div>
-</div>
-
-
-
-<p class="written" style="margin-left: 20px; margin-right: 20px">Regent Quant is managing over <b>$700,000</b></p>
-       <p class="written" style="margin-left: 20px; margin-right: 20px">Flagship Fund: Regent Aggressive Growth Fund</p>
-       <p class="written" style="margin-left: 20px; margin-right: 20px"><b>Curry Yao (born September 9, 2004)</b> is the Founder, Chairman and Portfolio Manager of Regent Quant. Please see bottom of webpage for quick contact.</p>
-<br>
-              <p class="written" style="margin-left: 20px; margin-right: 20px">中国区用户需要使用"虚拟专用网"访问谷歌文件</p>
-
-       <div class="list-group" style="margin-left: 20px; margin-right: 20px; margin-bottom: 100px;">
-                                         <a href="https://drive.google.com/file/d/1WCuPP_8oTqbHhRuxa28BWWa_E5NHht6v/view?usp=drive_link" class="list-group-item list-group-item-actionr" style="color: #3c3c3c" aria-current="true"><span class="badge rounded-pill text-bg-primary">New</span>
-【The Economist】2023-09-23 Weekly Edition.pdf</a>
-
-           <a href="https://drive.google.com/file/d/1vFI2NFrtnOhBQOKH8RCvoZo2WpDhpYFy/view?usp=drive_link" class="list-group-item list-group-item-action" style="color: #3c3c3c"><span class="badge rounded-pill text-bg-info">Investing Insights</span>【Blackrock】2023 Midyear Outlook.pdf</a>
-           <a href="https://drive.google.com/file/d/136Gm7WHLrF7jApFZFfI6AVM0PkMMru3s/view?usp=drive_link" class="list-group-item list-group-item-action" style="color: #3c3c3c"><span class="badge rounded-pill text-bg-info">Investing Insights</span>【Morgan Stanley】The Eyewall of the Storm.pdf</a>
-           <a href="https://drive.google.com/file/d/1ICU3jRyMwJPA7d6QZIhbARVLllLhrm74/view?usp=drive_link" class="list-group-item list-group-item-action" style="color: #3c3c3c"><span class="badge rounded-pill text-bg-secondary">Learning Material</span>【CENGAGE Learning】Calculus.pdf</a>
-           <a href="https://drive.google.com/file/d/1yJm7Ype_C0YVySeOHqx3By6-ITY9X5mn/view?usp=drive_link" class="list-group-item list-group-item-action" style="color: #3c3c3c"><span class="badge rounded-pill text-bg-secondary">Learning Material</span>【d2l】Dive into Deep Learning - Pytorch Version.pdf</a>
-           <a href="https://drive.google.com/file/d/1ONLD2StR3yaVeLy5sU1owDhSbC8eDEsW/view?usp=drive_link" class="list-group-item list-group-item-action" style="color: #3c3c3c"><span class="badge rounded-pill text-bg-secondary">Learning Material</span>【Pearson】University Physics with Modern Physics, 15th edition.pdf</a>
-         <a href="https://drive.google.com/file/d/1koOtmoxOljA1KlQ2gRiv7pD7hkuXX1Yc/view?usp=drive_link" class="list-group-item list-group-item-action" style="color: #3c3c3c"><span class="badge rounded-pill text-bg-secondary">Learning Material</span>【Springer】Data Science for Economics and Finance.pdf</a>
-          
-       </div>
-
-       <!-- Using <embed> tag -->
-
-       <!-- Using <iframe> tag -->
-
-       <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-       <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-       <!------ Include the above in your HEAD tag ---------->
-       <!--footer-->
-       <footer class="kilimanjaro_area">
-           <!-- Top Footer Area Start -->
-           <div class="foo_top_header_one section_padding_100_70">
-               <div class="container">
-                   <div class="row">
-                       <div class="col-12 col-md-6 col-lg-3">
-                           <div class="kilimanjaro_part">
-                               <h5>About Us</h5>
-                               <p>Regent Quantitaitve</p>
-                           </div>
-                       </div>
-                       <div class="col-12 col-md-6 col-lg-3">
-                           <div class="kilimanjaro_part">
-                               <h5>Quick Contact</h5>
-                               <div class="kilimanjaro_single_contact_info">
-                                   <h5>Phone:</h5>
-                                   <p>+1 415-652-7204<br>+86 166-0122-0552</p>
-                               </div>
-                               <div class="kilimanjaro_single_contact_info">
-                                   <h5>Email:</h5>
-                                   <p>curry_yao@regentquant.com</p>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <!-- Footer Bottom Area Start -->
-           <div class=" kilimanjaro_bottom_header_one section_padding_50 text-center">
-               <div class="container">
-                   <div class="row">
-                       <div class="col-12">
-                           <p>© All Rights Reserved by <a href="#"><img src="Vector.svg" alt="My Happy SVG" width="70" height="30" style="margin: auto; padding-bottom: 3px"/>
-                               <i class="fa fa-love"></i></a>
-                           </p>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </footer>
-       <!-- Credit to https://bootsnipp.com/snippets/X2XOv -->
-       <!-- ------------->
-       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/bootstrap.min.js"></script>
-       <script>
-
-       </script>
+            padding-bottom: 12px; !important;
+            }
+        </style>
+    </head>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container" style="">
+            <a class="navbar-brand" href="#" style="margin: auto">
+            <img src="regentlogo.svg" alt="My Happy SVG" width="100" height="30" style="margin: auto"/>
+            </a>
+        </div>
+    </nav>
+    <div style="padding-top: 20px">
+    <div class="card mb-3" style="margin-left: 20px; margin-right: 20px; margin-bottom: 100px;">
+        <div style="height: 300px; overflow: hidden;">
+            <img src="goldengate.jpg" class="card-img-top" alt="..." style="object-fit: cover; width: 100%; height: 100%;">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Flagship Fund's NAV Report Weekly Edition (2023-09-22)</h5>
+            <p class="card-text">Regent Aggressive Growth Private Fund is backed with an astonishing strategy that is proven to maintain an average CAGR of 45% over the past 20 years.</p>
+            <p class="card-text"><small class="text-body-secondary">Last updated: September 22, 2023</small></p>
+            <a href="[NAV Report] Sep 22, 2023 · USD · REGENT PRIVATE EQUITY.pdf" class="btn btn-dark" target="_blank" style="font-size: small">Download</a>
+        </div>
+    </div>
+    <p class="written" style="margin-left: 20px; margin-right: 20px">Regent Quant is managing over <b>$700,000</b></p>
+    <p class="written" style="margin-left: 20px; margin-right: 20px">Flagship Fund: Regent Aggressive Growth Fund</p>
+    <p class="written" style="margin-left: 20px; margin-right: 20px"><b>Curry Yao (born September 9, 2004)</b> is the Founder, Chairman and Portfolio Manager of Regent Quant. Please see bottom of webpage for quick contact.</p>
+    <br>
+    <p class="written" style="margin-left: 20px; margin-right: 20px">中国区用户需要使用"虚拟专用网"访问谷歌文件</p>
+    <div class="list-group" style="margin-left: 20px; margin-right: 20px; margin-bottom: 100px;">
+        <a href="https://drive.google.com/file/d/1WCuPP_8oTqbHhRuxa28BWWa_E5NHht6v/view?usp=drive_link" class="list-group-item list-group-item-actionr" style="color: #3c3c3c" aria-current="true"><span class="badge rounded-pill text-bg-primary">New</span>
+        【The Economist】2023-09-23 Weekly Edition.pdf</a>
+        <a href="https://drive.google.com/file/d/1vFI2NFrtnOhBQOKH8RCvoZo2WpDhpYFy/view?usp=drive_link" class="list-group-item list-group-item-action" style="color: #3c3c3c"><span class="badge rounded-pill text-bg-info">Investing Insights</span>【Blackrock】2023 Midyear Outlook.pdf</a>
+        <a href="https://drive.google.com/file/d/136Gm7WHLrF7jApFZFfI6AVM0PkMMru3s/view?usp=drive_link" class="list-group-item list-group-item-action" style="color: #3c3c3c"><span class="badge rounded-pill text-bg-info">Investing Insights</span>【Morgan Stanley】The Eyewall of the Storm.pdf</a>
+        <a href="https://drive.google.com/file/d/1ICU3jRyMwJPA7d6QZIhbARVLllLhrm74/view?usp=drive_link" class="list-group-item list-group-item-action" style="color: #3c3c3c"><span class="badge rounded-pill text-bg-secondary">Learning Material</span>【CENGAGE Learning】Calculus.pdf</a>
+        <a href="https://drive.google.com/file/d/1yJm7Ype_C0YVySeOHqx3By6-ITY9X5mn/view?usp=drive_link" class="list-group-item list-group-item-action" style="color: #3c3c3c"><span class="badge rounded-pill text-bg-secondary">Learning Material</span>【d2l】Dive into Deep Learning - Pytorch Version.pdf</a>
+        <a href="https://drive.google.com/file/d/1ONLD2StR3yaVeLy5sU1owDhSbC8eDEsW/view?usp=drive_link" class="list-group-item list-group-item-action" style="color: #3c3c3c"><span class="badge rounded-pill text-bg-secondary">Learning Material</span>【Pearson】University Physics with Modern Physics, 15th edition.pdf</a>
+        <a href="https://drive.google.com/file/d/1koOtmoxOljA1KlQ2gRiv7pD7hkuXX1Yc/view?usp=drive_link" class="list-group-item list-group-item-action" style="color: #3c3c3c"><span class="badge rounded-pill text-bg-secondary">Learning Material</span>【Springer】Data Science for Economics and Finance.pdf</a>
+    </div>
+    <!-- Using <embed> tag -->
+    <!-- Using <iframe> tag -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <!--footer-->
+    <footer class="kilimanjaro_area">
+        <!-- Top Footer Area Start -->
+        <div class="foo_top_header_one section_padding_100_70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="kilimanjaro_part">
+                            <h5>About Us</h5>
+                            <p>Regent Quantitaitve</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="kilimanjaro_part">
+                            <h5>Quick Contact</h5>
+                            <div class="kilimanjaro_single_contact_info">
+                                <h5>Phone:</h5>
+                                <p>+1 415-652-7204<br>+86 166-0122-0552</p>
+                            </div>
+                            <div class="kilimanjaro_single_contact_info">
+                                <h5>Email:</h5>
+                                <p>curry_yao@regentquant.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom Area Start -->
+        <div class=" kilimanjaro_bottom_header_one section_padding_50 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>© All Rights Reserved by <a href="#"><img src="Vector.svg" alt="My Happy SVG" width="70" height="30" style="margin: auto; padding-bottom: 3px"/>
+                            <i class="fa fa-love"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Credit to https://bootsnipp.com/snippets/X2XOv -->
+    <!-- ------------->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/bootstrap.min.js"></script>
+    <script></script>
 </html>

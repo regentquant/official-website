@@ -10,6 +10,6 @@ def convert_pdf_to_img(folder_path, output_folder):
                 image.save(os.path.join(output_folder, f'{filename[:-4]}.png'), 'PNG')
 
 # Example usage:
-folder_path = '/Users/curryyao/Downloads/Barron_s'
-output_folder = '/Users/curryyao/Library/Mobile Documents/com~apple~CloudDocs/Git/official-website/Barrons_Covers'
+folder_path = '/Users/curryyao/Library/Mobile Documents/com~apple~CloudDocs/Regent Quant/metadata_pdf'
+output_folder = '/Users/curryyao/Library/Mobile Documents/com~apple~CloudDocs/Git/official-website/Bloomberg_Businessweek_Covers'
 convert_pdf_to_img(folder_path, output_folder)

@@ -2,13 +2,48 @@
 import os
 
 file_names = [i.replace('jpeg','pdf') for i in '''
-The_Economist_20230902.jpeg
-The_Economist_20230909.jpeg
-The_Economist_20230916.jpeg
-The_Economist_20230923.jpeg
-The_Economist_20230930.jpeg
-The_Economist_20231007.jpeg
-The_Economist_20231014.jpeg
+Barrons_20230102.jpeg
+Barrons_20230109.jpeg
+Barrons_20230116.jpeg
+Barrons_20230123.jpeg
+Barrons_20230130.jpeg
+Barrons_20230206.jpeg
+Barrons_20230213.jpeg
+Barrons_20230220.jpeg
+Barrons_20230227.jpeg
+Barrons_20230306.jpeg
+Barrons_20230313.jpeg
+Barrons_20230320.jpeg
+Barrons_20230327.jpeg
+Barrons_20230403.jpeg
+Barrons_20230410.jpeg
+Barrons_20230417.jpeg
+Barrons_20230424.jpeg
+Barrons_20230501.jpeg
+Barrons_20230508.jpeg
+Barrons_20230515.jpeg
+Barrons_20230522.jpeg
+Barrons_20230529.jpeg
+Barrons_20230605.jpeg
+Barrons_20230612.jpeg
+Barrons_20230619.jpeg
+Barrons_20230627.jpeg
+Barrons_20230703.jpeg
+Barrons_20230710.jpeg
+Barrons_20230717.jpeg
+Barrons_20230724.jpeg
+Barrons_20230731.jpeg
+Barrons_20230807.jpeg
+Barrons_20230814.jpeg
+Barrons_20230821.jpeg
+Barrons_20230828.jpeg
+Barrons_20230904.jpeg
+Barrons_20230909.jpeg
+Barrons_20230918.jpeg
+Barrons_20230925.jpeg
+Barrons_20231002.jpeg
+Barrons_20231009.jpeg
+Barrons_20231016.jpeg
 '''.split('\n')[1:-1]]
 
 files = (sorted(file_names))
@@ -16,13 +51,48 @@ files.reverse()
 file_names = files
 
 google_links = '''
-https://drive.google.com/open?id=1CY9qhE61Fqk6KVyaMYYDY1gp46tGsgb3&usp=drive_copy
-https://drive.google.com/open?id=1nn9AL1VLyuRvWxxC5dD2DewLVWYTGbwH&usp=drive_copy
-https://drive.google.com/open?id=1IoHdIfevyE7JEKk4jr3C6tSZyJJIR7eA&usp=drive_copy
-https://drive.google.com/open?id=1xb0vIA_qAeE6ezzMSKukX4-pWwaM5u-h&usp=drive_copy
-https://drive.google.com/open?id=1Oe_jY3OirhFbAMhPJZv_ZrpKxoaQf17b&usp=drive_copy
-https://drive.google.com/open?id=1TvyVd6MSViyqgMpS63fkxaqWixfc4fFr&usp=drive_copy
-https://drive.google.com/open?id=1nCvcx0RIctbz-5Q7udMCZ894NWT4MZE8&usp=drive_copy
+https://drive.google.com/open?id=1OOVqmLFTEPqB2bka0V9rUGyNbx5d6di0&usp=drive_copy
+https://drive.google.com/open?id=16PPoOcHUWzJrxJESMypArvckkEm4N-0f&usp=drive_copy
+https://drive.google.com/open?id=14GDggO9BmvMV1CSDQ7FbKMDSmWEM2-l_&usp=drive_copy
+https://drive.google.com/open?id=1dDCsU56j_6AhZWWyg5AXLXSK_HhFJKl6&usp=drive_copy
+https://drive.google.com/open?id=1lUy-YaGhKiHkEpmUGGBNev08JvoqJz1C&usp=drive_copy
+https://drive.google.com/open?id=14gkyDHwMGjcLatTl1qvqAjpg1J1KTTxY&usp=drive_copy
+https://drive.google.com/open?id=1ghzmfReYfn9lxyYIDe1pn_6JfL8zK9kH&usp=drive_copy
+https://drive.google.com/open?id=1Zx0oTKVfjRVTagR2aHHRMh1PXzutAEDk&usp=drive_copy
+https://drive.google.com/open?id=183ww2fIUCt5PpfeGHkyQuCj-Dsr7Rmss&usp=drive_copy
+https://drive.google.com/open?id=1kERCE32d8Y5BfbaU6Mh0CpejNLRN4YrA&usp=drive_copy
+https://drive.google.com/open?id=1RegyXCTe7bInSyNVUtbzhKkvA7On5q-5&usp=drive_copy
+https://drive.google.com/open?id=1OH5pvuMX6-ESmGpajq_FgH0cfQ74ifKu&usp=drive_copy
+https://drive.google.com/open?id=1j9b-x3XEe5T7wsMQw991SJvVaKjN229h&usp=drive_copy
+https://drive.google.com/open?id=1NU0RVvYZXaGGwXFiN_BqTagGIjxeqioK&usp=drive_copy
+https://drive.google.com/open?id=1V1B0Z4IuJfR0hQIucsp940Gyjd6qt88M&usp=drive_copy
+https://drive.google.com/open?id=1_s_K9PFB_qj3Sq7KlGU_ClyXYNIufVkt&usp=drive_copy
+https://drive.google.com/open?id=19OR84vl4_GbWUj02T23qW6gGMnmDVrH1&usp=drive_copy
+https://drive.google.com/open?id=1SatIUTRCEnRjZTKYgkM3E9mKxWtw1E67&usp=drive_copy
+https://drive.google.com/open?id=1aHbKWqYmw8VhiQUhyO5twtb9Q4-pfwXP&usp=drive_copy
+https://drive.google.com/open?id=1kH3Q1RtrsR9mHcg55qCmwWEQJZK9vwIN&usp=drive_copy
+https://drive.google.com/open?id=1C2RPUxfTWWgrSBxevH47AC7FCY_ZUAkr&usp=drive_copy
+https://drive.google.com/open?id=1mfuWmJcRR3MT0e0aYne3Z6rj0KZBz21u&usp=drive_copy
+https://drive.google.com/open?id=1JzW2Zbl2ZGfPWj-2lVbA0faYwrGiTRG-&usp=drive_copy
+https://drive.google.com/open?id=16rtl-BvRMRCc4_2svyF7Sat_zCbmdIvJ&usp=drive_copy
+https://drive.google.com/open?id=1HLmQe5D3n078QV07QlamYC5O-BYpLqhR&usp=drive_copy
+https://drive.google.com/open?id=18VdcjJGrDOg87Bzdi7-6HfikxaxPwlnf&usp=drive_copy
+https://drive.google.com/open?id=1BszAHf_F7oKdTrBGeqa2eCH39Kkdcu0_&usp=drive_copy
+https://drive.google.com/open?id=1i5dOBuV2WBOgKHpX5eVFq-MFma6APwSI&usp=drive_copy
+https://drive.google.com/open?id=1-d8WBFxSo0MvOxJqBUh_VMWy56fhxEsz&usp=drive_copy
+https://drive.google.com/open?id=1kCHfixub-0SIf-eg4eGAH-qsyQEmf-uD&usp=drive_copy
+https://drive.google.com/open?id=1j23lKQngZVqd2Yg1_LUGvk20ifmvRJ_P&usp=drive_copy
+https://drive.google.com/open?id=19jTA6wAbXBKI0P6Fi1OVfS1EjqSRJ5aL&usp=drive_copy
+https://drive.google.com/open?id=14b-gVDGJDTt8HsiwI5TTYi1bpHDVkdp1&usp=drive_copy
+https://drive.google.com/open?id=1nIjQnuzdSJodMZibGEVzfW1K_kVSIIYi&usp=drive_copy
+https://drive.google.com/open?id=1r6nB3Qv1mmntygmgMcXYX2tTytQQbLZz&usp=drive_copy
+https://drive.google.com/open?id=1C2o9eVU5JTiiN9rhG2lNykxL_P_wO7I7&usp=drive_copy
+https://drive.google.com/open?id=1iawjIYFi1oPWaPekniqyce-D11sGiv6E&usp=drive_copy
+https://drive.google.com/open?id=1XOkDds0B0d3DIOCQyZJIjAT_-F-3JvAg&usp=drive_copy
+https://drive.google.com/open?id=1EXM4HEE2gi1N1Nx_oVwoJ_Dyf9kln0vx&usp=drive_copy
+https://drive.google.com/open?id=172ECpPMhw4SgRtK7cOtEzkIkXN1zVgdn&usp=drive_copy
+https://drive.google.com/open?id=1Klzos3BWRvr42BkpkA7_nd5zRgbXt5-m&usp=drive_copy
+https://drive.google.com/open?id=1F8ohjwBb3Nq7Yw-QKT6i5PCARM5WEgwa&usp=drive_copy
 '''.split('\n')[1:-1]
 
 for file_name, google_link in zip(file_names, google_links):
@@ -31,11 +101,11 @@ for file_name, google_link in zip(file_names, google_links):
                   <!-- File Start -->
                   <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                      <div class="card">
-                        <img src="The_Economist_Covers/{file_name.replace('.pdf','.jpeg')}" alt="{file_name.replace('.pdf','.jpeg')}" class="card-img-top">
+                        <img src="Barrons_Covers/{file_name.replace('.pdf','.jpeg')}" alt="{file_name.replace('.pdf','.jpeg')}" class="card-img-top">
                         <div class="card-body text-center">
                            <h5 class="card-title">
                               The Economist<br></br>
-                              <p>2023-{file_name.split('ist_')[1].split('.jpeg')[0][4:6]}-{file_name.split('ist')[1].split('.jpeg')[0][7:9]}</p>
+                              <p>2023-{file_name.split('Barrons_')[1].split('.jpeg')[0][4:6]}-{file_name.split('Barrons_')[1].split('.jpeg')[0][6:8]}</p>
                            </h5>
                            <a href="{google_link}" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px; background: white; color: #333333; border-width: 1px; border-color: #333333">
                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">

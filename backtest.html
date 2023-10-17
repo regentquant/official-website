@@ -77,9 +77,9 @@
     <!-- TradingView Widget END -->
          <div id="main" style="text-align: center; margin-top: 20px">
 
-            <div><a href="https://www.regentquant.com"><img src="logo.svg" style="width: 100px; margin-top: 20px"></a></div>
-<p>BLUE Line represents Theoretical growth of $100 if invested in Regent Quant</p><br>
-           <p>RED Line represents Theoretical growth of $100 if invested in S&P500</p>
+            <div style="margin-bottom: 70px"><a href="https://www.regentquant.com"><img src="logo.svg" style="width: 100px; margin-top: 20px"></a></div>
+<p><b style="color:blue;">BLUE</b> line represents Theoretical growth of $100 if invested in Regent Quant</p><br>
+           <p><b style="color: red">RED</b> line represents Theoretical growth of $100 if invested in S&P500</p>
 <div id="chart" style="margin: auto; margin-top: 100px;"></div>
 
 
@@ -721,5 +721,25 @@ chart.timeScale().fitContent();
 </script>
            <div style="height: 200px"></div>
          </div>
+
 </body>
+<style>
+@font-face {
+      font-family: 'Museo Sans';
+      src: url('fonts/MuseoSans_700.otf') format('opentype'); /* Update the URL with the correct file path */
+      font-weight: 700;
+      font-style: normal;
+      }
+      @font-face {
+      font-family: 'Museo Sans';
+      src: url('fonts/MuseoSans_500.otf') format('opentype'); /* Update the URL with the correct file path */
+      font-weight: 500;
+      font-style: normal;
+      }
+p {
+  font-family: "Museo Sans", sans-serif;
+  font-weight: 700;
+  margin-bottom: -20px;
+}
+</style>
 </html>

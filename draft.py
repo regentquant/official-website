@@ -1,370 +1,341 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-          <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LYVSDS633M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LYVSDS633M');
-</script>
- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archives</title>
-    <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-<!-- jQuery, Popper.js, and Bootstrap JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </head>
-    <body>
-      <div style="margin: 20px">
-
-<div id="main" style="text-align: center">
-
-    <div><a href="https://www.regentquant.com"><img src="logo.svg" style="width: 100px; margin-top: 20px"></a></div>
-
-    <div class="container mt-5 custom-container">
-        <div class="row justify-content-center">
-
-<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-    <div class="card">
-        <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20231016.jpeg" alt="Bloomberg_Businessweek_20231016.jpeg" class="card-img-top">
-        <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20231016</p></h5>
-            <a href="https://drive.google.com/open?id=12qSPYMPLSVxYjmlTSiXkvJDLZbvkUC_F&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
-        </div>
-    </div>
-</div>
-
+data = '''
+<!-- File 1 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20231009.jpeg" alt="Bloomberg_Businessweek_20231009.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20231009</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20231009</h5>
             <a href="https://drive.google.com/open?id=1ifH7Cy13zWuYNbCtHE71CJWYFzYACE20&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 2 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230918.jpeg" alt="Bloomberg_Businessweek_20230918.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230918</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230918</h5>
             <a href="https://drive.google.com/open?id=1Do1FMZ6GpQ6VJclCpH4PljnnLV7fdpLf&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 3 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230904.jpeg" alt="Bloomberg_Businessweek_20230904.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230904</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230904</h5>
             <a href="https://drive.google.com/open?id=144wDPqhlDa9q2ikVFnq8qih9J7ePu5hc&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 4 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230828.jpeg" alt="Bloomberg_Businessweek_20230828.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230828</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230828</h5>
             <a href="https://drive.google.com/open?id=1HzccO5tSLa-IdHg7PoT0gCIb2N7P4VPW&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 5 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230821.jpeg" alt="Bloomberg_Businessweek_20230821.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230821</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230821</h5>
             <a href="https://drive.google.com/open?id=1tl8kDFBC6-ekheUrbImsUlfH0wVz9u_2&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 6 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230807.jpeg" alt="Bloomberg_Businessweek_20230807.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230807</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230807</h5>
             <a href="https://drive.google.com/open?id=1_tP2aI__PRAj_M0joo8-6eOFKsV6Zw3k&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 7 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230717.jpeg" alt="Bloomberg_Businessweek_20230717.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230717</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230717</h5>
             <a href="https://drive.google.com/open?id=1VNvRWTUtq22F99gsm6WWMWSPmebur4Kw&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 8 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230703.jpeg" alt="Bloomberg_Businessweek_20230703.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230703</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230703</h5>
             <a href="https://drive.google.com/open?id=16DoKKFulE0O3_XwtQnQhDyzkOjsVJmfo&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 9 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230626.jpeg" alt="Bloomberg_Businessweek_20230626.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230626</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230626</h5>
             <a href="https://drive.google.com/open?id=1F82rLJAugXvGKComa51Tlvv0xPrO9KbW&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 10 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230619.jpeg" alt="Bloomberg_Businessweek_20230619.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230619</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230619</h5>
             <a href="https://drive.google.com/open?id=1U1JbZu6tnDrXZ76e41tNL4bxQOIwVkEP&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 11 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230612.jpeg" alt="Bloomberg_Businessweek_20230612.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230612</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230612</h5>
             <a href="https://drive.google.com/open?id=1yxvUSVHAG-eAPNKheimIUIcE5acFCrrq&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 12 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230529.jpeg" alt="Bloomberg_Businessweek_20230529.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230529</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230529</h5>
             <a href="https://drive.google.com/open?id=1wolf__9K6e3j6lHBzqq8ySauewEfYqVn&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 13 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230522.jpeg" alt="Bloomberg_Businessweek_20230522.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230522</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230522</h5>
             <a href="https://drive.google.com/open?id=1-WRxmgAqhwpx-3Da1nxs3qzL9BCwNgk1&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 14 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230508.jpeg" alt="Bloomberg_Businessweek_20230508.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230508</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230508</h5>
             <a href="https://drive.google.com/open?id=1K-EnufNVRitaYk8xZZROaGtLxch1-fCC&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 15 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230501.jpeg" alt="Bloomberg_Businessweek_20230501.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230501</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230501</h5>
             <a href="https://drive.google.com/open?id=1Irb8NEZfRVqDrFZnBDcGIsN37L3bFcbN&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 16 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230424.jpeg" alt="Bloomberg_Businessweek_20230424.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230424</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230424</h5>
             <a href="https://drive.google.com/open?id=12_gw7__JN5ttki3rmP_HcJM-Fg7ztizs&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 17 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230410.jpeg" alt="Bloomberg_Businessweek_20230410.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230410</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230410</h5>
             <a href="https://drive.google.com/open?id=1oqodBbtQulBU8dwqUuNIqSOcmIznZ41f&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 18 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230403.jpeg" alt="Bloomberg_Businessweek_20230403.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230403</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230403</h5>
             <a href="https://drive.google.com/open?id=1yVICgwKO2BJ2qZQmYICeU1pBmG04AHVW&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 19 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230320.jpeg" alt="Bloomberg_Businessweek_20230320.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230320</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230320</h5>
             <a href="https://drive.google.com/open?id=1GZgIwPuWtHbsQj7IjfbglOajNj6_W2oA&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 20 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230313.jpeg" alt="Bloomberg_Businessweek_20230313.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230313</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230313</h5>
             <a href="https://drive.google.com/open?id=1xb5odJwil93zJXeXaDRqBlRNAtYgdqlv&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 21 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230306.jpeg" alt="Bloomberg_Businessweek_20230306.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230306</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230306</h5>
             <a href="https://drive.google.com/open?id=1ngL3WDQbzlxNf8ZaAv9Gzm3G4vAXoV-4&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 22 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230220.jpeg" alt="Bloomberg_Businessweek_20230220.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230220</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230220</h5>
             <a href="https://drive.google.com/open?id=1_zqR38BVhSoOJckNEUTU4a7gfholaGyX&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 23 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230213.jpeg" alt="Bloomberg_Businessweek_20230213.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230213</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230213</h5>
             <a href="https://drive.google.com/open?id=1x7HMJxwckbUuD1D6zbxW66cBDLMNb8d5&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 24 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230206.jpeg" alt="Bloomberg_Businessweek_20230206.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230206</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230206</h5>
             <a href="https://drive.google.com/open?id=1F-R0GVGSvpLuGsTL1gaY4f89SgSp_I72&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 25 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230130.jpeg" alt="Bloomberg_Businessweek_20230130.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230130</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230130</h5>
             <a href="https://drive.google.com/open?id=12ArMCcK5--k5OHiMqlF3U1fWhEqcdIap&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 26 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230123.jpeg" alt="Bloomberg_Businessweek_20230123.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230123</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230123</h5>
             <a href="https://drive.google.com/open?id=1539xOPyUj7S4gaHvs1tak_PQf7Kq7Pqd&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 27 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230116.jpeg" alt="Bloomberg_Businessweek_20230116.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230116</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230116</h5>
             <a href="https://drive.google.com/open?id=1C0nEu13Q3M5VwyzbaNRMrWjNe6yPr0Gp&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
 
+
+<!-- File 28 -->
 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     <div class="card">
         <img src="Bloomberg_Businessweek_Covers/Bloomberg_Businessweek_20230109.jpeg" alt="Bloomberg_Businessweek_20230109.jpeg" class="card-img-top">
         <div class="card-body text-center">
-            <h5 class="card-title">Bloomberg Businessweek<br></br><p>20230109</p></h5>
+            <h5 class="card-title">Bloomberg Businessweek 20230109</h5>
             <a href="https://drive.google.com/open?id=19oqifYIjUpwcvXmbJ4ge48u07yqEIUkY&usp=drive_copy" class="btn btn-primary" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">Download</a>
         </div>
     </div>
 </div>
+'''.split('\n\n')
 
 
-        </div>
-    </div>
-</div>
+for i in data:
+  print(i.replace('Businessweek ','Businessweek<br></br><p>').replace('</h5>','</p></h5>').split('-->')[1])
 
-      </div>
-
-    <div class="footer" style="width: 100%; height: 200px; background: black; margin-top: 50px; color: white; text-align: center; display: flex; justify-content: center; align-items: center;">
-    <p style="margin: 0;" id="footer">Share Knowledge To Create A Better Future</p>
-</div>
-
-  </body>
-  <style>
-
-    @font-face {
-        font-family: 'Museo Sans';
-        src: url('fonts/MuseoSans_700.otf') format('opentype'); /* Update the URL with the correct file path */
-        font-weight: 700;
-        font-style: normal;
-        }
-        @font-face {
-        font-family: 'Museo Sans';
-        src: url('fonts/MuseoSans_500.otf') format('opentype'); /* Update the URL with the correct file path */
-        font-weight: 500;
-        font-style: normal;
-        }
- footer {
-      font-family: "Museo Sans", sans-serif;
-      font-weight: 700;
-
-  }
-  a {
-    margin-bottom: 20px;
-  }
-  h5 {
-        font-family: "Museo Sans", sans-serif;
-    font-weight: 700;
-  }
-    p {
-      font-size: medium;
-      color: #929292;
-      font-weight: 500;
-      margin-top: -15px;
-      margin-bottom: -10px;
-    }
-    </style>
-</html>

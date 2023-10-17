@@ -21,6 +21,62 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
    </head>
    <body>
+       <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+                "symbols": [
+                {
+                    "proName": "NASDAQ:AAPL",
+                    "title": "Apple"
+                },
+                {
+                    "proName": "NASDAQ:MSFT",
+                    "title": "Microsoft"
+                },
+                {
+                    "proName": "NASDAQ:GOOG",
+                    "title": "Alphabet"
+                },
+                {
+                    "proName": "NASDAQ:AMZN",
+                    "title": "Amazon"
+                },
+                {
+                    "proName": "NASDAQ:NVDA",
+                    "title": "Nvidia"
+                },
+                {
+                    "proName": "NASDAQ:META",
+                    "title": "Meta"
+                },
+                                {
+                    "proName": "NASDAQ:TSLA",
+                    "title": "Telsa"
+                },
+                                {
+                    "proName": "NYSE:BRK.A",
+                    "title": "Berkshire Hathaway"
+                },
+                                            {
+                    "proName": "NYSE:LLY",
+                    "title": "Eli Lilly and Company"
+                },                                            {
+                    "proName": "NYSE:UNH",
+                    "title": "UnitedHealth Group"
+                }
+
+            ],
+                "showSymbolLogo": true,
+                "colorTheme": "light",
+                "isTransparent": false,
+                "displayMode": "adaptive",
+                "locale": "en"
+            }
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
       <div style="margin: 20px">
          <div id="main" style="text-align: center">
             <div><a href="https://www.regentquant.com"><img src="logo.svg" style="width: 100px; margin-top: 20px"></a></div>

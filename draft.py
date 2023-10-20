@@ -1,359 +1,209 @@
 data = '''
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-LYVSDS633M"></script>
-      <script>
-         window.dataLayer = window.dataLayer || [];
+124.5386653
+125.823185
+124.4888777
+129.0693356
+129.597084
+130.1746199
+132.9228946
+132.8432345
+134.1874993
+135.3624863
+134.6355876
+134.6953327
+137.2842871
+140.5105226
+141.92449
+141.2573364
+143.348415
+145.3100458
+142.3924933
+143.677013
+144.81217
+150.1792716
+153.8436379
+151.0854057
+153.9930006
+151.2745985
+150.2290592
+150.5980497
+153.4303022
+152.7820754
+154.9062648
+153.2906842
+152.1338486
+148.0749514
+148.5037784
+148.9924417
+146.3097799
+147.5164791
+147.0078703
+144.9135991
+145.5119623
+150.6179951
+153.4103568
+151.1864402
+152.4529756
+150.1791954
+148.0948969
+150.0595228
+152.1737395
+152.5726483
+155.4248463
+154.5771651
+156.970618
+158.8454894
+157.3994449
+158.4964442
+159.8128432
+157.8482173
+157.219936
+160.3314247
+161.9170872
+164.4501582
+165.7166937
+165.1781668
+163.3132681
+164.2108129
+161.5879875
+160.3613429
+159.6632524
+165.1083577
+164.7593125
+164.779258
+166.0158753
+167.1727109
+166.1953843
+164.5698308
+164.8789852
+163.3232408
+163.3132681
+167.950583
+169.2171185
+169.127364
+168.0802284
+166.9932019
+165.3377303
+173.0965067
+173.0266977
+171.3014171
+173.0815476
+173.2760157
+172.3372825
+171.8379567
+171.8379567
+172.4571206
+174.8139381
+174.9237897
+173.9650843
+171.3286445
+171.6082669
+172.7567161
+175.1934256
+177.0609039
+177.0109713
+179.8471414
+180.7059817
+179.3378292
+178.9683282
+177.5802026
+180.3264941
+180.7159682
+183.5421518
+183.0627991
+183.7019361
+185.7591581
+184.670628
+184.7605066
+183.7119226
+186.747823
+186.4282546
+185.020156
+187.8063936
+188.9947888
+189.3343303
+193.7084237
+192.20046
+191.0719838
+191.5513365
+190.4228604
+188.3556519
+187.8263666
+189.5140876
+190.2830492
+190.4328469
+193.7283967
+193.4687474
+194.8368999
+192.8695565
+191.6811612
+192.4900689
+193.3588957
+194.237709
+192.9594351
+195.5659154
+196.1850793
+195.3412188
+192.3202982
+190.9121996
+181.7445792
+178.6088136
+179.5575325
+177.9497037
+177.7300003
+177.79
+179.46
+177.45
+176.57
+174
+174.49
+175.84
+177.23
+181.12
+176.38
+178.61
+180.19
+184.12
+187.65
+187.87
+189.46
+189.7
+182.91
+177.56
+178.18
+179.36
+176.3
+174.21
+175.74
+175.01
+177.97
+179.07
+175.49
+173.93
+174.79
+176.08
+171.96
+170.43
+170.69
+171.21
+173.75
+172.4
+173.66
+174.91
+177.49
+178.99
+178.39
+179.8
+180.71
+178.85
+178.72
+177.15
+175.84
+175.46
+'''.split('\n')[1:-1]
+fs = ''
 
-         function gtag() {
-             dataLayer.push(arguments);
-         }
-         gtag('js', new Date());
-         gtag('config', 'G-LYVSDS633M');
-      </script>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Archives</title>
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <!-- jQuery, Popper.js, and Bootstrap JS -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-   </head>
-   <body>
-       <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-            {
-                "symbols": [
-                {
-                    "proName": "NASDAQ:AAPL",
-                    "title": "Apple"
-                },
-                {
-                    "proName": "NASDAQ:MSFT",
-                    "title": "Microsoft"
-                },
-                {
-                    "proName": "NASDAQ:GOOG",
-                    "title": "Alphabet"
-                },
-                {
-                    "proName": "NASDAQ:AMZN",
-                    "title": "Amazon"
-                },
-                {
-                    "proName": "NASDAQ:NVDA",
-                    "title": "Nvidia"
-                },
-                {
-                    "proName": "NASDAQ:META",
-                    "title": "Meta"
-                },
-                                {
-                    "proName": "NASDAQ:TSLA",
-                    "title": "Telsa"
-                },
-                                {
-                    "proName": "NYSE:BRK.A",
-                    "title": "Berkshire Hathaway"
-                },
-                                            {
-                    "proName": "NYSE:LLY",
-                    "title": "Eli Lilly and Company"
-                },                                            {
-                    "proName": "NYSE:UNH",
-                    "title": "UnitedHealth Group"
-                }
+for i in data:
+  fs = f"{fs}{i},"
 
-            ],
-                "showSymbolLogo": true,
-                "colorTheme": "light",
-                "isTransparent": false,
-                "displayMode": "adaptive",
-                "locale": "en"
-            }
-        </script>
-    </div>
-    <!-- TradingView Widget END -->
-      <div style="margin: 20px">
-         <div id="main" style="text-align: center">
-            <div>
-               <a href="https://www.regentquant.com">
-               <img src="logo.svg" style="width: 100px; margin-top: 20px">
-               </a>
-            </div>
-            <div class="container mt-5 custom-container">
-               <div class="row justify-content-center">
-                  <!-- File Start -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                     <div class="card">
-                        <img src="The_Economist_Covers/The_Economist_20231014.jpeg" alt="The_Economist_20231014.jpeg" class="card-img-top">
-                        <div class="card-body text-center">
-                           <h5 class="card-title">
-                              The Economist<br></br>
-                              <p>2023-10-14</p>
-                           </h5>
-                           <a href="https://drive.google.com/open?id=1CY9qhE61Fqk6KVyaMYYDY1gp46tGsgb3&usp=drive_copy" class="btn btn-dark" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px; background: white; color: #333333; border-width: 1px; border-color: #333333">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
-                                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-                              </svg>
-                              Preview
-                           </a>
-                           <br>
-                           <a href="https://drive.google.com/uc?export=download&id=1CY9qhE61Fqk6KVyaMYYDY1gp46tGsgb3&usp=drive_copy" class="btn btn-dark" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                                 <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                              </svg>
-                              Download
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- File End -->
-
-
-                  <!-- File Start -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                     <div class="card">
-                        <img src="The_Economist_Covers/The_Economist_20231007.jpeg" alt="The_Economist_20231007.jpeg" class="card-img-top">
-                        <div class="card-body text-center">
-                           <h5 class="card-title">
-                              The Economist<br></br>
-                              <p>2023-10-07</p>
-                           </h5>
-                           <a href="https://drive.google.com/open?id=1nn9AL1VLyuRvWxxC5dD2DewLVWYTGbwH&usp=drive_copy" class="btn btn-dark" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px; background: white; color: #333333; border-width: 1px; border-color: #333333">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
-                                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-                              </svg>
-                              Preview
-                           </a>
-                           <br>
-                           <a href="https://drive.google.com/uc?export=download&id=1nn9AL1VLyuRvWxxC5dD2DewLVWYTGbwH&usp=drive_copy" class="btn btn-dark" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                                 <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                              </svg>
-                              Download
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- File End -->
-
-
-                  <!-- File Start -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                     <div class="card">
-                        <img src="The_Economist_Covers/The_Economist_20230930.jpeg" alt="The_Economist_20230930.jpeg" class="card-img-top">
-                        <div class="card-body text-center">
-                           <h5 class="card-title">
-                              The Economist<br></br>
-                              <p>2023-09-30</p>
-                           </h5>
-                           <a href="https://drive.google.com/open?id=1IoHdIfevyE7JEKk4jr3C6tSZyJJIR7eA&usp=drive_copy" class="btn btn-dark" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px; background: white; color: #333333; border-width: 1px; border-color: #333333">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
-                                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-                              </svg>
-                              Preview
-                           </a>
-                           <br>
-                           <a href="https://drive.google.com/uc?export=download&id=1IoHdIfevyE7JEKk4jr3C6tSZyJJIR7eA&usp=drive_copy" class="btn btn-dark" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                                 <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                              </svg>
-                              Download
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- File End -->
-
-
-                  <!-- File Start -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                     <div class="card">
-                        <img src="The_Economist_Covers/The_Economist_20230923.jpeg" alt="The_Economist_20230923.jpeg" class="card-img-top">
-                        <div class="card-body text-center">
-                           <h5 class="card-title">
-                              The Economist<br></br>
-                              <p>2023-09-23</p>
-                           </h5>
-                           <a href="https://drive.google.com/open?id=1xb0vIA_qAeE6ezzMSKukX4-pWwaM5u-h&usp=drive_copy" class="btn btn-dark" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px; background: white; color: #333333; border-width: 1px; border-color: #333333">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
-                                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-                              </svg>
-                              Preview
-                           </a>
-                           <br>
-                           <a href="https://drive.google.com/uc?export=download&id=1xb0vIA_qAeE6ezzMSKukX4-pWwaM5u-h&usp=drive_copy" class="btn btn-dark" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                                 <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                              </svg>
-                              Download
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- File End -->
-
-
-                  <!-- File Start -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                     <div class="card">
-                        <img src="The_Economist_Covers/The_Economist_20230916.jpeg" alt="The_Economist_20230916.jpeg" class="card-img-top">
-                        <div class="card-body text-center">
-                           <h5 class="card-title">
-                              The Economist<br></br>
-                              <p>2023-09-16</p>
-                           </h5>
-                           <a href="https://drive.google.com/open?id=1Oe_jY3OirhFbAMhPJZv_ZrpKxoaQf17b&usp=drive_copy" class="btn btn-dark" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px; background: white; color: #333333; border-width: 1px; border-color: #333333">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
-                                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-                              </svg>
-                              Preview
-                           </a>
-                           <br>
-                           <a href="https://drive.google.com/uc?export=download&id=1Oe_jY3OirhFbAMhPJZv_ZrpKxoaQf17b&usp=drive_copy" class="btn btn-dark" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                                 <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                              </svg>
-                              Download
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- File End -->
-
-
-                  <!-- File Start -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                     <div class="card">
-                        <img src="The_Economist_Covers/The_Economist_20230909.jpeg" alt="The_Economist_20230909.jpeg" class="card-img-top">
-                        <div class="card-body text-center">
-                           <h5 class="card-title">
-                              The Economist<br></br>
-                              <p>2023-09-09</p>
-                           </h5>
-                           <a href="https://drive.google.com/open?id=1TvyVd6MSViyqgMpS63fkxaqWixfc4fFr&usp=drive_copy" class="btn btn-dark" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px; background: white; color: #333333; border-width: 1px; border-color: #333333">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
-                                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-                              </svg>
-                              Preview
-                           </a>
-                           <br>
-                           <a href="https://drive.google.com/uc?export=download&id=1TvyVd6MSViyqgMpS63fkxaqWixfc4fFr&usp=drive_copy" class="btn btn-dark" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                                 <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                              </svg>
-                              Download
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- File End -->
-
-
-                  <!-- File Start -->
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                     <div class="card">
-                        <img src="The_Economist_Covers/The_Economist_20230902.jpeg" alt="The_Economist_20230902.jpeg" class="card-img-top">
-                        <div class="card-body text-center">
-                           <h5 class="card-title">
-                              The Economist<br></br>
-                              <p>2023-09-02</p>
-                           </h5>
-                           <a href="https://drive.google.com/open?id=1nCvcx0RIctbz-5Q7udMCZ894NWT4MZE8&usp=drive_copy" class="btn btn-dark" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px; background: white; color: #333333; border-width: 1px; border-color: #333333">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
-                                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-                              </svg>
-                              Preview
-                           </a>
-                           <br>
-                           <a href="https://drive.google.com/uc?export=download&id=1nCvcx0RIctbz-5Q7udMCZ894NWT4MZE8&usp=drive_copy" class="btn btn-dark" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                                 <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                              </svg>
-                              Download
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- File End -->
-
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="footer" style="width: 100%; height: 200px; background: black; margin-top: 50px; color: white; text-align: center; display: flex; justify-content: center; align-items: center;">
-         <p style="margin: 0;" id="footer">Share Knowledge To Create A Better Future</p>
-      </div>
-   </body>
-   <style>
-      @font-face {
-      font-family: 'Museo Sans';
-      src: url('fonts/MuseoSans_700.otf') format('opentype');
-      /* Update the URL with the correct file path */
-      font-weight: 700;
-      font-style: normal;
-      }
-      @font-face {
-      font-family: 'Museo Sans';
-      src: url('fonts/MuseoSans_500.otf') format('opentype');
-      /* Update the URL with the correct file path */
-      font-weight: 500;
-      font-style: normal;
-      }
-      #footer {
-      font-family: "Museo Sans", sans-serif;
-      font-weight: 700;
-      color: white;
-      }
-      a {
-      margin-bottom: 20px;
-      }
-      h5 {
-      font-family: "Museo Sans", sans-serif;
-      font-weight: 700;
-      }
-      p {
-      font-size: medium;
-      color: #929292;
-      font-weight: 500;
-      margin-top: -15px;
-      margin-bottom: -10px;
-      }
-      .btn {
-      font-family: "Museo Sans", sans-serif;
-      font-weight: 500;
-      font-size: small;
-      }
-            .bi {
-      margin-right: 5px;
-      margin-top: -3px;
-      }
-   </style>
-</html>
-'''.replace('''
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
-                                 <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-                              </svg>
-''', '''
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
-  <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
-</svg>''')
-
-
-
-
-print(data)
+print(fs)

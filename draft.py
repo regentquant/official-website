@@ -1,23 +1,9 @@
-d = '''
-108
-122
-113
-123
-127
-123
-113
-120
-118
-128
-116
-106
-124
-119
-125
-110
-'''.split('\n')[1:-1]
+import pyperclip
+
+d = pyperclip.paste().split('\n')
+d = [i.replace('\r','') for i in d]
 s=''
 for i in d:
-  s = f"{s}{i},"
+  s = f"{s}'{i}',"
 
 print(s)

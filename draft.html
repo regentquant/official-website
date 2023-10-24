@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Regent Quant</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+ /* Existing CSS */
+body {
+    margin: 0px;
+}
+
+#main-header {
+    background-image: url('wallpaper.jpg');
+    height: 500px;
+    color: #FFF;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#logo {
+    padding: 16px;
+    height: 48px;
+}
+
+/* New/Modified CSS */
+.navbar-collapse {
+    position: ;
+    top: 0;
+    right: 100%;  /* Initially keep it off-screen to the right */
+    width: 100%;   /* Assuming you want it to be full width */
+    transition: right 0s;  /* Smooth transition */
+}
+
+.navbar-toggler:focus + .navbar-collapse {
+    right: 0;  /* Bring it to view when the button is clicked */
+}
+
+/* When the navbar is not collapsed */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        right: 0;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+<header id="main-header">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+        <img id="logo" src="logo_new.svg" alt="Logo" class="d-inline-block align-text-top">
+    </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

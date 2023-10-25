@@ -858,19 +858,22 @@
       .button:hover {
       background-color: rgba(255, 255, 255, 0.8);
       }
-      .tesla-button {
-      padding: 10px 15px;
-      border-radius: 5px;
-      margin-right: 10px;
-      text-decoration: none;
-      display: inline-block;
-      backdrop-filter: var(--tcl-button-backdrop-filter);
-      background-color: var(--tds-btn--background-color);
-      color: var(--tds-theme-foreground-high-contrast);
-      }
-      .tesla-button:hover {
-      background-color: rgba(62, 106, 225, 0.3);
-      }
+.tesla-button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    text-decoration: none;
+    display: inline-block;
+    backdrop-filter: var(--tcl-button-backdrop-filter);
+    -webkit-backdrop-filter: var(--tcl-button-backdrop-filter); /* for Safari */
+    background-color: var(--tds-btn--background-color);
+    color: var(--tds-theme-foreground-high-contrast);
+}
+
+.tesla-button:hover {
+    background-color: rgba(62, 106, 225, 0.3);
+}
+
       body, html {
       margin: 0 !important;
       padding: 0 !important;

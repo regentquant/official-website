@@ -5,7 +5,7 @@ left: 10%;
 width: 80%;
 height: 800px;
 }
-h1 {
+.chart-title {
 font-family: "Saira Condensed", sans-serif;
 font-weight: 700;
 color: #333333;
@@ -48,7 +48,7 @@ color: #959595;
 a:hover {
 color: #333333;
 }
-img {
+#site-logo {
 width: 152px;
 margin-bottom: 10px;
 padding-left: 2px;
@@ -68,17 +68,22 @@ padding-left: 10px;
 padding-right: 10px;
 padding-top: 2px;
 padding-bottom: 2px;
+
 }
 button:hover {
 color: #959595;
 }
-#how-to-use {
-color: #959595;
-font-weight: 500;
-}
+
 section {
 text-align: left;
 margin: auto;
 width: 80%;
 padding-top: 100px;
+}
+
+#download-link {
+  color: #ffffff;
+}
+#download-link:hover {
+  color: #959595;
 }

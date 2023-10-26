@@ -25,12 +25,12 @@
    </head>
    <body>
       <section>
-         <img src="REGENTQUANT.svg">
-         <h1>Regent Quant QQQ Capital Trend</h1>
-         <h2><a href="https://www.regentquant.com">Go Back To Home Screen</a></h2>
-                  <h2 id="how-to-use">How to use: Investors can predict future price trend by looking at capital trend. Candlestick chart shows underlying stock's historical adjusted OHLC price. Line chart shows daily block order amount (Unit$). Here block order stands for the largest 30% of orders in terms of turnover over the past 200 days. The data is estimated by algorithm and for reference only.</h2>
+         <img id="site-logo" src="REGENTQUANT.svg">
+         <h1 class="chart-title">Regent Quant QQQ Capital Trend</h1>
+         <h2 class="go-back-to-home-screen"><a href="https://www.regentquant.com">Go Back To Home Screen</a></h2>
+         <h2>How to use: Investors can predict future price trend by looking at capital trend. Candlestick chart shows underlying stock's historical adjusted OHLC price. Line chart shows daily block order amount (Unit$). Here block order stands for the largest 30% of orders in terms of turnover over the past 200 days. The data is estimated by algorithm and for reference only.</h2>
         <button id="download-chart">Save Chart</button>
-         <button id="download-data">Download Data</button>
+         <button id="download-data"><a href="qqq-capital-trend-2023-10-25.csv" id="download-link">Download Data</a></button>
       </section>
       <!-- Fund NAV Chart -->
       <div id="container"></div>

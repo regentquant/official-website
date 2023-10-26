@@ -1,4 +1,4 @@
-#fund-nav-chart-container {
+#container {
 position: absolute;
 top: 10%;
 left: 10%;
@@ -12,15 +12,15 @@ color: #333333;
 font-size: 2rem;
 margin-bottom: 10px;
 }
-#fund-nav-chart-container {
+#container {
 width: 80%;
 height: 80vh;  /* Set height as a percentage of the viewport height */
-margin-top: 150px;
 position: relative;
-top: -100px;
+margin-top: 10px !important;
+top: 0px !important;
 }
 @media screen and (max-width: 767px) {
-#fund-nav-chart-container {
+#container {
 margin-top: 150px;
 position: relative;
 top: -100px;
@@ -28,6 +28,7 @@ top: -100px;
 }
 #footer {
 position: relative;
+top: 50px;
 bottom: 0px;
 width: 100%;
 height: 300px;
@@ -56,6 +57,7 @@ pointer-events: none; /* Disable mouse interactions */
 }
 button {
 margin-top: 10px;
+margin-bottom: 10px;
 border-width: 0px;
 background: #333333;
 color: #FFFFFF;
@@ -68,10 +70,15 @@ padding-top: 2px;
 padding-bottom: 2px;
 }
 button:hover {
-background: #FFFFFF;
-color: #333333;
-border-width: 1px;
-border-color: #333333;
-padding-top: 1px;
-padding-bottom: 1px;
+color: #959595;
+}
+#how-to-use {
+color: #959595;
+font-weight: 500;
+}
+section {
+text-align: left;
+margin: auto;
+width: 80%;
+padding-top: 100px;
 }

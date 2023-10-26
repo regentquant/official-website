@@ -506,7 +506,7 @@ chart.timeScale().fitContent();
          const chartContainer = document.getElementById('container');
 
          html2canvas(chartContainer, {
-         scale: 5  // Increase this value for higher resolution
+         scale: 10 // Increase this value for higher resolution
          }).then(canvas => {
          const link = document.createElement('a');
          link.href = canvas.toDataURL('image/png');

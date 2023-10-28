@@ -14,6 +14,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Fund NAV</title>
       <link rel="icon" type="image/x-icon" href="favicon_1.png">
+       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,6 +106,26 @@
            width: 80%;
            margin: auto;
          }
+ /* Table Styles */
+    .custom-table {
+      margin-top: 20px;
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #F2F2F2;
+      font-family: "Saira Condensed", sans-serif;
+    }
+    .custom-table th, .custom-table td {
+      border-top: 2px solid white;
+      border-bottom: 2px solid white;
+      text-align: left;
+      padding-left: 10px;
+      height: 5px;
+      font-size: small;
+    }
+    .custom-table thead {
+      background-color: #7F7F7F;
+      color: white;
+    }
       </style>
    </head>
    <body>
@@ -118,7 +140,26 @@
       <!-- Fund NAV Chart -->
       <div id="fund-nav-chart-container"></div>
 
-      <section id="dashboard">s</section>
+      <section id="dashboard">
+
+<table class="custom-table">
+  <thead>
+    <tr>
+      <th>Days Since Inception</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>119</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+
+      </section>
 
       <section id="footer"></section>
       <script type="text/javascript">
@@ -180,6 +221,8 @@
          });
          });
 
+
       </script>
+
    </body>
 </html>

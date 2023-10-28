@@ -103,9 +103,10 @@
       <section style="text-align: left; margin: auto; width: 80%; padding-top: 100px">
          <img src="REGENTQUANT.svg">
          <h1>Regent Aggressive Growth Private Fund NAV (Weekly & Public Version)</h1>
+                 <h2>Last updated: October 27, 2023</h2>
          <h2><a href="https://www.regentquant.com">Go Back To Home Screen</a></h2>
+
          <button id="download-chart">Save Chart</button>
-         <button id="download-data">Download Data</button>
       </section>
       <!-- Fund NAV Chart -->
       <div id="fund-nav-chart-container"></div>
@@ -116,23 +117,24 @@
          const baselineSeries = chart.addBaselineSeries({ baseValue: { type: 'price', price: 100 }, topLineColor: 'rgba( 38, 166, 154, 1)', topFillColor1: 'rgba( 38, 166, 154, 0.28)', topFillColor2: 'rgba( 38, 166, 154, 0.05)', bottomLineColor: 'rgba( 239, 83, 80, 1)', bottomFillColor1: 'rgba( 239, 83, 80, 0.05)', bottomFillColor2: 'rgba( 239, 83, 80, 0.28)' });
 
          const data = [
-         { value: 100.0000, time: 1688083200 },
-         { value: 96.6497, time: 1688688000 },
-         { value: 106.9302, time: 1689292800 },
-         { value: 103.1479, time: 1689897600 },
-         { value: 109.7243, time: 1690502400 },
-         { value: 100.1475, time: 1691107200 },
-         { value: 94.6994, time: 1691712000 },
-         { value: 91.7657, time: 1692144000 },
-         { value: 92.6439, time: 1692921600 },
-         { value: 103.2930, time: 1693526400 },
-         { value: 99.1047, time: 1694131200 },
-         { value: 97.1640, time: 1694736000 },
-         { value: 87.0461, time: 1695340800 },
-         { value: 87.3086, time: 1695945600 },
-         { value: 96.1599, time: 1696550400 },
-         { value: 94.1884, time: 1697155200 },
-         { value: 84.5230, time: 1697760000 },
+  { value: 100.0000, time: 1688083200 },
+  { value: 96.6497, time: 1688688000 },
+  { value: 106.9302, time: 1689292800 },
+  { value: 103.1479, time: 1689897600 },
+  { value: 109.7243, time: 1690502400 },
+  { value: 100.1475, time: 1691107200 },
+  { value: 94.6994, time: 1691712000 },
+  { value: 91.7657, time: 1692144000 },
+  { value: 92.6439, time: 1692921600 },
+  { value: 103.2930, time: 1693526400 },
+  { value: 99.1047, time: 1694131200 },
+  { value: 97.1640, time: 1694736000 },
+  { value: 87.0461, time: 1695340800 },
+  { value: 87.3086, time: 1695945600 },
+  { value: 96.1599, time: 1696550400 },
+  { value: 94.1884, time: 1697155200 },
+  { value: 84.5230, time: 1697760000 },
+  { value: 77.8002, time: 1698364800 },
          ];
 
          baselineSeries.setData(data);

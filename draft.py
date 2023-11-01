@@ -685,7 +685,7 @@ for name, googlelink, googlepreview in zip(names, googlelinks, googlepreviews):
   print(f"""
     <!-- Image card {name.split('EDS')[1].replace('.JPG','')} -->
   <div class="image-card">
-    <img src="{googlepreview}" alt="{name.replace('JPG','JPG')}">
+    <img src="/20231031-halloween/{name.replace('JPG','JPG')}" alt="{name.replace('JPG','JPG')}">
     <a class="download-btn" href="{googlelink}">Download</a>
   </div>
   """)

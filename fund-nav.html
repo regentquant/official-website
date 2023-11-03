@@ -134,9 +134,30 @@
       background-color: #7F7F7F;
       color: white;
     }
+
+
       </style>
    </head>
    <body>
+   <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="welcomeModalLabel">Welcome Message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Welcome to our website! Read this important message before you continue.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
       <section style="text-align: left; margin: auto; width: 80%; padding-top: 100px">
          <img src="REGENTQUANT-WHITE.svg" alt="logo">
          <h1>Regent Aggressive Growth Private Fund NAV (Weekly & Public Version)</h1>
@@ -171,26 +192,26 @@
          }};
 
 const chart = LightweightCharts.createChart(document.getElementById('fund-nav-chart-container'), chartOptions);
-const candlestickSeries = chart.addCandlestickSeries({ upColor: '#26a69a', downColor: '#ef5350', borderVisible: false, wickUpColor: '#26a69a', wickDownColor: '#ef5350' });
+const candlestickSeries = chart.addCandlestickSeries({ upColor: '#14AC9D', downColor: '#F33C75', borderVisible: false, wickUpColor: '#14AC9D', wickDownColor: '#F33C75' });
 
-const data = [{ open: 100, high: 100.0139, low: 96.6497, close: 96.6497, time: 1688342400 },
-{ open: 96.5072, high: 107.0949, low: 96.5072, close: 106.9302, time: 1688515200 },
-{ open: 109.941, high: 112.7859, low: 103.1479, close: 103.1479, time: 1688601600 },
-{ open: 103.641, high: 109.7243, low: 103.641, close: 109.7243, time: 1688688000 },
-{ open: 110.1082, high: 110.1082, low: 100.1475, close: 100.1475, time: 1688947200 },
-{ open: 102.6819, high: 102.6819, low: 94.6994, close: 94.6994, time: 1689033600 },
-{ open: 98.0394, high: 98.0394, low: 88.1341, close: 88.1341, time: 1689120000 },
-{ open: 92.7534, high: 96.8883, low: 90.4468, close: 92.6439, time: 1689206400 },
-{ open: 94.6591, high: 103.6627, low: 94.6591, close: 103.293, time: 1689292800 },
-{ open: 103.8302, high: 103.8302, low: 98.7864, close: 99.1047, time: 1689552000 },
-{ open: 102.7142, high: 102.7142, low: 97.164, close: 97.164, time: 1689638400 },
-{ open: 97.2925, high: 97.2925, low: 86.993, close: 87.0461, time: 1689724800 },
-{ open: 88.2555, high: 88.2555, low: 84.2583, close: 87.3086, time: 1689811200 },
-{ open: 90.6991, high: 96.1599, low: 85.1569, close: 96.1599, time: 1689897600 },
-{ open: 97.637, high: 101.1089, low: 94.1884, close: 94.1884, time: 1690156800 },
-{ open: 98.55, high: 98.55, low: 84.523, close: 84.523, time: 1690243200 },
-{ open: 87.233, high: 90.5479, low: 74.9855, close: 77.8002, time: 1690329600 },
-{ open: 80.7487, high: 89.9546, low: 80.7487, close: 89.9546, time: 1690416000 },];
+const data = [{ open: 100, high: 100.0139, low: 96.6497, close: 96.6497, time: '2023-07-03' },
+{ open: 96.5072, high: 107.0949, low: 96.5072, close: 106.9302, time: '2023-07-10' },
+{ open: 109.941, high: 112.7859, low: 103.1479, close: 103.1479, time: '2023-07-17' },
+{ open: 103.641, high: 109.7243, low: 103.641, close: 109.7243, time: '2023-07-24' },
+{ open: 110.1082, high: 110.1082, low: 100.1475, close: 100.1475, time: '2023-07-31' },
+{ open: 102.6819, high: 102.6819, low: 94.6994, close: 94.6994, time: '2023-08-07' },
+{ open: 98.0394, high: 98.0394, low: 88.1341, close: 88.1341, time: '2023-08-14' },
+{ open: 92.7534, high: 96.8883, low: 90.4468, close: 92.6439, time: '2023-08-21' },
+{ open: 94.6591, high: 103.6627, low: 94.6591, close: 103.293, time: '2023-08-28' },
+{ open: 103.8302, high: 103.8302, low: 98.7864, close: 99.1047, time: '2023-09-05' },
+{ open: 102.7142, high: 102.7142, low: 97.164, close: 97.164, time: '2023-09-11' },
+{ open: 97.2925, high: 97.2925, low: 86.993, close: 87.0461, time: '2023-09-18' },
+{ open: 88.2555, high: 88.2555, low: 84.2583, close: 87.3086, time: '2023-09-25' },
+{ open: 90.6991, high: 96.1599, low: 85.1569, close: 96.1599, time: '2023-10-02' },
+{ open: 97.637, high: 101.1089, low: 94.1884, close: 94.1884, time: '2023-10-09' },
+{ open: 98.55, high: 98.55, low: 84.523, close: 84.523, time: '2023-10-16' },
+{ open: 87.233, high: 90.5479, low: 74.9855, close: 77.8002, time: '2023-10-23' },
+{ open: 80.7487, high: 89.9546, low: 80.7487, close: 89.9546, time: '2023-10-30' },];
 
 candlestickSeries.setData(data);
 
@@ -226,6 +247,8 @@ chart.timeScale().fitContent();
 
 
       </script>
+
+
 
    </body>
 </html>

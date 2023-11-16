@@ -155,9 +155,9 @@
          </div>
       </div>
       <section style="text-align: left; margin: auto; width: 80%; padding-top: 100px">
-         <h1>Regent Quant Flagship Fund's Strategy Backtest (Theoretical Growth of $1.00) (Phone Browser May Not Show)</h1>
+         <h1>Regent Aggressive Growth Private Fund NAV (Weekly & Public Version)</h1>
          <h2>Last updated: November 14, 2023 At Close</h2>
-         <h2>We assure you that this backtest is 100% authentic, and we are confident in its effectiveness for real-time trading. Our flagship fund has employed this strategy since its inception.</h2>
+         <h2>The following candlestick OHLC data doesn't take intraday data into account.</h2>
          <h2><a href="https://forms.gle/TychBQgSgCC4sQpb8">💰   Want to invest? Subscribe to next fundraising event.</a></h2>
       </section>
       <!-- Fund NAV Chart -->
@@ -176,11 +176,10 @@
          color: 'rgba(36, 40, 50, 1)', // Your desired color for horizontal grid lines (y-axis)
          },
          }};
-
-     const chart = LightweightCharts.createChart(document.getElementById('fund-nav-chart-container'), chartOptions);
+ const chart = LightweightCharts.createChart(document.getElementById('fund-nav-chart-container'), chartOptions);
 const areaSeries = chart.addAreaSeries({ lineColor: '#2962FF', topColor: '#2962FF', bottomColor: 'transparent' });
 
-const data = [  { value: 1.0000, time: '2000-01-03'},
+const data = [{ value: 1.0000, time: '2000-01-03'},
   { value: 1.0000, time: '2000-01-13'},
   { value: 1.0000, time: '2000-01-26'},
   { value: 1.0000, time: '2000-02-07'},
@@ -934,11 +933,9 @@ const data = [  { value: 1.0000, time: '2000-01-03'},
 
 areaSeries.setData(data);
 
-chart.timeScale().fitContent();
-
-
+         chart.timeScale().fitContent();
          chart.applyOptions({
-                         layout: {
+                       layout: {
                              fontFamily: "'Saira Condensed', sans-serif",
                          },
                      });
@@ -967,8 +964,6 @@ chart.timeScale().fitContent();
          });
 
 
-        <img
-          src="../../../../../../../var/folders/m3/sk8p9fv56hd2zyc04q8knjt40000gn/T/TemporaryItems/NSIRD_screencaptureui_djy1EU/Screenshot 2023-11-14 at 10.59.53 PM.png"
-          height="1604" width="4140"/></script>
+      </script>
    </body>
 </html>

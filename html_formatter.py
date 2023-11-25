@@ -1,7 +1,7 @@
 import pyperclip
 
 
-def fear_and_greed_index():
+def capital_trend_spy():
     input = pyperclip.paste().split('\n')
 
     a_string = ''
@@ -126,4 +126,4 @@ chart.timeScale().fitContent();
     file.close()
 
 
-fear_and_greed_index()
+capital_trend_spy()

@@ -2730,9 +2730,10 @@ def main():
                 file.close()
             print(file_name)
 
-type = "STOCK"
-data = '''capital-trend-aapl.html
-capital-trend-amd.html
+type = "STOCKS"
+
+data = '''capital-trend-amd.html
+capital-trend-aapl.html
 capital-trend-amzn.html
 capital-trend-avgo.html
 capital-trend-googl.html
@@ -2744,5 +2745,5 @@ capital-trend-tsla.html'''.split('\n')
 
 for i in data:
     ticker = i.split('.html')[0].split('-')[-1]
-    stock = f'<div><img src="LOGO/Stocks/{ticker.upper()}_logo.svg"><a href="Net%20Capital%20Inflow%20Database/{type}/capital-trend-{ticker}.html">{ticker.upper()}</a><br></div>'
+    stock = f'<div><img src="LOGO/{type.upper()}/{ticker.upper()}.svg"><a href="Net%20Capital%20Inflow%20Database/{type.upper()}/capital-trend-{ticker}.html">{ticker.upper()}</a><br></div>'
     print(stock)

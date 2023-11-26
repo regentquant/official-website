@@ -550,4 +550,4 @@ chart.timeScale().fitContent();
     file.close()
 
 
-capital_trend_sqqq()
+capital_trend_tqqq()

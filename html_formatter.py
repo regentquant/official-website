@@ -39,7 +39,7 @@ def capital_trend_spy():
    </head>
    <body>
       <section>
-         <img id="site-logo" src="REGENTQUANT.svg">
+         <img id="site-logo" src="regentquant-logo-two-colors.svg">
          <h1 class="chart-title">Regent Quant SPY Capital Trend</h1>
          <h2 class="go-back-to-home-screen"><a href="https://www.regentquant.com">Go Back To Home Screen</a></h2>
          <h2>How to use: Investors can predict future price trend by looking at capital trend. Candlestick chart shows underlying stock's historical adjusted OHLC price. Line chart shows daily block order amount (Unit$). Here block order stands for the largest 30% of orders in terms of turnover over the past 200 days. The data is estimated by algorithm and for reference only.</h2>
@@ -215,7 +215,7 @@ def capital_trend_qqq():
    </head>
    <body>
       <section>
-         <img id="site-logo" src="REGENTQUANT.svg">
+         <img id="site-logo" src="regentquant-logo-two-colors.svg">
          <h1 class="chart-title">Regent Quant SPY Capital Trend</h1>
          <h2 class="go-back-to-home-screen"><a href="https://www.regentquant.com">Go Back To Home Screen</a></h2>
          <h2>How to use: Investors can predict future price trend by looking at capital trend. Candlestick chart shows underlying stock's historical adjusted OHLC price. Line chart shows daily block order amount (Unit$). Here block order stands for the largest 30% of orders in terms of turnover over the past 200 days. The data is estimated by algorithm and for reference only.</h2>
@@ -339,7 +339,7 @@ def capital_trend_sqqq():
    </head>
    <body>
       <section>
-         <img id="site-logo" src="REGENTQUANT.svg">
+         <img id="site-logo" src="regentquant-logo-two-colors.svg">
          <h1 class="chart-title">Regent Quant SPY Capital Trend</h1>
          <h2 class="go-back-to-home-screen"><a href="https://www.regentquant.com">Go Back To Home Screen</a></h2>
          <h2>How to use: Investors can predict future price trend by looking at capital trend. Candlestick chart shows underlying stock's historical adjusted OHLC price. Line chart shows daily block order amount (Unit$). Here block order stands for the largest 30% of orders in terms of turnover over the past 200 days. The data is estimated by algorithm and for reference only.</h2>
@@ -463,7 +463,7 @@ def capital_trend_tqqq():
    </head>
    <body>
       <section>
-         <img id="site-logo" src="REGENTQUANT.svg">
+         <img id="site-logo" src="regentquant-logo-two-colors.svg">
          <h1 class="chart-title">Regent Quant SPY Capital Trend</h1>
          <h2 class="go-back-to-home-screen"><a href="https://www.regentquant.com">Go Back To Home Screen</a></h2>
          <h2>How to use: Investors can predict future price trend by looking at capital trend. Candlestick chart shows underlying stock's historical adjusted OHLC price. Line chart shows daily block order amount (Unit$). Here block order stands for the largest 30% of orders in terms of turnover over the past 200 days. The data is estimated by algorithm and for reference only.</h2>
@@ -549,5 +549,4 @@ chart.timeScale().fitContent();
 
     file.close()
 
-
-capital_trend_tqqq()
+capital_trend_spy()

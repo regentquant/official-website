@@ -2768,7 +2768,7 @@ capital-trend-xom.html'''.split('\n')
 
     for i in data:
         ticker = i.split('.html')[0].split('-')[-1]
-        stock = f'<div class="nci-container"><img src="LOGO/{type.upper()}/{ticker.upper()}.svg"><a href="Capital%20Trend/{type.upper()}/capital-trend-{ticker}.html">{ticker.upper()}</a><br></div>'
+        stock = f'<div class="capital-trend-container"><img src="LOGO/{type.upper()}/{ticker.upper()}.svg"><a href="Capital%20Trend/{type.upper()}/capital-trend-{ticker}.html">{ticker.upper()}</a><br></div>'
         print(stock)
 
 

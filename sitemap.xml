@@ -3,117 +3,222 @@
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://www.regentquant.com/</loc>
-	<lastmod>2023-11-26T08:58:47+01:00</lastmod>
+	<lastmod>2023-11-26T23:27:28+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://www.regentquant.com/fund-nav.html</loc>
-	<lastmod>2023-11-26T08:58:47+01:00</lastmod>
+	<lastmod>2023-11-26T23:27:28+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://www.regentquant.com/backtest.html</loc>
-	<lastmod>2023-11-26T08:58:47+01:00</lastmod>
+	<lastmod>2023-11-26T23:27:28+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/capital-trend-dashboard.html</loc>
+	<lastmod>2023-11-26T23:27:28+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://www.regentquant.com/peratio-sp500.html</loc>
-	<lastmod>2023-11-26T08:58:47+01:00</lastmod>
+	<lastmod>2023-11-26T23:27:28+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://www.regentquant.com/peratio-nasdaq100.html</loc>
-	<lastmod>2023-11-26T08:58:47+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://www.regentquant.com/nci-dashboard.html</loc>
-	<lastmod>2023-11-26T08:58:47+01:00</lastmod>
+	<lastmod>2023-11-26T23:27:28+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://www.regentquant.com/archive_bloomberg_businessweek.html</loc>
-	<lastmod>2023-11-26T08:58:47+01:00</lastmod>
+	<lastmod>2023-11-26T23:27:28+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://www.regentquant.com/archive_the_economist.html</loc>
-	<lastmod>2023-11-26T08:58:47+01:00</lastmod>
+	<lastmod>2023-11-26T23:27:28+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://www.regentquant.com/archive_barrons.html</loc>
-	<lastmod>2023-11-26T08:58:47+01:00</lastmod>
+	<lastmod>2023-11-26T23:27:28+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://www.regentquant.com/Net%20Capital%20Inflow%20Database/ETF/capital-trend-qqq.html</loc>
-	<lastmod>2023-11-26T08:58:50+01:00</lastmod>
+	<loc>https://www.regentquant.com/Capital%20Trend/ETFS/capital-trend-soxl.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://www.regentquant.com/Net%20Capital%20Inflow%20Database/ETF/capital-trend-soxl.html</loc>
-	<lastmod>2023-11-26T08:58:50+01:00</lastmod>
+	<loc>https://www.regentquant.com/Capital%20Trend/ETFS/capital-trend-qqq.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://www.regentquant.com/Net%20Capital%20Inflow%20Database/ETF/capital-trend-spy.html</loc>
-	<lastmod>2023-11-26T08:58:50+01:00</lastmod>
+	<loc>https://www.regentquant.com/Capital%20Trend/ETFS/capital-trend-spy.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://www.regentquant.com/Net%20Capital%20Inflow%20Database/ETF/capital-trend-sqqq.html</loc>
-	<lastmod>2023-11-26T08:58:50+01:00</lastmod>
+	<loc>https://www.regentquant.com/Capital%20Trend/ETFS/capital-trend-sqqq.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://www.regentquant.com/Net%20Capital%20Inflow%20Database/ETF/capital-trend-tqqq.html</loc>
-	<lastmod>2023-11-26T08:58:50+01:00</lastmod>
+	<loc>https://www.regentquant.com/Capital%20Trend/ETFS/capital-trend-tqqq.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://www.regentquant.com/Net%20Capital%20Inflow%20Database/STOCK/capital-trend-aapl.html</loc>
-	<lastmod>2023-11-26T08:58:50+01:00</lastmod>
+	<loc>https://www.regentquant.com/Capital%20Trend/ETFS/capital-trend-xlf.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://www.regentquant.com/Net%20Capital%20Inflow%20Database/STOCK/capital-trend-amzn.html</loc>
-	<lastmod>2023-11-26T08:58:50+01:00</lastmod>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-abbv.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://www.regentquant.com/Net%20Capital%20Inflow%20Database/STOCK/capital-trend-avgo.html</loc>
-	<lastmod>2023-11-26T08:58:50+01:00</lastmod>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-aapl.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://www.regentquant.com/Net%20Capital%20Inflow%20Database/STOCK/capital-trend-googl.html</loc>
-	<lastmod>2023-11-26T08:58:50+01:00</lastmod>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-adbe.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://www.regentquant.com/Net%20Capital%20Inflow%20Database/STOCK/capital-trend-meta.html</loc>
-	<lastmod>2023-11-26T08:58:50+01:00</lastmod>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-amd.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://www.regentquant.com/Net%20Capital%20Inflow%20Database/STOCK/capital-trend-nflx.html</loc>
-	<lastmod>2023-11-26T08:58:50+01:00</lastmod>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-amzn.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://www.regentquant.com/Net%20Capital%20Inflow%20Database/STOCK/capital-trend-nvda.html</loc>
-	<lastmod>2023-11-26T08:58:50+01:00</lastmod>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-avgo.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://www.regentquant.com/Net%20Capital%20Inflow%20Database/STOCK/capital-trend-snow.html</loc>
-	<lastmod>2023-11-26T08:58:50+01:00</lastmod>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-bac.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 <url>
-	<loc>https://www.regentquant.com/Net%20Capital%20Inflow%20Database/STOCK/capital-trend-tsla.html</loc>
-	<lastmod>2023-11-26T08:58:50+01:00</lastmod>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-cost.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-cvx.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-googl.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-hd.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-jnj.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-jpm.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-ko.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-lly.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-ma.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-meta.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-mrk.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-nflx.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-nvda.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-orcl.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-pep.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-pg.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-snow.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-tsla.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-unh.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-v.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-wmt.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://www.regentquant.com/Capital%20Trend/STOCKS/capital-trend-xom.html</loc>
+	<lastmod>2023-11-26T23:27:31+01:00</lastmod>
 	<priority>0.6</priority>
 </url>
 </urlset>

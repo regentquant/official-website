@@ -24,6 +24,7 @@
       <link rel="stylesheet" href="chart-styles.css">
    </head>
    <style>
+
 h3 {
 font-family: "Saira Condensed", sans-serif;
 font-weight: 500;
@@ -52,7 +53,7 @@ border-radius: 3px;
   width: auto; /* Maintain aspect ratio */
   margin-right: 10px; /* Optional: Adds space between the image and text */
 }
-div {
+.nci-container {
       display: flex; /* Use flexbox to align children */
   align-items: center; /* Align children vertically in the center */
   justify-content: left; /* Align children horizontally in the center */
@@ -67,23 +68,30 @@ div {
 <h2>Update scheduled after market close at trading day.</h2>
 <h3 class="warning">Warning: Net Capital Inflow is not shown daily but as a 5-day average value.</h3>
 <h3>ETFs (Coverage: 2013-12-02 - Today)</h3>
-<div><img src="LOGO/ETFS/SOXL.svg"><a href="Net%20Capital%20Inflow%20Database/ETFS/capital-trend-soxl.html">SOXL</a><br></div>
-<div><img src="LOGO/ETFS/QQQ.svg"><a href="Net%20Capital%20Inflow%20Database/ETFS/capital-trend-qqq.html">QQQ</a><br></div>
-<div><img src="LOGO/ETFS/SPY.svg"><a href="Net%20Capital%20Inflow%20Database/ETFS/capital-trend-spy.html">SPY</a><br></div>
-<div><img src="LOGO/ETFS/SQQQ.svg"><a href="Net%20Capital%20Inflow%20Database/ETFS/capital-trend-sqqq.html">SQQQ</a><br></div>
-<div><img src="LOGO/ETFS/TQQQ.svg"><a href="Net%20Capital%20Inflow%20Database/ETFS/capital-trend-tqqq.html">TQQQ</a><br></div>
-<div><img src="LOGO/ETFS/XLF.svg"><a href="Net%20Capital%20Inflow%20Database/ETFS/capital-trend-xlf.html">XLF</a><br></div>
+<div class="nci-container"><img src="LOGO/ETFS/SQQQ.svg"><a href="Net%20Capital%20Inflow%20Database/ETFS/capital-trend-sqqq.html">SQQQ</a><br></div>
+<div class="nci-container"><img src="LOGO/ETFS/QQQ.svg"><a href="Net%20Capital%20Inflow%20Database/ETFS/capital-trend-qqq.html">QQQ</a><br></div>
+<div class="nci-container"><img src="LOGO/ETFS/SOXL.svg"><a href="Net%20Capital%20Inflow%20Database/ETFS/capital-trend-soxl.html">SOXL</a><br></div>
+<div class="nci-container"><img src="LOGO/ETFS/SPY.svg"><a href="Net%20Capital%20Inflow%20Database/ETFS/capital-trend-spy.html">SPY</a><br></div>
+<div class="nci-container"><img src="LOGO/ETFS/TQQQ.svg"><a href="Net%20Capital%20Inflow%20Database/ETFS/capital-trend-tqqq.html">TQQQ</a><br></div>
+<div class="nci-container"><img src="LOGO/ETFS/XLF.svg"><a href="Net%20Capital%20Inflow%20Database/ETFS/capital-trend-xlf.html">XLF</a><br></div>
 
 <h3>STOCKs (Coverage: 2020-01-02 - Today)</h3>
-<div><img src="LOGO/STOCKS/AMD.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-amd.html">AMD</a><br></div>
-<div><img src="LOGO/STOCKS/AAPL.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-aapl.html">AAPL</a><br></div>
-<div><img src="LOGO/STOCKS/AMZN.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-amzn.html">AMZN</a><br></div>
-<div><img src="LOGO/STOCKS/AVGO.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-avgo.html">AVGO</a><br></div>
-<div><img src="LOGO/STOCKS/GOOGL.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-googl.html">GOOGL</a><br></div>
-<div><img src="LOGO/STOCKS/META.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-meta.html">META</a><br></div>
-<div><img src="LOGO/STOCKS/NFLX.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-nflx.html">NFLX</a><br></div>
-<div><img src="LOGO/STOCKS/NVDA.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-nvda.html">NVDA</a><br></div>
-<div><img src="LOGO/STOCKS/SNOW.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-snow.html">SNOW</a><br></div>
-<div><img src="LOGO/STOCKS/TSLA.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-tsla.html">TSLA</a><br></div>
- </body>
+<div class="nci-container"><img src="LOGO/STOCKS/AMD.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-amd.html">AMD</a><br></div>
+<div class="nci-container"><img src="LOGO/STOCKS/AAPL.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-aapl.html">AAPL</a><br></div>
+<div class="nci-container"><img src="LOGO/STOCKS/AMZN.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-amzn.html">AMZN</a><br></div>
+<div class="nci-container"><img src="LOGO/STOCKS/AVGO.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-avgo.html">AVGO</a><br></div>
+<div class="nci-container"><img src="LOGO/STOCKS/GOOGL.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-googl.html">GOOGL</a><br></div>
+<div class="nci-container"><img src="LOGO/STOCKS/LLY.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-lly.html">LLY</a><br></div>
+<div class="nci-container"><img src="LOGO/STOCKS/META.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-meta.html">META</a><br></div>
+<div class="nci-container"><img src="LOGO/STOCKS/NFLX.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-nflx.html">NFLX</a><br></div>
+<div class="nci-container"><img src="LOGO/STOCKS/NVDA.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-nvda.html">NVDA</a><br></div>
+<div class="nci-container"><img src="LOGO/STOCKS/SNOW.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-snow.html">SNOW</a><br></div>
+<div class="nci-container"><img src="LOGO/STOCKS/TSLA.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-tsla.html">TSLA</a><br></div>
+<div class="nci-container"><img src="LOGO/STOCKS/UNH.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-unh.html">UNH</a><br></div>
+<div class="nci-container"><img src="LOGO/STOCKS/V.svg"><a href="Net%20Capital%20Inflow%20Database/STOCKS/capital-trend-v.html">V</a><br></div>
+
+      <div class="nci-footer" style="width: 100%; height: 300px; background: white; margin-top: 50px; color: white; text-align: center; display: flex; justify-content: center; align-items: center;">
+         <p style="margin: 0;></p>
+      </div>
+   </body>
 </html>

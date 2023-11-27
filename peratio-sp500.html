@@ -70,10 +70,14 @@ const candlestickSeries = chart.addCandlestickSeries({
 	wickUpColor: '#26a69a', wickDownColor: '#ef5350',
 });
 
-candlestickSeries.setData([{time:'2023-11-24',open:4555.84,high:4560.31,low:4552.8,close:4559.33},]);
+candlestickSeries.setData([
+        {time:'2023-11-24',open:4555.84,high:4560.31,low:4552.8,close:4559.33},
+{time:'2023-11-27',open:4554.86,high:4560.52,low:4546.32,close:4550.44},
+]);
 
 const lineSeries = chart.addLineSeries({ color: '#2962FF' });
-const data = [{time:'2023-11-24',value:23.78},];
+const data = [{time:'2023-11-24',value:23.78},
+{time:'2023-11-27',value:23.48},];
 
 lineSeries.setData(data);
 

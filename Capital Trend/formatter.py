@@ -314,7 +314,7 @@ border-radius: 3px;
 
         if "html" in i:
             ticker = i.split('.html')[0].split('-')[-1]
-            s = '<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-@replace_ticker_lower.html"><img src="LOGO/ETFS/@replace_ticker_upper.svg">@replace_ticker_upper</a><br></div>'.replace("@replace_ticker_upper", ticker.upper()).replace("@replace_ticker_lower", ticker.lower())
+            s = '<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-@replace_ticker_lower.html"><img src="LOGO/ETFS/@replace_ticker_upper.svg" alt="@replace_ticker_upper logo">@replace_ticker_upper</a><br></div>'.replace("@replace_ticker_upper", ticker.upper()).replace("@replace_ticker_lower", ticker.lower())
             fs = f"{fs}{s}\n"
 
     fs = f"{fs}<h3 class='asset-type'>STOCKs</h3>\n"
@@ -323,7 +323,7 @@ border-radius: 3px;
 
         if "html" in i:
             ticker = i.split('.html')[0].split('-')[-1]
-            s = '<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-@replace_ticker_lower.html"><img src="LOGO/STOCKS/@replace_ticker_upper.svg">@replace_ticker_upper</a><br></div>'.replace(
+            s = '<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-@replace_ticker_lower.html"><img src="LOGO/STOCKS/@replace_ticker_upper.svg" alt="@replace_ticker_upper logo">@replace_ticker_upper</a><br></div>'.replace(
                 "@replace_ticker_upper", ticker.upper()).replace("@replace_ticker_lower", ticker.lower())
             fs = f"{fs}{s}\n"
 
@@ -338,5 +338,5 @@ border-radius: 3px;
         file.write(fs)
     file.close()
 
-main()
+
 dashboard()

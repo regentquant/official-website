@@ -262,10 +262,10 @@ def dashboard():
 h3, h4 {
 font-family: "Saira Condensed", sans-serif;
 font-weight: 500;
-font-size: 2rem;
+font-size: 1.5rem;
 color: #333333;
-    margin-top: 10px;
-    margin-bottom: 40px;
+    margin-top: 50px;
+    margin-bottom: 25px;
 }
 h4 {
    font-size: 1rem;
@@ -273,7 +273,7 @@ h4 {
 a {
     font-family: "Saira Condensed", sans-serif;
 font-weight: 500;
-font-size: 1.5rem;
+font-size: 1rem;
 color: #3374f6;
 display: flex; /* Use flexbox for the link */
   align-items: center; /* Align the text with the image */
@@ -284,9 +284,12 @@ display: flex; /* Use flexbox for the link */
     font-size: 1.5rem;
     font-weight: 600;
 }
+.asset-type {
+   font-weight: 600;
+}
 img {
 border-radius: 3px;
-     height: 40px; /* Example height, adjust as needed */
+     height: 37px; /* Example height, adjust as needed */
   width: auto; /* Maintain aspect ratio */
   margin-right: 10px; /* Optional: Adds space between the image and text */
 }
@@ -295,7 +298,7 @@ border-radius: 3px;
   align-items: center; /* Align children vertically in the center */
   justify-content: left; /* Align children horizontally in the center */
   height: 30px; /* Make the container full height of the viewport */
-   margin-bottom: 40px;
+   margin-bottom: 20px;
 }
    </style>
    <body>
@@ -304,21 +307,21 @@ border-radius: 3px;
 <h1 class="chart-title">Regentquant Capital Trend Dashboard (Alphabetical Order)</h1>
 <h2>Update scheduled after market close at trading day.</h2>
 <h4>Didn't see your favorite ETF or stock? Send us email to request us to include your favorite ETF or stock! (email: curry_yao@regentquant.com)</h4>
-<h3>ETFs (Coverage: 2013-12-02 - Today)</h3>\n'''
+<h3 class='asset-type'>ETFs</h3>\n'''
     for i in sorted(os.listdir("ETFS")):
 
         if "html" in i:
             ticker = i.split('.html')[0].split('-')[-1]
-            s = '<div class="capital-trend-container"><img src="LOGO/ETFS/@replace_ticker_upper.svg"><a href="Capital%20Trend/ETFS/capital-trend-@replace_ticker_lower.html">@replace_ticker_upper</a><br></div>'.replace("@replace_ticker_upper", ticker.upper()).replace("@replace_ticker_lower", ticker.lower())
+            s = '<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-@replace_ticker_lower.html"><img src="LOGO/ETFS/@replace_ticker_upper.svg">@replace_ticker_upper</a><br></div>'.replace("@replace_ticker_upper", ticker.upper()).replace("@replace_ticker_lower", ticker.lower())
             fs = f"{fs}{s}\n"
 
-    fs = f"{fs}<h3>STOCKs (Coverage: 2020-01-02 - Today)</h3>\n"
+    fs = f"{fs}<h3 class='asset-type'>STOCKs</h3>\n"
 
     for i in sorted(os.listdir("STOCKS")):
 
         if "html" in i:
             ticker = i.split('.html')[0].split('-')[-1]
-            s = '<div class="capital-trend-container"><img src="LOGO/STOCKS/@replace_ticker_upper.svg"><a href="Capital%20Trend/STOCKS/capital-trend-@replace_ticker_lower.html">@replace_ticker_upper</a><br></div>'.replace(
+            s = '<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-@replace_ticker_lower.html"><img src="LOGO/STOCKS/@replace_ticker_upper.svg">@replace_ticker_upper</a><br></div>'.replace(
                 "@replace_ticker_upper", ticker.upper()).replace("@replace_ticker_lower", ticker.lower())
             fs = f"{fs}{s}\n"
 
@@ -334,5 +337,4 @@ border-radius: 3px;
     file.close()
 
 
-main()
 dashboard()

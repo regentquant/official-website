@@ -65,6 +65,13 @@ border-radius: 3px;
   width: auto; /* Maintain aspect ratio */
   margin-right: 10px; /* Optional: Adds space between the image and text */
 }
+.rectangle-fill {
+    flex-grow: 1; /* This makes the rectangle-fill take up the full width */
+    display: flex;
+    align-items: center;
+    justify-content: left; /* Center content inside rectangle-fill */
+    text-decoration: none; /* Optional: removes underline from links */
+}
 .capital-trend-container {
       display: flex; /* Use flexbox to align children */
   align-items: center; /* Align children vertically in the center */
@@ -82,87 +89,87 @@ border-radius: 3px;
 <h2>Update scheduled after market close at trading day.</h2>
 <h4>Didn't see your favorite ETF or stock? Send us email to request us to include your favorite ETF or stock! (email: curry_yao@regentquant.com)</h4>
 <h3 class='asset-type'>ETFs</h3>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-arkk.html"><img src="LOGO/ETFS/ARKK.svg" alt="ARKK logo">ARKK</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-efa.html"><img src="LOGO/ETFS/EFA.svg" alt="EFA logo">EFA</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-gld.html"><img src="LOGO/ETFS/GLD.svg" alt="GLD logo">GLD</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-ivv.html"><img src="LOGO/ETFS/IVV.svg" alt="IVV logo">IVV</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-iwf.html"><img src="LOGO/ETFS/IWF.svg" alt="IWF logo">IWF</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-iwm.html"><img src="LOGO/ETFS/IWM.svg" alt="IWM logo">IWM</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-qqq.html"><img src="LOGO/ETFS/QQQ.svg" alt="QQQ logo">QQQ</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-smh.html"><img src="LOGO/ETFS/SMH.svg" alt="SMH logo">SMH</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-soxl.html"><img src="LOGO/ETFS/SOXL.svg" alt="SOXL logo">SOXL</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-soxs.html"><img src="LOGO/ETFS/SOXS.svg" alt="SOXS logo">SOXS</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-spy.html"><img src="LOGO/ETFS/SPY.svg" alt="SPY logo">SPY</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-sqqq.html"><img src="LOGO/ETFS/SQQQ.svg" alt="SQQQ logo">SQQQ</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-tlt.html"><img src="LOGO/ETFS/TLT.svg" alt="TLT logo">TLT</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-tqqq.html"><img src="LOGO/ETFS/TQQQ.svg" alt="TQQQ logo">TQQQ</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-uvxy.html"><img src="LOGO/ETFS/UVXY.svg" alt="UVXY logo">UVXY</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-voo.html"><img src="LOGO/ETFS/VOO.svg" alt="VOO logo">VOO</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-xlf.html"><img src="LOGO/ETFS/XLF.svg" alt="XLF logo">XLF</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-xlv.html"><img src="LOGO/ETFS/XLV.svg" alt="XLV logo">XLV</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-arkk.html" class="rectangle-fill"><img src="LOGO/ETFS/ARKK.svg" alt="ARKK logo">ARKK</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-efa.html" class="rectangle-fill"><img src="LOGO/ETFS/EFA.svg" alt="EFA logo">EFA</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-gld.html" class="rectangle-fill"><img src="LOGO/ETFS/GLD.svg" alt="GLD logo">GLD</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-ivv.html" class="rectangle-fill"><img src="LOGO/ETFS/IVV.svg" alt="IVV logo">IVV</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-iwf.html" class="rectangle-fill"><img src="LOGO/ETFS/IWF.svg" alt="IWF logo">IWF</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-iwm.html" class="rectangle-fill"><img src="LOGO/ETFS/IWM.svg" alt="IWM logo">IWM</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-qqq.html" class="rectangle-fill"><img src="LOGO/ETFS/QQQ.svg" alt="QQQ logo">QQQ</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-smh.html" class="rectangle-fill"><img src="LOGO/ETFS/SMH.svg" alt="SMH logo">SMH</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-soxl.html" class="rectangle-fill"><img src="LOGO/ETFS/SOXL.svg" alt="SOXL logo">SOXL</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-soxs.html" class="rectangle-fill"><img src="LOGO/ETFS/SOXS.svg" alt="SOXS logo">SOXS</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-spy.html" class="rectangle-fill"><img src="LOGO/ETFS/SPY.svg" alt="SPY logo">SPY</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-sqqq.html" class="rectangle-fill"><img src="LOGO/ETFS/SQQQ.svg" alt="SQQQ logo">SQQQ</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-tlt.html" class="rectangle-fill"><img src="LOGO/ETFS/TLT.svg" alt="TLT logo">TLT</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-tqqq.html" class="rectangle-fill"><img src="LOGO/ETFS/TQQQ.svg" alt="TQQQ logo">TQQQ</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-uvxy.html" class="rectangle-fill"><img src="LOGO/ETFS/UVXY.svg" alt="UVXY logo">UVXY</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-voo.html" class="rectangle-fill"><img src="LOGO/ETFS/VOO.svg" alt="VOO logo">VOO</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-xlf.html" class="rectangle-fill"><img src="LOGO/ETFS/XLF.svg" alt="XLF logo">XLF</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-xlv.html" class="rectangle-fill"><img src="LOGO/ETFS/XLV.svg" alt="XLV logo">XLV</a><br></div>
 <h3 class='asset-type'>STOCKs</h3>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-aapl.html"><img src="LOGO/STOCKS/AAPL.svg" alt="AAPL logo">AAPL</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-abbv.html"><img src="LOGO/STOCKS/ABBV.svg" alt="ABBV logo">ABBV</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-acn.html"><img src="LOGO/STOCKS/ACN.svg" alt="ACN logo">ACN</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-adbe.html"><img src="LOGO/STOCKS/ADBE.svg" alt="ADBE logo">ADBE</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-amd.html"><img src="LOGO/STOCKS/AMD.svg" alt="AMD logo">AMD</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-amzn.html"><img src="LOGO/STOCKS/AMZN.svg" alt="AMZN logo">AMZN</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-arm.html"><img src="LOGO/STOCKS/ARM.svg" alt="ARM logo">ARM</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-asml.html"><img src="LOGO/STOCKS/ASML.svg" alt="ASML logo">ASML</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-avgo.html"><img src="LOGO/STOCKS/AVGO.svg" alt="AVGO logo">AVGO</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-bac.html"><img src="LOGO/STOCKS/BAC.svg" alt="BAC logo">BAC</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-bkng.html"><img src="LOGO/STOCKS/BKNG.svg" alt="BKNG logo">BKNG</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-brk.a.html"><img src="LOGO/STOCKS/BRK.A.svg" alt="BRK.A logo">BRK.A</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-cof.html"><img src="LOGO/STOCKS/COF.svg" alt="COF logo">COF</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-coin.html"><img src="LOGO/STOCKS/COIN.svg" alt="COIN logo">COIN</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-cost.html"><img src="LOGO/STOCKS/COST.svg" alt="COST logo">COST</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-crm.html"><img src="LOGO/STOCKS/CRM.svg" alt="CRM logo">CRM</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-crwd.html"><img src="LOGO/STOCKS/CRWD.svg" alt="CRWD logo">CRWD</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-csco.html"><img src="LOGO/STOCKS/CSCO.svg" alt="CSCO logo">CSCO</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-cvx.html"><img src="LOGO/STOCKS/CVX.svg" alt="CVX logo">CVX</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-de.html"><img src="LOGO/STOCKS/DE.svg" alt="DE logo">DE</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-dis.html"><img src="LOGO/STOCKS/DIS.svg" alt="DIS logo">DIS</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-goog.html"><img src="LOGO/STOCKS/GOOG.svg" alt="GOOG logo">GOOG</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-googl.html"><img src="LOGO/STOCKS/GOOGL.svg" alt="GOOGL logo">GOOGL</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-hd.html"><img src="LOGO/STOCKS/HD.svg" alt="HD logo">HD</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-hlt.html"><img src="LOGO/STOCKS/HLT.svg" alt="HLT logo">HLT</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-ihg.html"><img src="LOGO/STOCKS/IHG.svg" alt="IHG logo">IHG</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-intc.html"><img src="LOGO/STOCKS/INTC.svg" alt="INTC logo">INTC</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-intu.html"><img src="LOGO/STOCKS/INTU.svg" alt="INTU logo">INTU</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-jnj.html"><img src="LOGO/STOCKS/JNJ.svg" alt="JNJ logo">JNJ</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-jpm.html"><img src="LOGO/STOCKS/JPM.svg" alt="JPM logo">JPM</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-ko.html"><img src="LOGO/STOCKS/KO.svg" alt="KO logo">KO</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-lly.html"><img src="LOGO/STOCKS/LLY.svg" alt="LLY logo">LLY</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-lulu.html"><img src="LOGO/STOCKS/LULU.svg" alt="LULU logo">LULU</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-ma.html"><img src="LOGO/STOCKS/MA.svg" alt="MA logo">MA</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-mara.html"><img src="LOGO/STOCKS/MARA.svg" alt="MARA logo">MARA</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-mcd.html"><img src="LOGO/STOCKS/MCD.svg" alt="MCD logo">MCD</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-meli.html"><img src="LOGO/STOCKS/MELI.svg" alt="MELI logo">MELI</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-meta.html"><img src="LOGO/STOCKS/META.svg" alt="META logo">META</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-mrk.html"><img src="LOGO/STOCKS/MRK.svg" alt="MRK logo">MRK</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-msft.html"><img src="LOGO/STOCKS/MSFT.svg" alt="MSFT logo">MSFT</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-mstr.html"><img src="LOGO/STOCKS/MSTR.svg" alt="MSTR logo">MSTR</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-mu.html"><img src="LOGO/STOCKS/MU.svg" alt="MU logo">MU</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-nflx.html"><img src="LOGO/STOCKS/NFLX.svg" alt="NFLX logo">NFLX</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-nvda.html"><img src="LOGO/STOCKS/NVDA.svg" alt="NVDA logo">NVDA</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-nvo.html"><img src="LOGO/STOCKS/NVO.svg" alt="NVO logo">NVO</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-orcl.html"><img src="LOGO/STOCKS/ORCL.svg" alt="ORCL logo">ORCL</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-pep.html"><img src="LOGO/STOCKS/PEP.svg" alt="PEP logo">PEP</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-pfe.html"><img src="LOGO/STOCKS/PFE.svg" alt="PFE logo">PFE</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-pg.html"><img src="LOGO/STOCKS/PG.svg" alt="PG logo">PG</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-pltr.html"><img src="LOGO/STOCKS/PLTR.svg" alt="PLTR logo">PLTR</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-pypl.html"><img src="LOGO/STOCKS/PYPL.svg" alt="PYPL logo">PYPL</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-qcom.html"><img src="LOGO/STOCKS/QCOM.svg" alt="QCOM logo">QCOM</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-sbux.html"><img src="LOGO/STOCKS/SBUX.svg" alt="SBUX logo">SBUX</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-shop.html"><img src="LOGO/STOCKS/SHOP.svg" alt="SHOP logo">SHOP</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-snow.html"><img src="LOGO/STOCKS/SNOW.svg" alt="SNOW logo">SNOW</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-tmo.html"><img src="LOGO/STOCKS/TMO.svg" alt="TMO logo">TMO</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-tsla.html"><img src="LOGO/STOCKS/TSLA.svg" alt="TSLA logo">TSLA</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-uber.html"><img src="LOGO/STOCKS/UBER.svg" alt="UBER logo">UBER</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-unh.html"><img src="LOGO/STOCKS/UNH.svg" alt="UNH logo">UNH</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-v.html"><img src="LOGO/STOCKS/V.svg" alt="V logo">V</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-wmt.html"><img src="LOGO/STOCKS/WMT.svg" alt="WMT logo">WMT</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-xom.html"><img src="LOGO/STOCKS/XOM.svg" alt="XOM logo">XOM</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-aapl.html" class="rectangle-fill"><img src="LOGO/STOCKS/AAPL.svg" alt="AAPL logo">AAPL</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-abbv.html" class="rectangle-fill"><img src="LOGO/STOCKS/ABBV.svg" alt="ABBV logo">ABBV</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-acn.html" class="rectangle-fill"><img src="LOGO/STOCKS/ACN.svg" alt="ACN logo">ACN</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-adbe.html" class="rectangle-fill"><img src="LOGO/STOCKS/ADBE.svg" alt="ADBE logo">ADBE</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-amd.html" class="rectangle-fill"><img src="LOGO/STOCKS/AMD.svg" alt="AMD logo">AMD</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-amzn.html" class="rectangle-fill"><img src="LOGO/STOCKS/AMZN.svg" alt="AMZN logo">AMZN</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-arm.html" class="rectangle-fill"><img src="LOGO/STOCKS/ARM.svg" alt="ARM logo">ARM</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-asml.html" class="rectangle-fill"><img src="LOGO/STOCKS/ASML.svg" alt="ASML logo">ASML</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-avgo.html" class="rectangle-fill"><img src="LOGO/STOCKS/AVGO.svg" alt="AVGO logo">AVGO</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-bac.html" class="rectangle-fill"><img src="LOGO/STOCKS/BAC.svg" alt="BAC logo">BAC</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-bkng.html" class="rectangle-fill"><img src="LOGO/STOCKS/BKNG.svg" alt="BKNG logo">BKNG</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-brk.a.html" class="rectangle-fill"><img src="LOGO/STOCKS/BRK.A.svg" alt="BRK.A logo">BRK.A</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-cof.html" class="rectangle-fill"><img src="LOGO/STOCKS/COF.svg" alt="COF logo">COF</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-coin.html" class="rectangle-fill"><img src="LOGO/STOCKS/COIN.svg" alt="COIN logo">COIN</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-cost.html" class="rectangle-fill"><img src="LOGO/STOCKS/COST.svg" alt="COST logo">COST</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-crm.html" class="rectangle-fill"><img src="LOGO/STOCKS/CRM.svg" alt="CRM logo">CRM</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-crwd.html" class="rectangle-fill"><img src="LOGO/STOCKS/CRWD.svg" alt="CRWD logo">CRWD</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-csco.html" class="rectangle-fill"><img src="LOGO/STOCKS/CSCO.svg" alt="CSCO logo">CSCO</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-cvx.html" class="rectangle-fill"><img src="LOGO/STOCKS/CVX.svg" alt="CVX logo">CVX</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-de.html" class="rectangle-fill"><img src="LOGO/STOCKS/DE.svg" alt="DE logo">DE</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-dis.html" class="rectangle-fill"><img src="LOGO/STOCKS/DIS.svg" alt="DIS logo">DIS</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-goog.html" class="rectangle-fill"><img src="LOGO/STOCKS/GOOG.svg" alt="GOOG logo">GOOG</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-googl.html" class="rectangle-fill"><img src="LOGO/STOCKS/GOOGL.svg" alt="GOOGL logo">GOOGL</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-hd.html" class="rectangle-fill"><img src="LOGO/STOCKS/HD.svg" alt="HD logo">HD</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-hlt.html" class="rectangle-fill"><img src="LOGO/STOCKS/HLT.svg" alt="HLT logo">HLT</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-ihg.html" class="rectangle-fill"><img src="LOGO/STOCKS/IHG.svg" alt="IHG logo">IHG</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-intc.html" class="rectangle-fill"><img src="LOGO/STOCKS/INTC.svg" alt="INTC logo">INTC</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-intu.html" class="rectangle-fill"><img src="LOGO/STOCKS/INTU.svg" alt="INTU logo">INTU</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-jnj.html" class="rectangle-fill"><img src="LOGO/STOCKS/JNJ.svg" alt="JNJ logo">JNJ</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-jpm.html" class="rectangle-fill"><img src="LOGO/STOCKS/JPM.svg" alt="JPM logo">JPM</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-ko.html" class="rectangle-fill"><img src="LOGO/STOCKS/KO.svg" alt="KO logo">KO</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-lly.html" class="rectangle-fill"><img src="LOGO/STOCKS/LLY.svg" alt="LLY logo">LLY</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-lulu.html" class="rectangle-fill"><img src="LOGO/STOCKS/LULU.svg" alt="LULU logo">LULU</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-ma.html" class="rectangle-fill"><img src="LOGO/STOCKS/MA.svg" alt="MA logo">MA</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-mara.html" class="rectangle-fill"><img src="LOGO/STOCKS/MARA.svg" alt="MARA logo">MARA</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-mcd.html" class="rectangle-fill"><img src="LOGO/STOCKS/MCD.svg" alt="MCD logo">MCD</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-meli.html" class="rectangle-fill"><img src="LOGO/STOCKS/MELI.svg" alt="MELI logo">MELI</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-meta.html" class="rectangle-fill"><img src="LOGO/STOCKS/META.svg" alt="META logo">META</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-mrk.html" class="rectangle-fill"><img src="LOGO/STOCKS/MRK.svg" alt="MRK logo">MRK</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-msft.html" class="rectangle-fill"><img src="LOGO/STOCKS/MSFT.svg" alt="MSFT logo">MSFT</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-mstr.html" class="rectangle-fill"><img src="LOGO/STOCKS/MSTR.svg" alt="MSTR logo">MSTR</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-mu.html" class="rectangle-fill"><img src="LOGO/STOCKS/MU.svg" alt="MU logo">MU</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-nflx.html" class="rectangle-fill"><img src="LOGO/STOCKS/NFLX.svg" alt="NFLX logo">NFLX</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-nvda.html" class="rectangle-fill"><img src="LOGO/STOCKS/NVDA.svg" alt="NVDA logo">NVDA</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-nvo.html" class="rectangle-fill"><img src="LOGO/STOCKS/NVO.svg" alt="NVO logo">NVO</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-orcl.html" class="rectangle-fill"><img src="LOGO/STOCKS/ORCL.svg" alt="ORCL logo">ORCL</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-pep.html" class="rectangle-fill"><img src="LOGO/STOCKS/PEP.svg" alt="PEP logo">PEP</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-pfe.html" class="rectangle-fill"><img src="LOGO/STOCKS/PFE.svg" alt="PFE logo">PFE</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-pg.html" class="rectangle-fill"><img src="LOGO/STOCKS/PG.svg" alt="PG logo">PG</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-pltr.html" class="rectangle-fill"><img src="LOGO/STOCKS/PLTR.svg" alt="PLTR logo">PLTR</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-pypl.html" class="rectangle-fill"><img src="LOGO/STOCKS/PYPL.svg" alt="PYPL logo">PYPL</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-qcom.html" class="rectangle-fill"><img src="LOGO/STOCKS/QCOM.svg" alt="QCOM logo">QCOM</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-sbux.html" class="rectangle-fill"><img src="LOGO/STOCKS/SBUX.svg" alt="SBUX logo">SBUX</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-shop.html" class="rectangle-fill"><img src="LOGO/STOCKS/SHOP.svg" alt="SHOP logo">SHOP</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-snow.html" class="rectangle-fill"><img src="LOGO/STOCKS/SNOW.svg" alt="SNOW logo">SNOW</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-tmo.html" class="rectangle-fill"><img src="LOGO/STOCKS/TMO.svg" alt="TMO logo">TMO</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-tsla.html" class="rectangle-fill"><img src="LOGO/STOCKS/TSLA.svg" alt="TSLA logo">TSLA</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-uber.html" class="rectangle-fill"><img src="LOGO/STOCKS/UBER.svg" alt="UBER logo">UBER</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-unh.html" class="rectangle-fill"><img src="LOGO/STOCKS/UNH.svg" alt="UNH logo">UNH</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-v.html" class="rectangle-fill"><img src="LOGO/STOCKS/V.svg" alt="V logo">V</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-wmt.html" class="rectangle-fill"><img src="LOGO/STOCKS/WMT.svg" alt="WMT logo">WMT</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-xom.html" class="rectangle-fill"><img src="LOGO/STOCKS/XOM.svg" alt="XOM logo">XOM</a><br></div>
 
 
       <div class="nci-footer" style="width: 100%; height: 300px; background: white; margin-top: 50px; color: white; text-align: center; display: flex; justify-content: center; align-items: center;">

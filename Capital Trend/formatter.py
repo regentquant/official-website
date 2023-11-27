@@ -158,7 +158,12 @@ def main():
     @replace_ohlc
     ]);
     
-    chart.timeScale().fitContent();
+       const totalDataPoints = data.length;
+      const visibleRange = Math.min(252, totalDataPoints);
+      chart.timeScale().setVisibleLogicalRange({
+        from: totalDataPoints - visibleRange,
+        to: totalDataPoints - 1,
+      });
     
              chart.applyOptions({
                              layout: {

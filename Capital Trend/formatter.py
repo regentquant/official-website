@@ -300,7 +300,7 @@ border-radius: 3px;
 <h2>Update scheduled after market close at trading day.</h2>
 <h4>Didn't see your favorite ETF or stock? Send us email to request us to include your favorite ETF or stock! (email: curry_yao@regentquant.com)</h4>
 <h3>ETFs (Coverage: 2013-12-02 - Today)</h3>\n'''
-    for i in os.listdir("ETFS"):
+    for i in sorted(os.listdir("ETFS")):
 
         if "html" in i:
             ticker = i.split('.html')[0].split('-')[-1]
@@ -309,7 +309,7 @@ border-radius: 3px;
 
     fs = f"{fs}<h3>STOCKs (Coverage: 2020-01-02 - Today)</h3>\n"
 
-    for i in os.listdir("STOCKS"):
+    for i in sorted(os.listdir("STOCKS")):
 
         if "html" in i:
             ticker = i.split('.html')[0].split('-')[-1]

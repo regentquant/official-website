@@ -338,4 +338,5 @@ border-radius: 3px;
         file.write(fs)
     file.close()
 
+main()
 dashboard()

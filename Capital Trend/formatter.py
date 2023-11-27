@@ -265,7 +265,7 @@ font-weight: 500;
 font-size: 1.5rem;
 color: #333333;
     margin-top: 50px;
-    margin-bottom: 25px;
+    margin-bottom: 17px;
 }
 h4 {
    font-size: 1rem;
@@ -297,8 +297,10 @@ border-radius: 3px;
       display: flex; /* Use flexbox to align children */
   align-items: center; /* Align children vertically in the center */
   justify-content: left; /* Align children horizontally in the center */
-  height: 30px; /* Make the container full height of the viewport */
-   margin-bottom: 20px;
+  height: 37px; /* Make the container full height of the viewport */
+   margin-bottom: 17px;
+   background: #F5F5F5;
+   border-radius: 3px;
 }
    </style>
    <body>
@@ -336,5 +338,4 @@ border-radius: 3px;
         file.write(fs)
     file.close()
 
-main()
 dashboard()

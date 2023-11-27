@@ -2,7 +2,8 @@ import pyperclip
 import requests
 import pyperclip
 import os
-
+from datetime import datetime
+import pytz
 
 def main():
 
@@ -320,9 +321,9 @@ border-radius: 3px;
 <section>
 <img id="site-logo" src="regentquant-logo-two-colors.svg">
 <h1 class="chart-title">Regentquant Capital Trend Dashboard (Alphabetical Order)</h1>
-<h2>Update scheduled after market close at trading day.</h2>
+<h2>Last updated: @replace_time (NewYork Time)</h2>
 <h4>Didn't see your favorite ETF or stock? Send us email to request us to include your favorite ETF or stock! (email: curry_yao@regentquant.com)</h4>
-<h3 class='asset-type'>ETFs</h3>\n'''
+<h3 class='asset-type'>ETFs</h3>\n'''.replace("@replace_time",datetime.now(pytz.timezone('America/New_York')).strftime('%Y-%m-%d %H:%M:%S'))
     for i in sorted(os.listdir("ETFS")):
 
         if "html" in i:
@@ -351,5 +352,5 @@ border-radius: 3px;
         file.write(fs)
     file.close()
 
-
+main()
 dashboard()

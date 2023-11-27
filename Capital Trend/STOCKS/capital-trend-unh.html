@@ -63,7 +63,7 @@
     };
     /** @type {import('lightweight-charts').IChartApi} */
     const chart = LightweightCharts.createChart(document.getElementById('container'), chartOptions);
-    const baselineSeries = chart.addBaselineSeries({ baseValue: { type: 'price', price: 0 }, topLineColor: 'rgba( 38, 166, 154, 1)', topFillColor1: 'rgba(38, 166, 154, 0.28)', topFillColor2: 'rgba( 38, 166, 154, 0.05)', bottomLineColor: 'rgba( 207, 87, 119, 1)', bottomFillColor1: 'rgba(207, 87, 119, 0.05)', bottomFillColor2: 'rgba( 207, 87, 119, 0.28)' });
+    const baselineSeries = chart.addBaselineSeries({ baseValue: { type: 'price', price: 0 }, topLineColor: 'rgba( 38, 166, 154, 1)', topFillColor1: 'rgba(38, 166, 154, 0.28)', topFillColor2: 'rgba( 38, 166, 154, 0.05)', bottomLineColor: 'rgba( 239, 83, 80, 1)', bottomFillColor1: 'rgba( 239, 83, 80, 0.05)', bottomFillColor2: 'rgba( 239, 83, 80, 0.28)' });
     const data = [
     {time:'2020-01-08',value:-99818163},
 {time:'2020-01-09',value:-78657874},
@@ -1050,8 +1050,8 @@
     
     const candlestickSeries = chart.addCandlestickSeries({
         priceScaleId: 'left',
-        upColor: '#26a69a', downColor: '#e04d76', borderVisible: false,
-        wickUpColor: '#26a69a', wickDownColor: '#e04d76',
+        upColor: '#26a69a', downColor: '#ef5350', borderVisible: false,
+        wickUpColor: '#26a69a', wickDownColor: '#ef5350',
     });
     
     candlestickSeries.setData([

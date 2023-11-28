@@ -326,7 +326,7 @@ border-radius: 3px;
 <section>
 <img id="site-logo" src="regentquant-logo-two-colors.svg">
 <h1 class="chart-title">Regentquant Capital Trend Dashboard (Alphabetical Order)</h1>
-<h2>Last updated: 2023-11-27 18:50:20 (NewYork Time)</h2>
+<h2 style="color: #333333">Last updated: 2023-11-27 18:50:20 (NewYork Time)</h2>
 <h4>Didn't see your favorite ETF or stock? Send us email to request us to include your favorite ETF or stock! (email: curry_yao@regentquant.com)</h4>
 <h3>Today's Capital Trend Visualization</h3>
     <h2 class="subtitle">Overwhelmed by Data? Let the Expertise of the Regentquant Team Guide You Through Key Insights!</h2>

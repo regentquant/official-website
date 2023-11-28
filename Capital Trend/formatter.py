@@ -201,7 +201,24 @@ border-radius: 3px;
      };
      /** @type {import('lightweight-charts').IChartApi} */
      const chart = LightweightCharts.createChart(document.getElementById('container'), chartOptions);
-     const baselineSeries = chart.addBaselineSeries({ baseValue: { type: 'price', price: 0 }, topLineColor: 'rgba( 38, 166, 154, 1)', topFillColor1: 'rgba(38, 166, 154, 0.28)', topFillColor2: 'rgba( 38, 166, 154, 0.05)', bottomLineColor: 'rgba( 239, 83, 80, 1)', bottomFillColor1: 'rgba( 239, 83, 80, 0.05)', bottomFillColor2: 'rgba( 239, 83, 80, 0.28)' });
+function customPriceFormatter(price) {
+    return  price.toFixed(2) + ' M'; // Replace 'CustomText' with your desired text
+}
+
+// Update your baselineSeries creation
+const baselineSeries = chart.addBaselineSeries({
+    baseValue: { type: 'price', price: 0 },
+    topLineColor: 'rgba(38, 166, 154, 1)',
+    topFillColor1: 'rgba(38, 166, 154, 0.28)',
+    topFillColor2: 'rgba(38, 166, 154, 0.05)',
+    bottomLineColor: 'rgba(239, 83, 80, 1)',
+    bottomFillColor1: 'rgba(239, 83, 80, 0.05)',
+    bottomFillColor2: 'rgba(239, 83, 80, 0.28)',
+    priceFormat: {
+        type: 'custom',
+        formatter: customPriceFormatter
+    }
+});   
      const data = [
      @replace_nci
      ];
@@ -444,6 +461,7 @@ border-radius: 3px;
 
 import time
 s = time.time()
+main()
 dashboard()
 e = time.time()
 print(e-s)

@@ -91,6 +91,9 @@ def main():
             else:
                 date_list = columns['Date']
                 nci_list = columns[i]
+
+            nci_list = [round(float(i)/1000000,2) for i in nci_list]
+
             # Start Date & End Date
             start_date = date_list[0]
             end_date = date_list[-1]
@@ -118,7 +121,7 @@ def main():
             for date, nci in zip(date_list, nci_list):
                 nci_html = "{time:'@replace_with_date',value:@replace_with_nci},".replace("@replace_with_date",
                                                                                           date).replace(
-                    "@replace_with_nci", nci)
+                    "@replace_with_nci", str(nci))
                 final_nci_html_list.append(nci_html)
 
             final_ohlc_html_str = ""
@@ -173,7 +176,7 @@ border-radius: 3px;
            <section>
               <img id="site-logo" src="../../regentquant-logo-two-colors.svg">
               <h1 class="chart-title">@replace_logoRegentquant @replace_ticker Capital Trend (Daily Amount)</h1>
-              <h2 class="go-back-to-home-screen"><a href="https://www.regentquant.com">Go Back To Home Screen</a></h2>
+              <h2 class="go-back-to-home-screen"><a href="https://www.regentquant.com/capital-trend-dashboard.html">Go Back To Dashboard</a></h2>
               <h2>How to use: Investors may try to predict future price trend by looking at capital trend. Candlestick chart shows underlying stock's historical adjusted OHLC price. Line chart shows net capital inflow (Unit$). The data is estimated by algorithm and for reference only. Data used in calculation is bought from ICE. Users may not reproduce or republish Regentquant's Net Capital Inflow data without permission.</h2>
              <button id="download-chart">Save Chart</button> <button><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSKtccuxjMvuMaBrgBQMfPXHs6W3LKdAcZ0MzmEv1RNl0sAEkYaN4MYQyPTIrPIjSXwXoBzKOlg_2kt/pubhtml" style="color: white">Download Data</a></button>
            </section>

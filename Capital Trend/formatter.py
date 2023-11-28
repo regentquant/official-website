@@ -429,6 +429,7 @@ border-radius: 3px;
 
 import time
 s = time.time()
+main()
 dashboard()
 e = time.time()
 print(e-s)

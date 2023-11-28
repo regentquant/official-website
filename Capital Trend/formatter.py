@@ -161,10 +161,18 @@ def main():
            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
            <link rel="stylesheet" href="../../chart-styles.css">
         </head>
-        <body>
+        <style>
+            img {
+border-radius: 3px;
+     height: 32px; /* Example height, adjust as needed */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Optional: Adds space between the image and text */
+padding-bottom: 5px;
+            }
+        </style>
            <section>
               <img id="site-logo" src="../../regentquant-logo-two-colors.svg">
-              <h1 class="chart-title">Regentquant @replace_ticker Capital Trend (Daily Amount)</h1>
+              <h1 class="chart-title">@replace_logoRegentquant @replace_ticker Capital Trend (Daily Amount)</h1>
               <h2 class="go-back-to-home-screen"><a href="https://www.regentquant.com">Go Back To Home Screen</a></h2>
               <h2>How to use: Investors may try to predict future price trend by looking at capital trend. Candlestick chart shows underlying stock's historical adjusted OHLC price. Line chart shows net capital inflow (Unit$). The data is estimated by algorithm and for reference only. Data used in calculation is bought from ICE. Users may not reproduce or republish Regentquant's Net Capital Inflow data without permission.</h2>
              <button id="download-chart">Save Chart</button> <button><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSKtccuxjMvuMaBrgBQMfPXHs6W3LKdAcZ0MzmEv1RNl0sAEkYaN4MYQyPTIrPIjSXwXoBzKOlg_2kt/pubhtml" style="color: white">Download Data</a></button>
@@ -251,9 +259,15 @@ def main():
      </html>
      """
 
+            replace_logo = ""
+            if "STOCK:" in i:
+                replace_logo = f'<img src="../../LOGO/STOCKS/{ticker}.svg">'
+            elif "ETF:" in i:
+                replace_logo = f'<img src="../../LOGO/ETFS/{ticker}.svg">'
+
             formatted_html = html_template.replace("@replace_ticker", ticker).replace("@replace_nci",
                                                                                       final_nci_html_str).replace(
-                "@replace_ohlc", final_ohlc_html_str)
+                "@replace_ohlc", final_ohlc_html_str).replace("@replace_logo",replace_logo)
 
             # Check if html exists
             asset_type = i.split(':')[0]

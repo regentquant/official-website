@@ -367,7 +367,14 @@ border-radius: 3px;
   width: auto; /* Maintain aspect ratio */
   margin-right: 10px; /* Optional: Adds space between the image and text */
 }
-
+.bi {
+    width: 23px;
+    height: auto;
+    position: relative;
+    margin-bottom: 5px;
+    color: red;
+    margin-right: 5px;
+}
 .rectangle-fill {
     flex-grow: 1; /* This makes the rectangle-fill take up the full width */
     display: flex;
@@ -394,9 +401,17 @@ border-radius: 3px;
 <img id="site-logo" src="regentquant-logo-two-colors.svg">
 <h1 class="chart-title">Regentquant Capital Trend Dashboard (Alphabetical Order)</h1>
 <h2 style="color: #333333">Last updated: @replace_time (New York Time)</h2>
-<h3 class='asset-type'>Today's Capital Trend Visualization</h3>
+    <h3 class='asset-type'>Today's Capital Trend Visualization</h3>
     <h2 class="subtitle">Overwhelmed by Data? Let the Expertise of the Regentquant Team Guide You Through Key Insights!</h2>
     <div class="capital-trend-container"><a href="Capital%20Trend/Capital%20Trend%20Visualization%20(Top%205%20Net%20Inflow%20&%20Top%205%20Net%20Outflow).pdf" class="rectangle-fill"><img src="LOGO/pdf-icon.svg" alt="PDF logo">Top 5 Net Inflow & Top 5 Net Outflow</a><br></div>
+<h3 class="asset-type"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+  <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
+</svg>Trending Tickers</h3>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-qqq.html" class="rectangle-fill"><img src="LOGO/ETFS/QQQ.svg" alt="QQQ logo">QQQ</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-spy.html" class="rectangle-fill"><img src="LOGO/ETFS/SPY.svg" alt="SPY logo">SPY</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-tsla.html" class="rectangle-fill"><img src="LOGO/STOCKS/TSLA.svg" alt="TSLA logo">TSLA</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-nvda.html" class="rectangle-fill"><img src="LOGO/STOCKS/NVDA.svg" alt="NVDA logo">NVDA</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-aapl.html" class="rectangle-fill"><img src="LOGO/STOCKS/AAPL.svg" alt="AAPL logo">AAPL</a><br></div>
     <h3 class='asset-type'>ETFs</h3>\n'''.replace("@replace_time",datetime.now(pytz.timezone('America/New_York')).strftime('%Y-%m-%d %H:%M:%S'))
     for i in sorted(os.listdir("ETFS")):
 
@@ -417,7 +432,7 @@ border-radius: 3px;
 
     fs = f"""{fs}\n
       <div class="nci-footer" style="width: 100%; height: 300px; background: white; margin-top: 50px; color: white; text-align: center; display: flex; justify-content: center; align-items: center;">
-         <p style="margin: 0;></p>
+         <p style="margin: 0;"></p>
       </div>
    </body>
 </html>"""
@@ -429,7 +444,6 @@ border-radius: 3px;
 
 import time
 s = time.time()
-main()
 dashboard()
 e = time.time()
 print(e-s)

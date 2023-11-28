@@ -65,7 +65,14 @@ border-radius: 3px;
   width: auto; /* Maintain aspect ratio */
   margin-right: 10px; /* Optional: Adds space between the image and text */
 }
-
+.bi {
+    width: 23px;
+    height: auto;
+    position: relative;
+    margin-bottom: 5px;
+    color: red;
+    margin-right: 5px;
+}
 .rectangle-fill {
     flex-grow: 1; /* This makes the rectangle-fill take up the full width */
     display: flex;
@@ -86,20 +93,12 @@ border-radius: 3px;
     margin-top: -15px;
     margin-bottom: 15px;
 }
-.bi {
-    width: 23px;
-    height: auto;
-    position: relative;
-    margin-bottom: 5px;
-    color: red;
-    margin-right: 5px;
-}
    </style>
    <body>
 <section>
 <img id="site-logo" src="regentquant-logo-two-colors.svg">
 <h1 class="chart-title">Regentquant Capital Trend Dashboard (Alphabetical Order)</h1>
-<h2 style="color: #333333">Last updated: 2023-11-28 17:07:43 (New York Time)</h2>
+<h2 style="color: #333333">Last updated: 2023-11-28 17:43:41 (New York Time)</h2>
 
     <h3 class='asset-type'>Today's Capital Trend Visualization</h3>
     <h2 class="subtitle">Overwhelmed by Data? Let the Expertise of the Regentquant Team Guide You Through Key Insights!</h2>
@@ -113,7 +112,6 @@ border-radius: 3px;
 <div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-nvda.html" class="rectangle-fill"><img src="LOGO/STOCKS/NVDA.svg" alt="NVDA logo">NVDA</a><br></div>
 <div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-aapl.html" class="rectangle-fill"><img src="LOGO/STOCKS/AAPL.svg" alt="AAPL logo">AAPL</a><br></div>
     <h3 class='asset-type'>ETFs</h3>
-
 <div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-acwi.html" class="rectangle-fill"><img src="LOGO/ETFS/ACWI.svg" alt="ACWI logo">ACWI</a><br></div>
 <div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-agg.html" class="rectangle-fill"><img src="LOGO/ETFS/AGG.svg" alt="AGG logo">AGG</a><br></div>
 <div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-arkk.html" class="rectangle-fill"><img src="LOGO/ETFS/ARKK.svg" alt="ARKK logo">ARKK</a><br></div>
@@ -327,7 +325,28 @@ border-radius: 3px;
 
 
       <div class="nci-footer" style="width: 100%; height: 300px; background: white; margin-top: 50px; color: white; text-align: center; display: flex; justify-content: center; align-items: center;">
-         <p style="margin: 0;></p>
+         <p style="margin: 0";></p>
       </div>
+       <script>
+        // JavaScript code goes here
+        window.onload = function() {
+            const finalNumber = 15976508522; // Set your final number here
+            const duration = 10000; // Duration in milliseconds (2000ms = 2 seconds)
+            const counterElement = document.getElementById('counter');
+            let currentNumber = 0;
+
+            const increment = finalNumber / (duration / 1000);
+
+            const interval = setInterval(() => {
+                currentNumber += increment;
+                if (currentNumber >= finalNumber) {
+                    counterElement.innerText = finalNumber;
+                    clearInterval(interval);
+                } else {
+                    counterElement.innerText = Math.floor(currentNumber);
+                }
+            }, 100);
+        };
+    </script>
    </body>
 </html>

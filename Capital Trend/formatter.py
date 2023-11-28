@@ -4,10 +4,63 @@ import pyperclip
 import os
 from datetime import datetime
 import pytz
+from concurrent.futures import ThreadPoolExecutor
+
+
+
 
 def main():
+    """
+    # Directory where the text files are located
+    directory = "/Users/curryyao/Library/Mobile Documents/com~apple~CloudDocs/Regent Quant/Database"
+
+    # Initialize a list to store the file names
+    file_names = []
+    for i in os.listdir(directory):
+        if i.endswith(".txt"):
+            file_names.append(f"{directory}/{i}")
+
+    # Initialize a dictionary to store data for each stock
+    stock_data = {}
+
+    # Iterate through the file names and store data in the dictionary
+    for file_name in file_names:
+        with open(file_name, 'r') as file:
+            lines = file.readlines()
+            # Extract the stock name from the header
+            header = lines[0].strip().split('\t')
+            stock_name = header[1]
+            # Initialize a list for the stock's data if it's not in the dictionary
+            if stock_name not in stock_data:
+                stock_data[stock_name] = []
+            # Append the data to the stock's list
+            for line in lines[1:]:
+                data = line.strip().split('\t')
+                stock_data[stock_name].append(data[1])
+
+    # Combine data for all stocks into a single list
+    combined_data = []
+
+    # Create the header line with stock names
+    header = ['Date'] + list(stock_data.keys())
+    combined_data.append('\t'.join(header))
+
+    # Iterate through the data and combine it into a single line
+    for i in range(len(stock_data[list(stock_data.keys())[0]])):
+        date = lines[i + 1].strip().split('\t')[0]
+        values = [date] + [stock_data[stock][i] for stock in stock_data]
+        combined_data.append('\t'.join(values))
+
+    fs = f""
+    # Print the combined data
+    for line in combined_data:
+        fs = f"{fs}{line}\n"
 
     api_key = "ezBrk47F0tOiUtSZU7KevlNnxEEwPgIs"
+    data = fs[:-1]
+    """
+    api_key = "ezBrk47F0tOiUtSZU7KevlNnxEEwPgIs"
+
     data = pyperclip.paste()
     # Split the data by lines and then by tabs
     lines = data.split('\n')
@@ -29,7 +82,7 @@ def main():
             date_list = []
             nci_list = []
             for a in columns[i]:
-                if a.replace("\r","") == "null":
+                if a.replace("\r", "") == "null":
                     total_null = total_null + 1
 
             if total_null > 0:
@@ -43,7 +96,7 @@ def main():
             end_date = date_list[-1]
             print(f"{start_date}\t{end_date}")
             # Grabbing OHLC Data from Polygon
-            ticker = i.split(':')[1].replace("\r","")
+            ticker = i.split(':')[1].replace("\r", "")
 
             data = requests.get(
                 f"https://api.polygon.io/v2/aggs/ticker/{ticker}/range/1/day/{start_date}/{end_date}?adjusted=true&sort=asc&limit=50000&apiKey={api_key}")
@@ -54,154 +107,153 @@ def main():
             final_ohlc_html_list = []
             final_nci_html_list = []
             for a in data:
-
                 html = "{time:'@replace_with_date',open:,high:,low:,close:},"
-                html = html.replace('open:',f'open:{a["o"]}').replace('high:',f'high:{a["h"]}')
-                html = html.replace('low:',f'low:{a["l"]}').replace('close:',f'close:{a["c"]}')
+                html = html.replace('open:', f'open:{a["o"]}').replace('high:', f'high:{a["h"]}')
+                html = html.replace('low:', f'low:{a["l"]}').replace('close:', f'close:{a["c"]}')
                 ohlc_html_list.append(html)
             for date, ohlc_html in zip(date_list, ohlc_html_list):
-
                 ohlc_html = ohlc_html.replace("@replace_with_date", date)
                 final_ohlc_html_list.append(ohlc_html)
 
             for date, nci in zip(date_list, nci_list):
-
-                nci_html = "{time:'@replace_with_date',value:@replace_with_nci},".replace("@replace_with_date", date).replace("@replace_with_nci", nci)
+                nci_html = "{time:'@replace_with_date',value:@replace_with_nci},".replace("@replace_with_date",
+                                                                                          date).replace(
+                    "@replace_with_nci", nci)
                 final_nci_html_list.append(nci_html)
 
             final_ohlc_html_str = ""
             final_nci_html_str = ""
 
             for ohlc, nci in zip(final_ohlc_html_list, final_nci_html_list):
-
                 final_ohlc_html_str = f"{final_ohlc_html_str}{ohlc}\n"
                 final_nci_html_str = f"{final_nci_html_str}{nci}\n"
 
             html_template = """
-    <!doctype html>
-    <html lang="en">
-       <head>
-               <!-- Google tag (gtag.js) -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-LYVSDS633M"></script>
-          <script>
-             window.dataLayer = window.dataLayer || [];
-             function gtag(){dataLayer.push(arguments);}
-             gtag('js', new Date());
-             gtag('config', 'G-LYVSDS633M');
-          </script>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>@replace_ticker Capital Trend</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="In-depth analysis of @replace_ticker stock capital trends.">
-    <meta name="keywords" content="@replace_ticker, capital trend, stock capital analysis, stock market, investment insights, market predictions, stock performance">
-    <meta name="author" content="Regentquant">
-    <meta name="robots" content="index, follow">
-    <meta name="canonical" href="https://www.regentquant.com/">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <link rel="icon" type="image/x-icon" href="../../favicon_1.png">
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-          <link rel="preconnect" href="https://fonts.googleapis.com">
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-          <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-          <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-          <link rel="stylesheet" href="../../chart-styles.css">
-       </head>
-       <body>
-          <section>
-             <img id="site-logo" src="../../regentquant-logo-two-colors.svg">
-             <h1 class="chart-title">Regentquant @replace_ticker Capital Trend (Daily Amount)</h1>
-             <h2 class="go-back-to-home-screen"><a href="https://www.regentquant.com">Go Back To Home Screen</a></h2>
-             <h2>How to use: Investors may try to predict future price trend by looking at capital trend. Candlestick chart shows underlying stock's historical adjusted OHLC price. Line chart shows net capital inflow (Unit$). The data is estimated by algorithm and for reference only. Data used in calculation is bought from ICE. Users may not reproduce or republish Regentquant's Net Capital Inflow data without permission.</h2>
-            <button id="download-chart">Save Chart</button> <button><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSKtccuxjMvuMaBrgBQMfPXHs6W3LKdAcZ0MzmEv1RNl0sAEkYaN4MYQyPTIrPIjSXwXoBzKOlg_2kt/pubhtml" style="color: white">Download Data</a></button>
-          </section>
-          <!-- Fund NAV Chart -->
-          <div id="container"></div>
-          <section id="footer"></section>
-          <script type="text/javascript">
-            // Lightweight Charts™ Example: Two Price Scales
-    // https://tradingview.github.io/lightweight-charts/tutorials/how_to/two-price-scales
-    
-    const chartOptions = {
-        rightPriceScale: {
-            visible: true,
-        },
-        leftPriceScale: {
-            visible: true,
-        },
-        layout: {
-            textColor: 'black',
-            background: { type: 'solid', color: 'white' },
-        },
-        crosshair: {
-            mode: 0, // CrosshairMode.Normal
-        },
-    };
-    /** @type {import('lightweight-charts').IChartApi} */
-    const chart = LightweightCharts.createChart(document.getElementById('container'), chartOptions);
-    const baselineSeries = chart.addBaselineSeries({ baseValue: { type: 'price', price: 0 }, topLineColor: 'rgba( 38, 166, 154, 1)', topFillColor1: 'rgba(38, 166, 154, 0.28)', topFillColor2: 'rgba( 38, 166, 154, 0.05)', bottomLineColor: 'rgba( 239, 83, 80, 1)', bottomFillColor1: 'rgba( 239, 83, 80, 0.05)', bottomFillColor2: 'rgba( 239, 83, 80, 0.28)' });
-    const data = [
-    @replace_nci
-    ];
-    baselineSeries.setData(data);
-    
-    
-    const candlestickSeries = chart.addCandlestickSeries({
-        priceScaleId: 'left',
-        upColor: '#26a69a', downColor: '#ef5350', borderVisible: false,
-        wickUpColor: '#26a69a', wickDownColor: '#ef5350',
-    });
-    
-    candlestickSeries.setData([
-    @replace_ohlc
-    ]);
-    
-       const totalDataPoints = data.length;
-      const visibleRange = Math.min(252, totalDataPoints);
-      chart.timeScale().setVisibleLogicalRange({
-        from: totalDataPoints - visibleRange,
-        to: totalDataPoints - 1,
-      });
-    
-             chart.applyOptions({
-                             layout: {
-                                 fontFamily: "'Saira Condensed', sans-serif",
-                             },
-                         });
-    
-             window.addEventListener('resize', resizeChart);
-    
-             function resizeChart() {
-             const container = document.getElementById('container');
-             chart.resize(
-             container.offsetWidth,
-             container.offsetHeight
-             );
-             }
-             resizeChart();
-             document.getElementById('download-chart').addEventListener('click', function() {
-             const chartContainer = document.getElementById('container');
-    
-             html2canvas(chartContainer, {
-             scale: 5  // Increase this value for higher resolution
-             }).then(canvas => {
-             const link = document.createElement('a');
-             link.href = canvas.toDataURL('image/png');
-             link.download = 'chart_high_res.png';
-             link.click();
-             });
-             });
-    
-          </script>
-       </body>
-    </html>
-    """
+     <!doctype html>
+     <html lang="en">
+        <head>
+                <!-- Google tag (gtag.js) -->
+           <script async src="https://www.googletagmanager.com/gtag/js?id=G-LYVSDS633M"></script>
+           <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-LYVSDS633M');
+           </script>
+           <meta charset="utf-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+           <title>@replace_ticker Capital Trend</title>
+     <meta charset="UTF-8">
+     <meta name="description" content="In-depth analysis of @replace_ticker stock capital trends.">
+     <meta name="keywords" content="@replace_ticker, capital trend, stock capital analysis, stock market, investment insights, market predictions, stock performance">
+     <meta name="author" content="Regentquant">
+     <meta name="robots" content="index, follow">
+     <meta name="canonical" href="https://www.regentquant.com/">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <link rel="icon" type="image/x-icon" href="../../favicon_1.png">
+           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+           <link rel="preconnect" href="https://fonts.googleapis.com">
+           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+           <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+           <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+           <link rel="stylesheet" href="../../chart-styles.css">
+        </head>
+        <body>
+           <section>
+              <img id="site-logo" src="../../regentquant-logo-two-colors.svg">
+              <h1 class="chart-title">Regentquant @replace_ticker Capital Trend (Daily Amount)</h1>
+              <h2 class="go-back-to-home-screen"><a href="https://www.regentquant.com">Go Back To Home Screen</a></h2>
+              <h2>How to use: Investors may try to predict future price trend by looking at capital trend. Candlestick chart shows underlying stock's historical adjusted OHLC price. Line chart shows net capital inflow (Unit$). The data is estimated by algorithm and for reference only. Data used in calculation is bought from ICE. Users may not reproduce or republish Regentquant's Net Capital Inflow data without permission.</h2>
+             <button id="download-chart">Save Chart</button> <button><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSKtccuxjMvuMaBrgBQMfPXHs6W3LKdAcZ0MzmEv1RNl0sAEkYaN4MYQyPTIrPIjSXwXoBzKOlg_2kt/pubhtml" style="color: white">Download Data</a></button>
+           </section>
+           <!-- Fund NAV Chart -->
+           <div id="container"></div>
+           <section id="footer"></section>
+           <script type="text/javascript">
+             // Lightweight Charts™ Example: Two Price Scales
+     // https://tradingview.github.io/lightweight-charts/tutorials/how_to/two-price-scales
 
-            formatted_html = html_template.replace("@replace_ticker", ticker).replace("@replace_nci", final_nci_html_str).replace("@replace_ohlc", final_ohlc_html_str)
+     const chartOptions = {
+         rightPriceScale: {
+             visible: true,
+         },
+         leftPriceScale: {
+             visible: true,
+         },
+         layout: {
+             textColor: 'black',
+             background: { type: 'solid', color: 'white' },
+         },
+         crosshair: {
+             mode: 0, // CrosshairMode.Normal
+         },
+     };
+     /** @type {import('lightweight-charts').IChartApi} */
+     const chart = LightweightCharts.createChart(document.getElementById('container'), chartOptions);
+     const baselineSeries = chart.addBaselineSeries({ baseValue: { type: 'price', price: 0 }, topLineColor: 'rgba( 38, 166, 154, 1)', topFillColor1: 'rgba(38, 166, 154, 0.28)', topFillColor2: 'rgba( 38, 166, 154, 0.05)', bottomLineColor: 'rgba( 239, 83, 80, 1)', bottomFillColor1: 'rgba( 239, 83, 80, 0.05)', bottomFillColor2: 'rgba( 239, 83, 80, 0.28)' });
+     const data = [
+     @replace_nci
+     ];
+     baselineSeries.setData(data);
 
+
+     const candlestickSeries = chart.addCandlestickSeries({
+         priceScaleId: 'left',
+         upColor: '#26a69a', downColor: '#ef5350', borderVisible: false,
+         wickUpColor: '#26a69a', wickDownColor: '#ef5350',
+     });
+
+     candlestickSeries.setData([
+     @replace_ohlc
+     ]);
+
+        const totalDataPoints = data.length;
+       const visibleRange = Math.min(252, totalDataPoints);
+       chart.timeScale().setVisibleLogicalRange({
+         from: totalDataPoints - visibleRange,
+         to: totalDataPoints - 1,
+       });
+
+              chart.applyOptions({
+                              layout: {
+                                  fontFamily: "'Saira Condensed', sans-serif",
+                              },
+                          });
+
+              window.addEventListener('resize', resizeChart);
+
+              function resizeChart() {
+              const container = document.getElementById('container');
+              chart.resize(
+              container.offsetWidth,
+              container.offsetHeight
+              );
+              }
+              resizeChart();
+              document.getElementById('download-chart').addEventListener('click', function() {
+              const chartContainer = document.getElementById('container');
+
+              html2canvas(chartContainer, {
+              scale: 5  // Increase this value for higher resolution
+              }).then(canvas => {
+              const link = document.createElement('a');
+              link.href = canvas.toDataURL('image/png');
+              link.download = 'chart_high_res.png';
+              link.click();
+              });
+              });
+
+           </script>
+        </body>
+     </html>
+     """
+
+            formatted_html = html_template.replace("@replace_ticker", ticker).replace("@replace_nci",
+                                                                                      final_nci_html_str).replace(
+                "@replace_ohlc", final_ohlc_html_str)
 
             # Check if html exists
             asset_type = i.split(':')[0]
@@ -230,6 +282,7 @@ def main():
                     file.write(formatted_html)
                 file.close()
             print(file_name)
+
 
 def dashboard():
 
@@ -359,6 +412,10 @@ border-radius: 3px;
         file.write(fs)
     file.close()
 
-main()
 
+import time
+s = time.time()
+main()
 dashboard()
+e = time.time()
+print(e-s)

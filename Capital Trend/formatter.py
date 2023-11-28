@@ -167,7 +167,7 @@ border-radius: 3px;
      height: 32px; /* Example height, adjust as needed */
   width: auto; /* Maintain aspect ratio */
   margin-right: 10px; /* Optional: Adds space between the image and text */
-padding-bottom: 5px;
+                margin-bottom: 3px;
             }
         </style>
            <section>

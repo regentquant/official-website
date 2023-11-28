@@ -211,7 +211,7 @@ def main():
      ]);
 
         const totalDataPoints = data.length;
-       const visibleRange = Math.min(252, totalDataPoints);
+       const visibleRange = Math.min(30, totalDataPoints);
        chart.timeScale().setVisibleLogicalRange({
          from: totalDataPoints - visibleRange,
          to: totalDataPoints - 1,

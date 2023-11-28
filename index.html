@@ -165,8 +165,8 @@
                         Flagship Fund's AUM: $170,000 (TOTAL AUM Estimated: $700,000)<br>
                         <section style="font-size: small; margin-top: 8px">data as of Novemeber 16, 2023</section>
                     </h2>
-                    <a href="fund-nav.html" class="tesla-button" style="--tds-btn--background-color: rgba(62, 106, 225, 0.1); --tcl-button-backdrop-filter: blur(8px); color: var(--tds-theme-foreground-high-contrast); font-family: 'Saira Condensed', sans-serif; font-weight: 400">Flagship Fund NAV</a>
-                    <a href="backtest.html" class="tesla-button" style="--tds-btn--background-color: rgba(62, 106, 225, 0.1); --tcl-button-backdrop-filter: blur(8px); color: var(--tds-theme-foreground-high-contrast); font-family: 'Saira Condensed', sans-serif; font-weight: 400">Strategy Backtest</a>
+                    <a href="fund-nav.html" class="blurred-button" style="--tds-btn--background-color: rgba(62, 106, 225, 0.1); --tcl-button-backdrop-filter: blur(8px); color: var(--tds-theme-foreground-high-contrast); font-family: 'Saira Condensed', sans-serif; font-weight: 400">Flagship Fund NAV</a>
+                    <a href="backtest.html" class="blurred-button" style="--tds-btn--background-color: rgba(62, 106, 225, 0.1); --tcl-button-backdrop-filter: blur(8px); color: var(--tds-theme-foreground-high-contrast); font-family: 'Saira Condensed', sans-serif; font-weight: 400">Strategy Backtest</a>
                 </div>
             </header>
             <section style="font-family: 'Saira Condensed', sans-serif; font-weight: 400; color: #595959; font-size: small; text-align: center; padding-top: 10px; width: 80%; margin: auto">Regentquant is not affliated with SpaceX. We use SpaceX's starbase as wallpaper of the website because our founder wants to occupy Mars.</section>
@@ -839,7 +839,7 @@
         .button:hover {
         background-color: rgba(255, 255, 255, 0.8);
         }
-        .tesla-button {
+        .blurred-button {
         padding: 10px 15px;
         border-radius: 5px;
         margin-right: 10px;
@@ -850,15 +850,18 @@
         background-color: var(--tds-btn--background-color);
         color: var(--tds-theme-foreground-high-contrast);
         }
-        .tesla-button:hover {
+        .blurred-button:hover {
         background-color: rgba(62, 106, 225, 0.3);
         }
         @media only screen and (max-width: 768px) {
-        .tesla-button {
+    .blurred-button {
         display: block; /* Stack buttons */
-        margin-right: 0; /* Remove margin-right on mobile */
+        width: calc(100% - 20px); /* Full width minus the padding */
+        margin: 10px 0; /* Add some margin at the top and bottom */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
         text-align: center;
-        }
+    }
+}
         }
         body, html {
         margin: 0 !important;

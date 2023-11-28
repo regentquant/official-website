@@ -300,6 +300,7 @@ border-radius: 3px;
   width: auto; /* Maintain aspect ratio */
   margin-right: 10px; /* Optional: Adds space between the image and text */
 }
+
 .rectangle-fill {
     flex-grow: 1; /* This makes the rectangle-fill take up the full width */
     display: flex;
@@ -316,14 +317,21 @@ border-radius: 3px;
    background: #FBFBFD;
    border-radius: 3px;
 }
+.subtitle {
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
    </style>
    <body>
 <section>
 <img id="site-logo" src="regentquant-logo-two-colors.svg">
 <h1 class="chart-title">Regentquant Capital Trend Dashboard (Alphabetical Order)</h1>
-<h2>Last updated: @replace_time (NewYork Time)</h2>
+<h2>Last updated: 2023-11-27 18:50:20 (NewYork Time)</h2>
 <h4>Didn't see your favorite ETF or stock? Send us email to request us to include your favorite ETF or stock! (email: curry_yao@regentquant.com)</h4>
-<h3 class='asset-type'>ETFs</h3>\n'''.replace("@replace_time",datetime.now(pytz.timezone('America/New_York')).strftime('%Y-%m-%d %H:%M:%S'))
+<h3>Today's Capital Trend Visualization</h3>
+    <h2 class="subtitle">Overwhelmed by Data? Let the Expertise of the Regentquant Team Guide You Through Key Insights!</h2>
+    <div class="capital-trend-container"><a href="Capital%20Trend/Capital%20Trend%20Visualization%20(Top%205%20Net%20Inflow%20&%20Top%205%20Net%20Outflow).pdf" class="rectangle-fill"><img src="LOGO/pdf-icon.svg" alt="PDF logo">Top 5 Net Inflow & Top 5 Net Outflow</a><br></div>
+    <h3 class='asset-type'>ETFs</h3>\n'''.replace("@replace_time",datetime.now(pytz.timezone('America/New_York')).strftime('%Y-%m-%d %H:%M:%S'))
     for i in sorted(os.listdir("ETFS")):
 
         if "html" in i:
@@ -352,5 +360,4 @@ border-radius: 3px;
         file.write(fs)
     file.close()
 
-main()
 dashboard()

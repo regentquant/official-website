@@ -360,5 +360,5 @@ border-radius: 3px;
     file.close()
 
 
-main()
+
 dashboard()

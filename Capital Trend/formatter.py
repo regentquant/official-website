@@ -7,8 +7,6 @@ import pytz
 from concurrent.futures import ThreadPoolExecutor
 
 
-
-
 def main():
     """
     # Directory where the text files are located
@@ -92,7 +90,7 @@ def main():
                 date_list = columns['Date']
                 nci_list = columns[i]
 
-            nci_list = [round(float(i)/1000000,2) for i in nci_list]
+            nci_list = [round(float(i) / 1000000, 2) for i in nci_list]
 
             # Start Date & End Date
             start_date = date_list[0]
@@ -128,8 +126,8 @@ def main():
             final_nci_html_str = ""
 
             for ohlc, nci in zip(final_ohlc_html_list, final_nci_html_list):
-                final_ohlc_html_str = f"{final_ohlc_html_str}{ohlc}\n"
-                final_nci_html_str = f"{final_nci_html_str}{nci}\n"
+                final_ohlc_html_str = f"{final_ohlc_html_str}{ohlc}\t"
+                final_nci_html_str = f"{final_nci_html_str}{nci}\t"
 
             html_template = """
      <!doctype html>
@@ -143,6 +141,54 @@ def main():
               gtag('js', new Date());
               gtag('config', 'G-LYVSDS633M');
            </script>
+        <!--<![endif]--><!--
+            Regentquant
+            WE BELIEVE THE FUTURE OF HUMANITY IS BRIGHT
+            JOIN US. TO CREATE A BETTER FUTURE.
+                      _____                    _____                    _____                    _____                    _____                _____
+                     /\    \                  /\    \                  /\    \                  /\    \                  /\    \              /\    \
+                    /::\    \                /::\    \                /::\    \                /::\    \                /::\____\            /::\    \
+                   /::::\    \              /::::\    \              /::::\    \              /::::\    \              /::::|   |            \:::\    \
+                  /::::::\    \            /::::::\    \            /::::::\    \            /::::::\    \            /:::::|   |             \:::\    \
+                 /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /::::::|   |              \:::\    \
+                /:::/__\:::\    \        /:::/__\:::\    \        /:::/  \:::\    \        /:::/__\:::\    \        /:::/|::|   |               \:::\    \
+               /::::\   \:::\    \      /::::\   \:::\    \      /:::/    \:::\    \      /::::\   \:::\    \      /:::/ |::|   |               /::::\    \
+              /::::::\   \:::\    \    /::::::\   \:::\    \    /:::/    / \:::\    \    /::::::\   \:::\    \    /:::/  |::|   | _____        /::::::\    \
+             /:::/\:::\   \:::\____\  /:::/\:::\   \:::\    \  /:::/    /   \:::\ ___\  /:::/\:::\   \:::\    \  /:::/   |::|   |/\    \      /:::/\:::\    \
+            /:::/  \:::\   \:::|    |/:::/__\:::\   \:::\____\/:::/____/  ___\:::|    |/:::/__\:::\   \:::\____\/:: /    |::|   /::\____\    /:::/  \:::\____\
+            \::/   |::::\  /:::|____|\:::\   \:::\   \::/    /\:::\    \ /\  /:::|____|\:::\   \:::\   \::/    /\::/    /|::|  /:::/    /   /:::/    \::/    /
+             \/____|:::::\/:::/    /  \:::\   \:::\   \/____/  \:::\    /::\ \::/    /  \:::\   \:::\   \/____/  \/____/ |::| /:::/    /   /:::/    / \/____/
+                   |:::::::::/    /    \:::\   \:::\    \       \:::\   \:::\ \/____/    \:::\   \:::\    \              |::|/:::/    /   /:::/    /
+                   |::|\::::/    /      \:::\   \:::\____\       \:::\   \:::\____\       \:::\   \:::\____\             |::::::/    /   /:::/    /
+                   |::| \::/____/        \:::\   \::/    /        \:::\  /:::/    /        \:::\   \::/    /             |:::::/    /    \::/    /
+                   |::|  ~|               \:::\   \/____/          \:::\/:::/    /          \:::\   \/____/              |::::/    /      \/____/
+                   |::|   |                \:::\    \               \::::::/    /            \:::\    \                  /:::/    /
+                   \::|   |                 \:::\____\               \::::/    /              \:::\____\                /:::/    /
+                    \:|   |                  \::/    /                \::/____/                \::/    /                \::/    /
+                     \|___|                   \/____/                                           \/____/                  \/____/
+
+                     _______                   _____                    _____                    _____                _____
+                    /::\    \                 /\    \                  /\    \                  /\    \              /\    \
+                   /::::\    \               /::\____\                /::\    \                /::\____\            /::\    \
+                  /::::::\    \             /:::/    /               /::::\    \              /::::|   |            \:::\    \
+                 /::::::::\    \           /:::/    /               /::::::\    \            /:::::|   |             \:::\    \
+                /:::/~~\:::\    \         /:::/    /               /:::/\:::\    \          /::::::|   |              \:::\    \
+               /:::/    \:::\    \       /:::/    /               /:::/__\:::\    \        /:::/|::|   |               \:::\    \
+              /:::/    / \:::\    \     /:::/    /               /::::\   \:::\    \      /:::/ |::|   |               /::::\    \
+             /:::/____/   \:::\____\   /:::/    /      _____    /::::::\   \:::\    \    /:::/  |::|   | _____        /::::::\    \
+            |:::|    |     |:::|    | /:::/____/      /\    \  /:::/\:::\   \:::\    \  /:::/   |::|   |/\    \      /:::/\:::\    \
+            |:::|____|     |:::|____||:::|    /      /::\____\/:::/  \:::\   \:::\____\/:: /    |::|   /::\____\    /:::/  \:::\____\
+             \:::\   _\___/:::/    / |:::|____\     /:::/    /\::/    \:::\  /:::/    /\::/    /|::|  /:::/    /   /:::/    \::/    /
+              \:::\ |::| /:::/    /   \:::\    \   /:::/    /  \/____/ \:::\/:::/    /  \/____/ |::| /:::/    /   /:::/    / \/____/
+               \:::\|::|/:::/    /     \:::\    \ /:::/    /            \::::::/    /           |::|/:::/    /   /:::/    /
+                \::::::::::/    /       \:::\    /:::/    /              \::::/    /            |::::::/    /   /:::/    /
+                 \::::::::/    /         \:::\__/:::/    /               /:::/    /             |:::::/    /    \::/    /
+                  \::::::/    /           \::::::::/    /               /:::/    /              |::::/    /      \/____/
+                   \::::/____/             \::::::/    /               /:::/    /               /:::/    /
+                    |::|    |               \::::/    /               /:::/    /               /:::/    /
+                    |::|____|                \::/____/                \::/    /                \::/    /
+                     ~~                       ~~                       \/____/                  \/____/
+            -->
            <meta charset="utf-8">
            <meta name="viewport" content="width=device-width, initial-scale=1">
            <title>@replace_ticker Capital Trend</title>
@@ -287,7 +333,7 @@ const baselineSeries = chart.addBaselineSeries({
 
             formatted_html = html_template.replace("@replace_ticker", ticker).replace("@replace_nci",
                                                                                       final_nci_html_str).replace(
-                "@replace_ohlc", final_ohlc_html_str).replace("@replace_logo",replace_logo)
+                "@replace_ohlc", final_ohlc_html_str).replace("@replace_logo", replace_logo)
 
             # Check if html exists
             asset_type = i.split(':')[0]
@@ -319,7 +365,6 @@ const baselineSeries = chart.addBaselineSeries({
 
 
 def dashboard():
-
     fs = '''<!doctype html>
 <html lang="en">
    <head>
@@ -432,12 +477,15 @@ border-radius: 3px;
 <div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-tsla.html" class="rectangle-fill"><img src="LOGO/STOCKS/TSLA.svg" alt="TSLA logo">TSLA</a><br></div>
 <div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-nvda.html" class="rectangle-fill"><img src="LOGO/STOCKS/NVDA.svg" alt="NVDA logo">NVDA</a><br></div>
 <div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-aapl.html" class="rectangle-fill"><img src="LOGO/STOCKS/AAPL.svg" alt="AAPL logo">AAPL</a><br></div>
-    <h3 class='asset-type'>ETFs</h3>\n'''.replace("@replace_time",datetime.now(pytz.timezone('America/New_York')).strftime('%Y-%m-%d %H:%M:%S'))
+    <h3 class='asset-type'>ETFs</h3>\n'''.replace("@replace_time",
+                                                  datetime.now(pytz.timezone('America/New_York')).strftime(
+                                                      '%Y-%m-%d %H:%M:%S'))
     for i in sorted(os.listdir("ETFS")):
 
         if "html" in i:
             ticker = i.split('.html')[0].split('-')[-1]
-            s = '<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-@replace_ticker_lower.html" class="rectangle-fill"><img src="LOGO/ETFS/@replace_ticker_upper.svg" alt="@replace_ticker_upper logo">@replace_ticker_upper</a><br></div>'.replace("@replace_ticker_upper", ticker.upper()).replace("@replace_ticker_lower", ticker.lower())
+            s = '<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-@replace_ticker_lower.html" class="rectangle-fill"><img src="LOGO/ETFS/@replace_ticker_upper.svg" alt="@replace_ticker_upper logo">@replace_ticker_upper</a><br></div>'.replace(
+                "@replace_ticker_upper", ticker.upper()).replace("@replace_ticker_lower", ticker.lower())
             fs = f"{fs}{s}\n"
 
     fs = f"{fs}<h3 class='asset-type'>STOCKs</h3>\n"
@@ -463,8 +511,9 @@ border-radius: 3px;
 
 
 import time
+
 s = time.time()
 main()
 dashboard()
 e = time.time()
-print(e-s)
+print(e - s)

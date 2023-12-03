@@ -27,31 +27,9 @@ string = """                                          <!-- File Start -->
 """
 
 
-download_links = """https://drive.google.com/open?id=1IwHzYXBxYqh5esP5GUaWDP5FYiR0vqPQ&usp=drive_copy
-https://drive.google.com/open?id=1Ap5iGz7mvLMHL_qQ2R5JGoMCfyiPpdJq&usp=drive_copy
-https://drive.google.com/open?id=1ntwUvhPTQlz8kmYv5WBqMBoqwmi_aTOK&usp=drive_copy
-https://drive.google.com/open?id=1drh3pbaWYW3zRcqdtn2qvFoSuqPWLACp&usp=drive_copy
-https://drive.google.com/open?id=19SsohvCCKiNP0GQCwgw-SmQSCT49xc-W&usp=drive_copy
-https://drive.google.com/open?id=1ayGCVnkjCyydquqcpH2YgTuiO3YEZZNk&usp=drive_copy
-https://drive.google.com/open?id=1EFhP8ejltGN8o4a9Tlr69pqhyQAv1Rci&usp=drive_copy
-https://drive.google.com/open?id=1cO2V_UMhR5GWQU3p6mSexh4Vvk677Dq_&usp=drive_copy
-https://drive.google.com/open?id=121aKjzw7zxvffFTlsCIXu1IzFHAPMLr9&usp=drive_copy
-https://drive.google.com/open?id=13A4O_qu3JbSaA74XqVFHty2Sa1U3unzm&usp=drive_copy
-https://drive.google.com/open?id=1bPMoE0D5Z-SuAMfPQ3k3Q9pXJaDXLZz5&usp=drive_copy
-https://drive.google.com/open?id=1E7XZJo7cLJz6dwAaWOjiVKjCmU1RyV5l&usp=drive_copy""".split('\n')
+download_links = """https://drive.google.com/open?id=1ayDYFiH3QVIL8cCjiewm3sv0TxfMNSqD&usp=drive_copy""".split('\n')
 
-file_names = """The_New_Yorker_20231016.jpeg
-The_New_Yorker_20230918.jpeg
-The_New_Yorker_20230925.jpeg
-The_New_Yorker_20231002.jpeg
-The_New_Yorker_20231009.jpeg
-The_New_Yorker_20231023.jpeg
-The_New_Yorker_20231030.jpeg
-The_New_Yorker_20231106.jpeg
-The_New_Yorker_20231113.jpeg
-The_New_Yorker_20231120.jpeg
-The_New_Yorker_20231127.jpeg
-The_New_Yorker_20231204.jpeg""".split('\n')
+file_names = """Bloomberg_Businessweek_20231204.jpeg""".split('\n')
 
 file_names.sort()
 file_names.reverse()
@@ -63,7 +41,7 @@ for file_name, download_link in zip(file_names, download_links):
                         <img src="The_New_Yorker_Covers/@replace_a" alt="@replace_a" class="card-img-top">
                         <div class="card-body text-center">
                            <h5 class="card-title">
-                              The New Yorker<br></br>
+                              Barron's<br></br>
                               <p>@replace_date</p>
                            </h5>
                            <a href="@replace_link_a" class="btn btn-dark" style="margin-top: 10px; margin-bottom: -1px; background: black; border-width: 0px; background: white; color: #333333; border-width: 1px; border-color: #333333">

@@ -27,9 +27,9 @@ string = """                                          <!-- File Start -->
 """
 
 
-download_links = """https://drive.google.com/open?id=1ayDYFiH3QVIL8cCjiewm3sv0TxfMNSqD&usp=drive_copy""".split('\n')
+download_links = """https://drive.google.com/open?id=1D0KK7q28nqJfotLHFyRM0ag8JJ5-i3mG&usp=drive_copy""".split('\n')
 
-file_names = """Bloomberg_Businessweek_20231204.jpeg""".split('\n')
+file_names = """The_New_Yorker_20231211.jpeg""".split('\n')
 
 file_names.sort()
 file_names.reverse()

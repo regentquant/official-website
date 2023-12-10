@@ -26,7 +26,6 @@ string = """                                          <!-- File Start -->
                   <!-- File End -->
 """
 
-
 download_links = """https://drive.google.com/open?id=1huQrFLUCkyg_PbcjZqJhZSh-OwcmHUNK&usp=drive_copy""".split('\n')
 
 file_names = """Bloomberg_Businessweek_20231211.jpeg""".split('\n')
@@ -61,6 +60,9 @@ for file_name, download_link in zip(file_names, download_links):
                      </div>
                   </div>
                   <!-- File End -->
-""".replace("@replace_a", file_name.replace(".pdf","jpeg")).replace("@replace_date", f"{file_name[15:].replace('.jpeg','')[:4]}-{file_name[15:].replace('.jpeg','')[4:6]}-{file_name[15:].replace('.jpeg','')[6:8]}").replace("@replace_link_a", download_link).replace("@replace_link_b",download_link.replace("open?","uc?export=download&"))
+""".replace("@replace_a", file_name.replace(".pdf", "jpeg")).replace("@replace_date",
+                                                                     f"{file_name[15:].replace('.jpeg', '')[:4]}-{file_name[15:].replace('.jpeg', '')[4:6]}-{file_name[15:].replace('.jpeg', '')[6:8]}").replace(
+        "@replace_link_a", download_link).replace("@replace_link_b",
+                                                  download_link.replace("open?", "uc?export=download&"))
     print(string)
     print(f"")

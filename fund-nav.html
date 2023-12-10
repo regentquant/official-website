@@ -186,32 +186,7 @@
          const chart = LightweightCharts.createChart(document.getElementById('fund-nav-chart-container'), chartOptions);
          const candlestickSeries = chart.addCandlestickSeries({ upColor: '#14AC9D', downColor: '#F33C75', borderVisible: false, wickUpColor: '#14AC9D', wickDownColor: '#F33C75' });
 
-const data = [
-
- { open: 100, high: 100.0139, low: 96.6497, close: 96.6497, time: '2023-07-03' },
-{ open: 96.5072, high: 107.0949, low: 96.5072, close: 106.9302, time: '2023-07-10' },
-{ open: 109.941, high: 112.7859, low: 103.1479, close: 103.1479, time: '2023-07-17' },
-{ open: 103.641, high: 109.7243, low: 103.641, close: 109.7243, time: '2023-07-24' },
-{ open: 110.1082, high: 110.1082, low: 100.1475, close: 100.1475, time: '2023-07-31' },
-{ open: 102.6819, high: 102.6819, low: 94.6994, close: 94.6994, time: '2023-08-07' },
-{ open: 98.0394, high: 98.0394, low: 88.1341, close: 88.1341, time: '2023-08-14' },
-{ open: 92.7534, high: 96.8883, low: 90.4468, close: 92.6439, time: '2023-08-21' },
-{ open: 94.6591, high: 103.6627, low: 94.6591, close: 103.293, time: '2023-08-28' },
-{ open: 103.8302, high: 103.8302, low: 98.7864, close: 99.1047, time: '2023-09-05' },
-{ open: 102.7142, high: 102.7142, low: 97.164, close: 97.164, time: '2023-09-11' },
-{ open: 97.2925, high: 97.2925, low: 86.993, close: 87.0461, time: '2023-09-18' },
-{ open: 88.2555, high: 88.2555, low: 84.2583, close: 87.3086, time: '2023-09-25' },
-{ open: 90.6991, high: 96.1599, low: 85.1569, close: 96.1599, time: '2023-10-02' },
-{ open: 97.637, high: 101.1089, low: 94.1884, close: 94.1884, time: '2023-10-09' },
-{ open: 98.55, high: 98.55, low: 84.523, close: 84.523, time: '2023-10-16' },
-{ open: 87.233, high: 90.5479, low: 74.9855, close: 77.8002, time: '2023-10-23' },
-{ open: 80.7487, high: 89.9546, low: 80.7487, close: 89.9546, time: '2023-10-30' },
-{ open: 90.6429, high: 102.4223, low: 90.6429, close: 102.4223, time: '2023-11-06' },
-{ open: 101.9172, high: 109.4888, low: 101.9172, close: 109.4888, time: '2023-11-13' },
-{ open: 114.6013, high: 114.6013, low: 112.7972, close: 112.7972, time: '2023-11-20' },
-{ open: 112.009, high: 113.691, low: 109.6887, close: 109.6887, time: '2023-11-27' },
-       { open: 105.3866, high: 113.1941, low: 104.3543, close: 113.0941, time: '2023-12-04' },
-             ];
+const data = [{ open: 100, high: 100.0139, low: 96.6497, close: 96.6497, time: '2023-07-03' },{ open: 96.5072, high: 107.0949, low: 96.5072, close: 106.9302, time: '2023-07-10' },{ open: 109.941, high: 112.7859, low: 103.1479, close: 103.1479, time: '2023-07-17' },{ open: 103.641, high: 109.7243, low: 103.641, close: 109.7243, time: '2023-07-24' },{ open: 110.1082, high: 110.1082, low: 100.1475, close: 100.1475, time: '2023-07-31' },{ open: 102.6819, high: 102.6819, low: 94.6994, close: 94.6994, time: '2023-08-07' },{ open: 98.0394, high: 98.0394, low: 88.1341, close: 88.1341, time: '2023-08-14' },{ open: 92.7534, high: 96.8883, low: 90.4468, close: 92.6439, time: '2023-08-21' },{ open: 94.6591, high: 103.6627, low: 94.6591, close: 103.293, time: '2023-08-28' },{ open: 103.8302, high: 103.8302, low: 98.7864, close: 99.1047, time: '2023-09-05' },{ open: 102.7142, high: 102.7142, low: 97.164, close: 97.164, time: '2023-09-11' },{ open: 97.2925, high: 97.2925, low: 86.993, close: 87.0461, time: '2023-09-18' },{ open: 88.2555, high: 88.2555, low: 84.2583, close: 87.3086, time: '2023-09-25' },{ open: 90.6991, high: 96.1599, low: 85.1569, close: 96.1599, time: '2023-10-02' },{ open: 97.637, high: 101.1089, low: 94.1884, close: 94.1884, time: '2023-10-09' },{ open: 98.55, high: 98.55, low: 84.523, close: 84.523, time: '2023-10-16' },{ open: 87.233, high: 90.5479, low: 74.9855, close: 77.8002, time: '2023-10-23' },{ open: 80.7487, high: 89.9546, low: 80.7487, close: 89.9546, time: '2023-10-30' },{ open: 90.6429, high: 102.4223, low: 90.6429, close: 102.4223, time: '2023-11-06' },{ open: 101.9172, high: 109.4888, low: 101.9172, close: 109.4888, time: '2023-11-13' },{ open: 114.6013, high: 114.6013, low: 112.7972, close: 112.7972, time: '2023-11-20' },{ open: 112.009, high: 113.691, low: 109.6887, close: 109.6887, time: '2023-11-27' },{ open: 105.3866, high: 113.0941, low: 104.0543, close: 113.0941, time: '2023-12-04' },];
 
          candlestickSeries.setData(data);
 

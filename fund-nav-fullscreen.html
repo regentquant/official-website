@@ -1,0 +1,134 @@
+      <!doctype html>
+<html lang="en">
+ <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Regent Flagship NAV</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+ </head>
+<style>
+  #container {
+    width: 100vw;  /* 100% of the viewport's width */
+    height: 100vh; /* 100% of the viewport's height */
+    padding: 0;    /* No padding */
+  }
+
+  body {
+    margin: 0;        /* No margin around the <body> */
+    padding: 0;       /* No padding inside the <body> */
+    background: #131722;
+    overflow: hidden; /* Hide scrollbars */
+  }
+
+  #description {
+    font-family: "Roboto", sans-serif;
+    color: #D2D4DC;
+    margin: 0px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+</style>
+ <body>
+
+    <!-- Fund NAV Chart -->
+    <div id="container"></div>
+      <script type="text/javascript">
+        // Lightweight Charts™ Example: Two Price Scales
+// https://tradingview.github.io/lightweight-charts/tutorials/how_to/two-price-scales
+
+const chartOptions = {
+	rightPriceScale: {
+		visible: true,
+	},
+	leftPriceScale: {
+		visible: true,
+	},
+	layout: {
+		textColor: 'white',
+		background: { type: 'solid', color: 'transparent' },
+	},
+	crosshair: {
+		mode: 0, // CrosshairMode.Normal
+	},
+    grid: {
+    vertLines: {
+      color: 'rgba(36, 40, 50, 1)', // Your desired color for vertical grid lines (x-axis)
+    },
+    horzLines: {
+      color: 'rgba(36, 40, 50, 1)', // Your desired color for horizontal grid lines (y-axis)
+    }}
+};
+/** @type {import('lightweight-charts').IChartApi} */
+// Continue with the existing chartOptions and create the chart as before
+const chart = LightweightCharts.createChart(document.getElementById('container'), chartOptions);
+
+// Create the baseline series with the right price scale as before
+const baselineSeries = chart.addCandlestickSeries({
+  baseValue: {
+    type: 'price',
+    price: 100
+  },
+  topLineColor: 'rgba( 38, 166, 154, 1)',
+  topFillColor1: 'rgba( 38, 166, 154,1)',
+  topFillColor2: 'transparent',
+  bottomLineColor: 'rgba( 243, 60, 117, 1)',
+  bottomFillColor1: 'transparent',
+  bottomFillColor2: 'rgba( 243, 60, 117, 1)',
+  priceScaleId: 'right',
+});
+
+
+
+const baselineData = [{ open: 100, high: 100.0139, low: 96.6497, close: 96.6497, time: '2023-07-03' },{ open: 96.5072, high: 107.0949, low: 96.5072, close: 106.9302, time: '2023-07-10' },{ open: 109.941, high: 112.7859, low: 103.1479, close: 103.1479, time: '2023-07-17' },{ open: 103.641, high: 109.7243, low: 103.641, close: 109.7243, time: '2023-07-24' },{ open: 110.1082, high: 110.1082, low: 100.1475, close: 100.1475, time: '2023-07-31' },{ open: 102.6819, high: 102.6819, low: 94.6994, close: 94.6994, time: '2023-08-07' },{ open: 98.0394, high: 98.0394, low: 88.1341, close: 88.1341, time: '2023-08-14' },{ open: 92.7534, high: 96.8883, low: 90.4468, close: 92.6439, time: '2023-08-21' },{ open: 94.6591, high: 103.6627, low: 94.6591, close: 103.293, time: '2023-08-28' },{ open: 103.8302, high: 103.8302, low: 98.7864, close: 99.1047, time: '2023-09-05' },{ open: 102.7142, high: 102.7142, low: 97.164, close: 97.164, time: '2023-09-11' },{ open: 97.2925, high: 97.2925, low: 86.993, close: 87.0461, time: '2023-09-18' },{ open: 88.2555, high: 88.2555, low: 84.2583, close: 87.3086, time: '2023-09-25' },{ open: 90.6991, high: 96.1599, low: 85.1569, close: 96.1599, time: '2023-10-02' },{ open: 97.637, high: 101.1089, low: 94.1884, close: 94.1884, time: '2023-10-09' },{ open: 98.55, high: 98.55, low: 84.523, close: 84.523, time: '2023-10-16' },{ open: 87.233, high: 90.5479, low: 74.9855, close: 77.8002, time: '2023-10-23' },{ open: 80.7487, high: 89.9546, low: 80.7487, close: 89.9546, time: '2023-10-30' },{ open: 90.6429, high: 102.4223, low: 90.6429, close: 102.4223, time: '2023-11-06' },{ open: 101.9172, high: 109.4888, low: 101.9172, close: 109.4888, time: '2023-11-13' },{ open: 114.6013, high: 114.6013, low: 112.7972, close: 112.7972, time: '2023-11-20' },{ open: 112.009, high: 113.691, low: 109.6887, close: 109.6887, time: '2023-11-27' },{ open: 105.3866, high: 113.0941, low: 104.0543, close: 113.0941, time: '2023-12-04' },];
+
+
+baselineSeries.setData(baselineData);
+
+         chart.timeScale().fitContent();
+         chart.applyOptions({
+                       layout: {
+                             fontFamily: "'Saira Condensed', sans-serif",
+                         },
+                     });
+
+         window.addEventListener('resize', resizeChart);
+
+         function resizeChart() {
+         const container = document.getElementById('container');
+         chart.resize(
+         container.offsetWidth,
+         container.offsetHeight
+         );
+         }
+         resizeChart();
+
+// Fit the chart content
+ const totalDataPoints = baselineData.length;
+       const visibleRange = Math.min(252, totalDataPoints);
+       chart.timeScale().setVisibleLogicalRange({
+         from: totalDataPoints - visibleRange,
+         to: totalDataPoints - 1,
+       });
+         chart.applyOptions({
+                         layout: {
+                             fontFamily: "'Saira Condensed', sans-serif",
+                         },
+                     });
+
+
+
+
+
+      </script>
+ </body>
+</html>

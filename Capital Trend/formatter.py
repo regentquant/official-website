@@ -513,7 +513,435 @@ border-radius: 3px;
 import time
 
 s = time.time()
-main()
-dashboard()
+#main()
+#dashboard()
 e = time.time()
 print(e - s)
+
+def upgrade_ui():
+    dir = '/Users/curryyao/Library/Mobile Documents/com~apple~CloudDocs/[GIT] official-website/Capital Trend/ETFS'
+    for file in os.listdir(dir):
+        final = ''
+        if "capital-trend" in file:
+
+            replace_logo = ""
+            replace_logo = f'<img src="../../LOGO/ETFS/{file.split("capital-trend-")[1].replace(".html","").upper()}.svg">'
+            replace_ticker = file.split("capital-trend-")[1].replace(".html","").upper()
+
+            sample_data = ''
+            with open(f"{dir}/{file}", "r") as a:
+                sample_data = a.read()
+
+            # Now, open the file in write mode to clear its content
+            with open(f"{dir}/{file}", "w") as b:
+                pass  # Opening in 'w' mode clears the file
+
+            with open(f"{dir}/{file}", "r+") as file_read:
+                template = '''
+                           <!doctype html>
+     <html lang="en">
+        <head>
+                <!-- Google tag (gtag.js) -->
+           <script async src="https://www.googletagmanager.com/gtag/js?id=G-LYVSDS633M"></script>
+           <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-LYVSDS633M');
+           </script>
+        <!--<![endif]--><!--
+            Regentquant
+            WE BELIEVE THE FUTURE OF HUMANITY IS BRIGHT
+            JOIN US. TO CREATE A BETTER FUTURE.
+                      _____                    _____                    _____                    _____                    _____                _____
+                     /\    \                  /\    \                  /\    \                  /\    \                  /\    \              /\    \
+                    /::\    \                /::\    \                /::\    \                /::\    \                /::\____\            /::\    \
+                   /::::\    \              /::::\    \              /::::\    \              /::::\    \              /::::|   |            \:::\    \
+                  /::::::\    \            /::::::\    \            /::::::\    \            /::::::\    \            /:::::|   |             \:::\    \
+                 /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /::::::|   |              \:::\    \
+                /:::/__\:::\    \        /:::/__\:::\    \        /:::/  \:::\    \        /:::/__\:::\    \        /:::/|::|   |               \:::\    \
+               /::::\   \:::\    \      /::::\   \:::\    \      /:::/    \:::\    \      /::::\   \:::\    \      /:::/ |::|   |               /::::\    \
+              /::::::\   \:::\    \    /::::::\   \:::\    \    /:::/    / \:::\    \    /::::::\   \:::\    \    /:::/  |::|   | _____        /::::::\    \
+             /:::/\:::\   \:::\____\  /:::/\:::\   \:::\    \  /:::/    /   \:::\ ___\  /:::/\:::\   \:::\    \  /:::/   |::|   |/\    \      /:::/\:::\    \
+            /:::/  \:::\   \:::|    |/:::/__\:::\   \:::\____\/:::/____/  ___\:::|    |/:::/__\:::\   \:::\____\/:: /    |::|   /::\____\    /:::/  \:::\____\
+            \::/   |::::\  /:::|____|\:::\   \:::\   \::/    /\:::\    \ /\  /:::|____|\:::\   \:::\   \::/    /\::/    /|::|  /:::/    /   /:::/    \::/    /
+             \/____|:::::\/:::/    /  \:::\   \:::\   \/____/  \:::\    /::\ \::/    /  \:::\   \:::\   \/____/  \/____/ |::| /:::/    /   /:::/    / \/____/
+                   |:::::::::/    /    \:::\   \:::\    \       \:::\   \:::\ \/____/    \:::\   \:::\    \              |::|/:::/    /   /:::/    /
+                   |::|\::::/    /      \:::\   \:::\____\       \:::\   \:::\____\       \:::\   \:::\____\             |::::::/    /   /:::/    /
+                   |::| \::/____/        \:::\   \::/    /        \:::\  /:::/    /        \:::\   \::/    /             |:::::/    /    \::/    /
+                   |::|  ~|               \:::\   \/____/          \:::\/:::/    /          \:::\   \/____/              |::::/    /      \/____/
+                   |::|   |                \:::\    \               \::::::/    /            \:::\    \                  /:::/    /
+                   \::|   |                 \:::\____\               \::::/    /              \:::\____\                /:::/    /
+                    \:|   |                  \::/    /                \::/____/                \::/    /                \::/    /
+                     \|___|                   \/____/                                           \/____/                  \/____/
+
+                     _______                   _____                    _____                    _____                _____
+                    /::\    \                 /\    \                  /\    \                  /\    \              /\    \
+                   /::::\    \               /::\____\                /::\    \                /::\____\            /::\    \
+                  /::::::\    \             /:::/    /               /::::\    \              /::::|   |            \:::\    \
+                 /::::::::\    \           /:::/    /               /::::::\    \            /:::::|   |             \:::\    \
+                /:::/~~\:::\    \         /:::/    /               /:::/\:::\    \          /::::::|   |              \:::\    \
+               /:::/    \:::\    \       /:::/    /               /:::/__\:::\    \        /:::/|::|   |               \:::\    \
+              /:::/    / \:::\    \     /:::/    /               /::::\   \:::\    \      /:::/ |::|   |               /::::\    \
+             /:::/____/   \:::\____\   /:::/    /      _____    /::::::\   \:::\    \    /:::/  |::|   | _____        /::::::\    \
+            |:::|    |     |:::|    | /:::/____/      /\    \  /:::/\:::\   \:::\    \  /:::/   |::|   |/\    \      /:::/\:::\    \
+            |:::|____|     |:::|____||:::|    /      /::\____\/:::/  \:::\   \:::\____\/:: /    |::|   /::\____\    /:::/  \:::\____\
+             \:::\   _\___/:::/    / |:::|____\     /:::/    /\::/    \:::\  /:::/    /\::/    /|::|  /:::/    /   /:::/    \::/    /
+              \:::\ |::| /:::/    /   \:::\    \   /:::/    /  \/____/ \:::\/:::/    /  \/____/ |::| /:::/    /   /:::/    / \/____/
+               \:::\|::|/:::/    /     \:::\    \ /:::/    /            \::::::/    /           |::|/:::/    /   /:::/    /
+                \::::::::::/    /       \:::\    /:::/    /              \::::/    /            |::::::/    /   /:::/    /
+                 \::::::::/    /         \:::\__/:::/    /               /:::/    /             |:::::/    /    \::/    /
+                  \::::::/    /           \::::::::/    /               /:::/    /              |::::/    /      \/____/
+                   \::::/____/             \::::::/    /               /:::/    /               /:::/    /
+                    |::|    |               \::::/    /               /:::/    /               /:::/    /
+                    |::|____|                \::/____/                \::/    /                \::/    /
+                     ~~                       ~~                       \/____/                  \/____/
+            -->
+           <meta charset="utf-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+           <title>@replace_ticker Capital Trend</title>
+     <meta charset="UTF-8">
+     <meta name="description" content="In-depth analysis of @replace_ticker stock capital trends.">
+     <meta name="keywords" content="@replace_ticker, capital trend, stock capital analysis, stock market, investment insights, market predictions, stock performance">
+     <meta name="author" content="Regentquant">
+     <meta name="robots" content="index, follow">
+     <meta name="canonical" href="https://www.regentquant.com/">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <link rel="icon" type="image/x-icon" href="../../favicon_1.png">
+           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+           <link rel="preconnect" href="https://fonts.googleapis.com">
+           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+           <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+           <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+           <script src="../../lightweight-charts.standalone.production.js"></script>
+
+           <link rel="stylesheet" href="../../chart-styles.css">
+        </head>
+        <style>
+            img {
+border-radius: 3px;
+     height: 32px; /* Example height, adjust as needed */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Optional: Adds space between the image and text */
+                margin-bottom: 3px;
+            }
+        </style>
+           <section>
+              <img id="site-logo" src="../../regentquant-logo-two-colors.svg">
+              <h1 class="chart-title">@replace_logoRegentquant @replace_ticker Capital Trend (5-Day Average)</h1>
+              <h2 class="go-back-to-home-screen"><a href="https://www.regentquant.com/capital-trend-dashboard.html">Go Back To Dashboard</a></h2>
+              <h2>How to use: Investors may try to predict future price trend by looking at capital trend. Candlestick chart shows underlying stock's historical adjusted OHLC price. Line chart shows net capital inflow (Unit$). The data is estimated by algorithm and for reference only. Data used in calculation is bought from ICE. Users may not reproduce or republish Regentquant's Net Capital Inflow data without permission.</h2>
+             <button id="download-chart">Save Chart</button> <button><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSKtccuxjMvuMaBrgBQMfPXHs6W3LKdAcZ0MzmEv1RNl0sAEkYaN4MYQyPTIrPIjSXwXoBzKOlg_2kt/pubhtml" style="color: white">Download Data</a></button>
+           </section>
+           <!-- Fund NAV Chart -->
+           <div id="container"></div>
+           <section id="footer"></section>
+           <script type="text/javascript">
+                            // Lightweight Charts™ Example: Two Price Scales
+                    // https://tradingview.github.io/lightweight-charts/tutorials/how_to/two-price-scales
+                    
+                   // Lightweight Charts™ Example: Price and Volume
+                // https://tradingview.github.io/lightweight-charts/tutorials/how_to/price-and-volume
+                
+                const chartOptions = {
+         rightPriceScale: {
+             visible: true,
+         },
+         leftPriceScale: {
+             visible: true,
+         },
+         layout: {
+             textColor: 'black',
+             background: { type: 'solid', color: 'white' },
+         },
+         crosshair: {
+             mode: 0, // CrosshairMode.Normal
+         },
+     };
+                /** @type {import('lightweight-charts').IChartApi} */
+                const chart = LightweightCharts.createChart(document.getElementById('container'), chartOptions);
+                
+                const areaSeries = chart.addCandlestickSeries({ upColor: '#26a69a', downColor: '#ef5350', borderVisible: false, wickUpColor: '#26a69a', wickDownColor: '#ef5350' });
+                areaSeries.priceScale().applyOptions({
+                    scaleMargins: {
+                        // positioning the price scale for the area series
+                        top: 0.1,
+                        bottom: 0.4,
+                    },
+                });
+                
+                const volumeSeries = chart.addHistogramSeries({
+                    color: '#26a69a',
+                    priceFormat: {
+                        type: 'volume',
+                    },
+                    priceScaleId: '', // set as an overlay by setting a blank priceScaleId
+                    // set the positioning of the volume series
+                    scaleMargins: {
+                        top: 0.7, // highest point of the series will be 70% away from the top
+                        bottom: 0,
+                    },
+                });
+                volumeSeries.priceScale().applyOptions({
+                    scaleMargins: {
+                        top: 0.7, // highest point of the series will be 70% away from the top
+                        bottom: 0,
+                    },
+                });
+                
+                areaSeries.setData([@REPLACE_A]);
+                
+                // setting the data for the volume series.
+                // note: we are defining each bars color as part of the data
+                volumeSeries.setData([@REPLACE_B]);
+                
+                chart.timeScale().fitContent();
+                    chart.applyOptions({
+                                 layout: {
+                                     fontFamily: "'Saira Condensed', sans-serif",
+                                 },
+                             });
+                    
+                    
+                    
+                          </script>
+                     </body>
+                    </html>
+                    '''
+                print(file)
+                candlestick = (sample_data.split('     candlestickSeries.setData([')[1].split('\n')[1])
+                volume_string = ""
+                volume = (sample_data.split('     const data = [')[1].split('\n')[1])
+                volume_list = (volume.split('},'))
+                for i in volume_list:
+                    if "value" in i:
+                        value = i.split('value:')[1]
+                        if float(value.strip()) > 0:
+                            string = (f"{i},color:'#26a69a'@,".replace("@","}"))
+                            volume_string = f"{volume_string}\t{string}"
+                        else:
+                            string = (f"{i},color:'#ef5350'@,".replace("@","}"))
+                            volume_string = f"{volume_string}\t{string}"
+
+                final = (template.replace("@REPLACE_A",candlestick).replace("@REPLACE_B",volume_string).replace("@replace_logo", replace_logo).replace("@replace_ticker",replace_ticker))
+                file_read.write(final)
+                print(file)
+
+    dir = '/Users/curryyao/Library/Mobile Documents/com~apple~CloudDocs/[GIT] official-website/Capital Trend/STOCKS'
+    for file in os.listdir(dir):
+        final = ''
+        if "capital-trend" in file:
+
+            replace_logo = ""
+            replace_logo = f'<img src="../../LOGO/ETFS/{file.split("capital-trend-")[1].replace(".html", "").upper()}.svg">'
+            replace_ticker = file.split("capital-trend-")[1].replace(".html", "").upper()
+
+            sample_data = ''
+            with open(f"{dir}/{file}", "r") as a:
+                sample_data = a.read()
+
+            # Now, open the file in write mode to clear its content
+            with open(f"{dir}/{file}", "w") as b:
+                pass  # Opening in 'w' mode clears the file
+
+            with open(f"{dir}/{file}", "r+") as file_read:
+                template = '''
+                           <!doctype html>
+     <html lang="en">
+        <head>
+                <!-- Google tag (gtag.js) -->
+           <script async src="https://www.googletagmanager.com/gtag/js?id=G-LYVSDS633M"></script>
+           <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-LYVSDS633M');
+           </script>
+        <!--<![endif]--><!--
+            Regentquant
+            WE BELIEVE THE FUTURE OF HUMANITY IS BRIGHT
+            JOIN US. TO CREATE A BETTER FUTURE.
+                      _____                    _____                    _____                    _____                    _____                _____
+                     /\    \                  /\    \                  /\    \                  /\    \                  /\    \              /\    \
+                    /::\    \                /::\    \                /::\    \                /::\    \                /::\____\            /::\    \
+                   /::::\    \              /::::\    \              /::::\    \              /::::\    \              /::::|   |            \:::\    \
+                  /::::::\    \            /::::::\    \            /::::::\    \            /::::::\    \            /:::::|   |             \:::\    \
+                 /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /::::::|   |              \:::\    \
+                /:::/__\:::\    \        /:::/__\:::\    \        /:::/  \:::\    \        /:::/__\:::\    \        /:::/|::|   |               \:::\    \
+               /::::\   \:::\    \      /::::\   \:::\    \      /:::/    \:::\    \      /::::\   \:::\    \      /:::/ |::|   |               /::::\    \
+              /::::::\   \:::\    \    /::::::\   \:::\    \    /:::/    / \:::\    \    /::::::\   \:::\    \    /:::/  |::|   | _____        /::::::\    \
+             /:::/\:::\   \:::\____\  /:::/\:::\   \:::\    \  /:::/    /   \:::\ ___\  /:::/\:::\   \:::\    \  /:::/   |::|   |/\    \      /:::/\:::\    \
+            /:::/  \:::\   \:::|    |/:::/__\:::\   \:::\____\/:::/____/  ___\:::|    |/:::/__\:::\   \:::\____\/:: /    |::|   /::\____\    /:::/  \:::\____\
+            \::/   |::::\  /:::|____|\:::\   \:::\   \::/    /\:::\    \ /\  /:::|____|\:::\   \:::\   \::/    /\::/    /|::|  /:::/    /   /:::/    \::/    /
+             \/____|:::::\/:::/    /  \:::\   \:::\   \/____/  \:::\    /::\ \::/    /  \:::\   \:::\   \/____/  \/____/ |::| /:::/    /   /:::/    / \/____/
+                   |:::::::::/    /    \:::\   \:::\    \       \:::\   \:::\ \/____/    \:::\   \:::\    \              |::|/:::/    /   /:::/    /
+                   |::|\::::/    /      \:::\   \:::\____\       \:::\   \:::\____\       \:::\   \:::\____\             |::::::/    /   /:::/    /
+                   |::| \::/____/        \:::\   \::/    /        \:::\  /:::/    /        \:::\   \::/    /             |:::::/    /    \::/    /
+                   |::|  ~|               \:::\   \/____/          \:::\/:::/    /          \:::\   \/____/              |::::/    /      \/____/
+                   |::|   |                \:::\    \               \::::::/    /            \:::\    \                  /:::/    /
+                   \::|   |                 \:::\____\               \::::/    /              \:::\____\                /:::/    /
+                    \:|   |                  \::/    /                \::/____/                \::/    /                \::/    /
+                     \|___|                   \/____/                                           \/____/                  \/____/
+
+                     _______                   _____                    _____                    _____                _____
+                    /::\    \                 /\    \                  /\    \                  /\    \              /\    \
+                   /::::\    \               /::\____\                /::\    \                /::\____\            /::\    \
+                  /::::::\    \             /:::/    /               /::::\    \              /::::|   |            \:::\    \
+                 /::::::::\    \           /:::/    /               /::::::\    \            /:::::|   |             \:::\    \
+                /:::/~~\:::\    \         /:::/    /               /:::/\:::\    \          /::::::|   |              \:::\    \
+               /:::/    \:::\    \       /:::/    /               /:::/__\:::\    \        /:::/|::|   |               \:::\    \
+              /:::/    / \:::\    \     /:::/    /               /::::\   \:::\    \      /:::/ |::|   |               /::::\    \
+             /:::/____/   \:::\____\   /:::/    /      _____    /::::::\   \:::\    \    /:::/  |::|   | _____        /::::::\    \
+            |:::|    |     |:::|    | /:::/____/      /\    \  /:::/\:::\   \:::\    \  /:::/   |::|   |/\    \      /:::/\:::\    \
+            |:::|____|     |:::|____||:::|    /      /::\____\/:::/  \:::\   \:::\____\/:: /    |::|   /::\____\    /:::/  \:::\____\
+             \:::\   _\___/:::/    / |:::|____\     /:::/    /\::/    \:::\  /:::/    /\::/    /|::|  /:::/    /   /:::/    \::/    /
+              \:::\ |::| /:::/    /   \:::\    \   /:::/    /  \/____/ \:::\/:::/    /  \/____/ |::| /:::/    /   /:::/    / \/____/
+               \:::\|::|/:::/    /     \:::\    \ /:::/    /            \::::::/    /           |::|/:::/    /   /:::/    /
+                \::::::::::/    /       \:::\    /:::/    /              \::::/    /            |::::::/    /   /:::/    /
+                 \::::::::/    /         \:::\__/:::/    /               /:::/    /             |:::::/    /    \::/    /
+                  \::::::/    /           \::::::::/    /               /:::/    /              |::::/    /      \/____/
+                   \::::/____/             \::::::/    /               /:::/    /               /:::/    /
+                    |::|    |               \::::/    /               /:::/    /               /:::/    /
+                    |::|____|                \::/____/                \::/    /                \::/    /
+                     ~~                       ~~                       \/____/                  \/____/
+            -->
+           <meta charset="utf-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1">
+           <title>@replace_ticker Capital Trend</title>
+     <meta charset="UTF-8">
+     <meta name="description" content="In-depth analysis of @replace_ticker stock capital trends.">
+     <meta name="keywords" content="@replace_ticker, capital trend, stock capital analysis, stock market, investment insights, market predictions, stock performance">
+     <meta name="author" content="Regentquant">
+     <meta name="robots" content="index, follow">
+     <meta name="canonical" href="https://www.regentquant.com/">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <link rel="icon" type="image/x-icon" href="../../favicon_1.png">
+           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+           <link rel="preconnect" href="https://fonts.googleapis.com">
+           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+           <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+           <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+           <script src="../../lightweight-charts.standalone.production.js"></script>
+
+           <link rel="stylesheet" href="../../chart-styles.css">
+        </head>
+        <style>
+            img {
+border-radius: 3px;
+     height: 32px; /* Example height, adjust as needed */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Optional: Adds space between the image and text */
+                margin-bottom: 3px;
+            }
+        </style>
+           <section>
+              <img id="site-logo" src="../../regentquant-logo-two-colors.svg">
+              <h1 class="chart-title">@replace_logoRegentquant @replace_ticker Capital Trend (5-Day Average)</h1>
+              <h2 class="go-back-to-home-screen"><a href="https://www.regentquant.com/capital-trend-dashboard.html">Go Back To Dashboard</a></h2>
+              <h2>How to use: Investors may try to predict future price trend by looking at capital trend. Candlestick chart shows underlying stock's historical adjusted OHLC price. Line chart shows net capital inflow (Unit$). The data is estimated by algorithm and for reference only. Data used in calculation is bought from ICE. Users may not reproduce or republish Regentquant's Net Capital Inflow data without permission.</h2>
+             <button id="download-chart">Save Chart</button> <button><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSKtccuxjMvuMaBrgBQMfPXHs6W3LKdAcZ0MzmEv1RNl0sAEkYaN4MYQyPTIrPIjSXwXoBzKOlg_2kt/pubhtml" style="color: white">Download Data</a></button>
+           </section>
+           <!-- Fund NAV Chart -->
+           <div id="container"></div>
+           <section id="footer"></section>
+           <script type="text/javascript">
+                            // Lightweight Charts™ Example: Two Price Scales
+                    // https://tradingview.github.io/lightweight-charts/tutorials/how_to/two-price-scales
+
+                   // Lightweight Charts™ Example: Price and Volume
+                // https://tradingview.github.io/lightweight-charts/tutorials/how_to/price-and-volume
+
+                const chartOptions = {
+         rightPriceScale: {
+             visible: true,
+         },
+         leftPriceScale: {
+             visible: true,
+         },
+         layout: {
+             textColor: 'black',
+             background: { type: 'solid', color: 'white' },
+         },
+         crosshair: {
+             mode: 0, // CrosshairMode.Normal
+         },
+     };
+                /** @type {import('lightweight-charts').IChartApi} */
+                const chart = LightweightCharts.createChart(document.getElementById('container'), chartOptions);
+
+                const areaSeries = chart.addCandlestickSeries({ upColor: '#26a69a', downColor: '#ef5350', borderVisible: false, wickUpColor: '#26a69a', wickDownColor: '#ef5350' });
+                areaSeries.priceScale().applyOptions({
+                    scaleMargins: {
+                        // positioning the price scale for the area series
+                        top: 0.1,
+                        bottom: 0.4,
+                    },
+                });
+
+                const volumeSeries = chart.addHistogramSeries({
+                    color: '#26a69a',
+                    priceFormat: {
+                        type: 'volume',
+                    },
+                    priceScaleId: '', // set as an overlay by setting a blank priceScaleId
+                    // set the positioning of the volume series
+                    scaleMargins: {
+                        top: 0.7, // highest point of the series will be 70% away from the top
+                        bottom: 0,
+                    },
+                });
+                volumeSeries.priceScale().applyOptions({
+                    scaleMargins: {
+                        top: 0.7, // highest point of the series will be 70% away from the top
+                        bottom: 0,
+                    },
+                });
+
+                areaSeries.setData([@REPLACE_A]);
+
+                // setting the data for the volume series.
+                // note: we are defining each bars color as part of the data
+                volumeSeries.setData([@REPLACE_B]);
+
+                chart.timeScale().fitContent();
+                    chart.applyOptions({
+                                 layout: {
+                                     fontFamily: "'Saira Condensed', sans-serif",
+                                 },
+                             });
+
+
+
+                          </script>
+                     </body>
+                    </html>
+                    '''
+                print(file)
+                candlestick = (sample_data.split('     candlestickSeries.setData([')[1].split('\n')[1])
+                volume_string = ""
+                volume = (sample_data.split('     const data = [')[1].split('\n')[1])
+                volume_list = (volume.split('},'))
+                for i in volume_list:
+                    if "value" in i:
+                        value = i.split('value:')[1]
+                        if float(value.strip()) > 0:
+                            string = (f"{i},color:'#26a69a'@,".replace("@", "}"))
+                            volume_string = f"{volume_string}\t{string}"
+                        else:
+                            string = (f"{i},color:'#ef5350'@,".replace("@", "}"))
+                            volume_string = f"{volume_string}\t{string}"
+
+                final = (template.replace("@REPLACE_A", candlestick).replace("@REPLACE_B", volume_string).replace(
+                    "@replace_logo", replace_logo).replace("@replace_ticker", replace_ticker))
+                file_read.write(final)
+                print(file)
+
+
+
+upgrade_ui()

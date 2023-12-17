@@ -1,0 +1,130 @@
+
+                  <!doctype html>
+            <html lang="en">
+             <head>
+            
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>ARM Daily Short Volume</title>
+                <link rel="icon" type="image/x-icon" href="favicon.png">
+                <script src="lightweight-charts.standalone.production.js"></script>
+             </head>
+            <style>
+              #container {
+                width: 100vw;  /* 100% of the viewport's width */
+                height: 100vh; /* 100% of the viewport's height */
+                padding: 0;    /* No padding */
+              }
+            
+              body {
+                margin: 0;        /* No margin around the <body> */
+                padding: 0;       /* No padding inside the <body> */
+                background: #141721;
+                overflow: hidden; /* Hide scrollbars */
+              }
+            
+              #description {
+                font-family: "Roboto", sans-serif;
+                color: #D2D4DC;
+                margin: 0px;
+                padding-top: 10px;
+                padding-left: 10px;
+                padding-bottom: 10px;
+              }
+              #position {
+                  color: white;
+              }
+              @font-face {
+            font-family: 'SairaCondensed';
+            src: url('Saira_Condensed/SairaCondensed-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+            </style>
+             <body>
+                <!-- Fund NAV Chart -->
+                <div id="large"><div id="container"></div></div>
+                  <script type="text/javascript">
+         // Lightweight Charts™ Example: Price and Volume
+        // https://tradingview.github.io/lightweight-charts/tutorials/how_to/price-and-volume
+        // Lightweight Charts™ Example: Series Markers
+        // https://tradingview.github.io/lightweight-charts/tutorials/how_to/series-markers
+        // Lightweight Charts™ Example: Price and Volume
+        // https://tradingview.github.io/lightweight-charts/tutorials/how_to/price-and-volume
+        
+        const chartOptions = {
+            layout: {
+                textColor: 'white',
+                background: "transparent",
+            },
+            rightPriceScale: {
+                borderVisible: false,
+            },
+                grid: {
+            vertLines: {
+              color: 'rgba(36, 40, 50, 1)', // Your desired color for vertical grid lines (x-axis)
+            },
+            horzLines: {
+              color: 'rgba(36, 40, 50, 1)', // Your desired color for horizontal grid lines (y-axis)
+            }}
+        };
+        /** @type {import('lightweight-charts').IChartApi} */
+        const chart = LightweightCharts.createChart(document.getElementById('container'), chartOptions);
+        
+        const areaSeries = chart.addCandlestickSeries({
+            topColor: '#2962FF',
+            bottomColor: 'transparent',
+            lineColor: '#2962FF',
+            lineWidth: 2,
+        });
+        areaSeries.priceScale().applyOptions({
+            scaleMargins: {
+                // positioning the price scale for the area series
+                top: 0.1,
+                bottom: 0.4,
+            },
+        });
+        
+        const volumeSeries = chart.addHistogramSeries({
+            color: '#26a69a',
+            priceFormat: {
+                type: 'volume',
+            },
+            priceScaleId: '', // set as an overlay by setting a blank priceScaleId
+            // set the positioning of the volume series
+            scaleMargins: {
+                top: 0.7, // highest point of the series will be 70% away from the top
+                bottom: 0,
+            },
+        });
+        volumeSeries.priceScale().applyOptions({
+            scaleMargins: {
+                top: 0.7, // highest point of the series will be 70% away from the top
+                bottom: 0,
+            },
+        
+        });
+        
+        areaSeries.setData([
+        {open: 56.1, high: 66.28, low: 55.54, close: 63.59, time: '2023-09-14'},{open: 68.63, high: 69, low: 60.75, close: 60.75, time: '2023-09-15'},{open: 57.95, high: 58.7407, low: 55.02, close: 58, time: '2023-09-18'},{open: 56.25, high: 56.78, low: 53.88, close: 55.17, time: '2023-09-19'},{open: 55.17, high: 55.4, low: 51.52, close: 52.91, time: '2023-09-20'},{open: 51.78, high: 52.8, low: 49.85, close: 52.16, time: '2023-09-21'},{open: 52.9, high: 52.9, low: 50.3548, close: 51.32, time: '2023-09-22'},{open: 51.12, high: 54.5, low: 50.02, close: 54.44, time: '2023-09-25'},{open: 53.93, high: 54.53, low: 52.7, close: 53.52, time: '2023-09-26'},{open: 54.4, high: 54.4099, low: 51.7894, close: 52.99, time: '2023-09-27'},{open: 53.5, high: 56.5, low: 52.86, close: 55.49, time: '2023-09-28'},{open: 56.21, high: 56.79, low: 53.08, close: 53.52, time: '2023-09-29'},{open: 53.475, high: 54.1899, low: 51.91, close: 52.26, time: '2023-10-02'},{open: 51.96, high: 52.235, low: 50.8, close: 51.57, time: '2023-10-03'},{open: 51.97, high: 53.81, low: 51.31, close: 53.46, time: '2023-10-04'},{open: 53.9, high: 53.9, low: 52.09, close: 52.51, time: '2023-10-05'},{open: 52.72, high: 54.21, low: 51.55, close: 54.08, time: '2023-10-06'},{open: 54.4, high: 55.8, low: 53.37, close: 54.25, time: '2023-10-09'},{open: 55.24, high: 55.86, low: 54.2, close: 55.71, time: '2023-10-10'},{open: 56.17, high: 56.33, low: 54.38, close: 54.68, time: '2023-10-11'},{open: 54.75, high: 54.75, low: 51.41, close: 51.85, time: '2023-10-12'},{open: 52.5, high: 52.56, low: 50, close: 50.78, time: '2023-10-13'},{open: 51.04, high: 52.35, low: 51.04, close: 52.09, time: '2023-10-16'},{open: 51, high: 52.76, low: 50.65, close: 52.29, time: '2023-10-17'},{open: 52.28, high: 52.7, low: 51.275, close: 51.9, time: '2023-10-18'},{open: 52, high: 52.7, low: 49.53, close: 49.74, time: '2023-10-19'},{open: 49.74, high: 49.74, low: 46.5, close: 47.87, time: '2023-10-20'},{open: 47.22, high: 51.88, low: 46.5, close: 50.21, time: '2023-10-23'},{open: 52, high: 52.8917, low: 51.05, close: 52.37, time: '2023-10-24'},{open: 52.7, high: 52.79, low: 49.31, close: 49.44, time: '2023-10-25'},{open: 50.06, high: 51.11, low: 49.5, close: 50.17, time: '2023-10-26'},{open: 51.26, high: 51.33, low: 48.81, close: 49.09, time: '2023-10-27'},{open: 49.51, high: 49.9, low: 47.28, close: 47.9, time: '2023-10-30'},{open: 47.9, high: 49.66, low: 47.12, close: 49.29, time: '2023-10-31'},{open: 49.61, high: 50.52, low: 48.3, close: 50.52, time: '2023-11-01'},{open: 51.4, high: 53.56, low: 51.3, close: 52.82, time: '2023-11-02'},{open: 52.82, high: 53.86, low: 52.25, close: 53.49, time: '2023-11-03'},{open: 53.98, high: 54.46, low: 52.52, close: 53.1, time: '2023-11-06'},{open: 53.45, high: 56.1, low: 53.26, close: 55.27, time: '2023-11-07'},{open: 55.27, high: 55.56, low: 53.39, close: 54.4, time: '2023-11-08'},{open: 51, high: 52.05, low: 49.82, close: 51.58, time: '2023-11-09'},{open: 52, high: 52.5, low: 51.01, close: 52.27, time: '2023-11-10'},{open: 52.2, high: 52.5, low: 50.57, close: 51.69, time: '2023-11-13'},{open: 53, high: 53.5, low: 52.28, close: 53.43, time: '2023-11-14'},{open: 54.4, high: 56.03, low: 54.08, close: 55.43, time: '2023-11-15'},{open: 55.51, high: 55.6799, low: 53.47, close: 54.23, time: '2023-11-16'},{open: 55.11, high: 55.74, low: 54.26, close: 54.99, time: '2023-11-17'},{open: 55.35, high: 59.24, low: 55.27, close: 58.68, time: '2023-11-20'},{open: 58, high: 58.9, low: 56.43, close: 58.66, time: '2023-11-21'},{open: 59, high: 64.92, low: 59, close: 61.76, time: '2023-11-22'},{open: 61.5, high: 64.2, low: 61.41, close: 63.88, time: '2023-11-24'},{open: 63.05, high: 63.69, low: 60.99, close: 61, time: '2023-11-27'},{open: 60.84, high: 62.68, low: 60.79, close: 61.92, time: '2023-11-28'},{open: 62.52, high: 63.41, low: 61.69, close: 62.21, time: '2023-11-29'},{open: 62.58, high: 63.5, low: 60.91, close: 61.5, time: '2023-11-30'},{open: 61.51, high: 64.43, low: 60.91, close: 63.9, time: '2023-12-01'},{open: 63.9, high: 63.9, low: 60.8, close: 61.93, time: '2023-12-04'},{open: 61.73, high: 64.349, low: 60.37, close: 63.59, time: '2023-12-05'},{open: 64.35, high: 64.69, low: 60.89, close: 61.06, time: '2023-12-06'},{open: 61.52, high: 62.97, low: 61.2, close: 62.44, time: '2023-12-07'},{open: 62.44, high: 67.4399, low: 62.235, close: 67.23, time: '2023-12-08'},{open: 67.26, high: 67.26, low: 64.29, close: 64.89, time: '2023-12-11'},{open: 65, high: 66.25, low: 63.28, close: 64.71, time: '2023-12-12'},{open: 65.41, high: 66.5, low: 62.75, close: 65.61, time: '2023-12-13'},{open: 66.52, high: 71.79, low: 66.37, close: 70.735, time: '2023-12-14'},{open: 70.5, high: 71.89, low: 69.29, close: 71.03, time: '2023-12-15'},
+        ]);
+        
+        // setting the data for the volume series.
+        // note: we are defining each bars color as part of the data
+        volumeSeries.setData([
+        {time: '2023-09-14', value: 24529750, color: '#3761F6'},{time: '2023-09-15', value: 20096565, color: '#3761F6'},{time: '2023-09-18', value: 9221751, color: '#3761F6'},{time: '2023-09-19', value: 4695339, color: '#3761F6'},{time: '2023-09-20', value: 4262918, color: '#3761F6'},{time: '2023-09-21', value: 3878191, color: '#3761F6'},{time: '2023-09-22', value: 2072274, color: '#3761F6'},{time: '2023-09-25', value: 3205645, color: '#3761F6'},{time: '2023-09-26', value: 1399864, color: '#3761F6'},{time: '2023-09-27', value: 1176617, color: '#3761F6'},{time: '2023-09-28', value: 2008792, color: '#3761F6'},{time: '2023-09-29', value: 1906833, color: '#3761F6'},{time: '2023-10-02', value: 1166865, color: '#3761F6'},{time: '2023-10-03', value: 934481, color: '#3761F6'},{time: '2023-10-04', value: 1215506, color: '#3761F6'},{time: '2023-10-05', value: 794362, color: '#3761F6'},{time: '2023-10-06', value: 942618, color: '#3761F6'},{time: '2023-10-09', value: 1833030, color: '#3761F6'},{time: '2023-10-10', value: 1156595, color: '#3761F6'},{time: '2023-10-11', value: 1104035, color: '#3761F6'},{time: '2023-10-12', value: 1523548, color: '#3761F6'},{time: '2023-10-13', value: 1343293, color: '#3761F6'},{time: '2023-10-16', value: 717672, color: '#3761F6'},{time: '2023-10-17', value: 558947, color: '#3761F6'},{time: '2023-10-18', value: 475606, color: '#3761F6'},{time: '2023-10-19', value: 897095, color: '#3761F6'},{time: '2023-10-20', value: 1862460, color: '#3761F6'},{time: '2023-10-23', value: 2665465, color: '#3761F6'},{time: '2023-10-24', value: 1956401, color: '#3761F6'},{time: '2023-10-25', value: 949162, color: '#3761F6'},{time: '2023-10-26', value: 879704, color: '#3761F6'},{time: '2023-10-27', value: 534227, color: '#3761F6'},{time: '2023-10-30', value: 555248, color: '#3761F6'},{time: '2023-10-31', value: 579561, color: '#3761F6'},{time: '2023-11-01', value: 748815, color: '#3761F6'},{time: '2023-11-02', value: 1097155, color: '#3761F6'},{time: '2023-11-03', value: 521855, color: '#3761F6'},{time: '2023-11-06', value: 398992, color: '#3761F6'},{time: '2023-11-07', value: 1006747, color: '#3761F6'},{time: '2023-11-08', value: 970300, color: '#3761F6'},{time: '2023-11-09', value: 4541919, color: '#3761F6'},{time: '2023-11-10', value: 1339479, color: '#3761F6'},{time: '2023-11-13', value: 1106420, color: '#3761F6'},{time: '2023-11-14', value: 702887, color: '#3761F6'},{time: '2023-11-15', value: 1120282, color: '#3761F6'},{time: '2023-11-16', value: 571704, color: '#3761F6'},{time: '2023-11-17', value: 842813, color: '#3761F6'},{time: '2023-11-20', value: 2009507, color: '#3761F6'},{time: '2023-11-21', value: 1147748, color: '#3761F6'},{time: '2023-11-22', value: 3698654, color: '#3761F6'},{time: '2023-11-24', value: 1243735, color: '#3761F6'},{time: '2023-11-27', value: 1500672, color: '#3761F6'},{time: '2023-11-28', value: 994741, color: '#3761F6'},{time: '2023-11-29', value: 1042559, color: '#3761F6'},{time: '2023-11-30', value: 1128392, color: '#3761F6'},{time: '2023-12-01', value: 1693505, color: '#3761F6'},{time: '2023-12-04', value: 1165408, color: '#3761F6'},{time: '2023-12-05', value: 2317534, color: '#3761F6'},{time: '2023-12-06', value: 1669315, color: '#3761F6'},{time: '2023-12-07', value: 911020, color: '#3761F6'},{time: '2023-12-08', value: 3130723, color: '#3761F6'},{time: '2023-12-11', value: 2102707, color: '#3761F6'},{time: '2023-12-12', value: 1626566, color: '#3761F6'},{time: '2023-12-13', value: 1753809, color: '#3761F6'},{time: '2023-12-14', value: 1827365, color: '#3761F6'},{time: '2023-12-15', value: 1172699, color: '#3761F6'},
+        ]);
+        
+        chart.timeScale().fitContent();
+        
+        chart.applyOptions({
+                     layout: {
+                         fontFamily: "'Saira Condensed', sans-serif",
+                     },
+                 });
+        
+                  </script>
+             </body>
+            </html>
+            

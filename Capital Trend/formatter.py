@@ -513,8 +513,8 @@ border-radius: 3px;
 import time
 
 s = time.time()
-#main()
-#dashboard()
+main()
+dashboard()
 e = time.time()
 print(e - s)
 
@@ -691,19 +691,27 @@ border-radius: 3px;
                         bottom: 0,
                     },
                 });
-                
-                areaSeries.setData([@REPLACE_A]);
-                
+                data = [@REPLACE_A]
+                areaSeries.setData(data);
+
                 // setting the data for the volume series.
                 // note: we are defining each bars color as part of the data
                 volumeSeries.setData([@REPLACE_B]);
-                
+
                 chart.timeScale().fitContent();
                     chart.applyOptions({
                                  layout: {
                                      fontFamily: "'Saira Condensed', sans-serif",
                                  },
                              });
+
+const totalDataPoints = data.length;
+const visibleRange = Math.min(252, totalDataPoints);
+chart.timeScale().setVisibleLogicalRange({
+from: totalDataPoints - visibleRange,
+to: totalDataPoints - 1,
+});
+
                     
                     
                     
@@ -902,8 +910,9 @@ border-radius: 3px;
                         bottom: 0,
                     },
                 });
-
-                areaSeries.setData([@REPLACE_A]);
+                
+                data = [@REPLACE_A]
+                areaSeries.setData(data);
 
                 // setting the data for the volume series.
                 // note: we are defining each bars color as part of the data
@@ -916,7 +925,12 @@ border-radius: 3px;
                                  },
                              });
 
-
+const totalDataPoints = data.length;
+const visibleRange = Math.min(252, totalDataPoints);
+chart.timeScale().setVisibleLogicalRange({
+from: totalDataPoints - visibleRange,
+to: totalDataPoints - 1,
+});
 
                           </script>
                      </body>

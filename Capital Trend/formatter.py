@@ -515,7 +515,7 @@ def upgrade_ui():
         if "capital-trend" in file:
 
             replace_logo = ""
-            replace_logo = f'<img src="../../LOGO/ETFS/{file.split("capital-trend-")[1].replace(".html","").upper()}.svg">'
+            replace_logo = f'<img src="LOGO/ETFS/{file.split("capital-trend-")[1].replace(".html","").upper()}.svg">'
             replace_ticker = file.split("capital-trend-")[1].replace(".html","").upper()
 
             sample_data = ''

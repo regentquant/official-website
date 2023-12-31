@@ -390,10 +390,7 @@ def dashboard():
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-      <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
       <link rel="stylesheet" href="chart-styles.css">
    </head>
    <style>
@@ -466,9 +463,6 @@ border-radius: 3px;
 <img id="site-logo" src="regentquant-logo-two-colors.svg">
 <h1 class="chart-title">Regentquant Capital Trend Dashboard (Alphabetical Order)</h1>
 <h2 style="color: #333333">Last updated: @replace_time (New York Time)</h2>
-    <h3 class='asset-type'>Today's Capital Trend Visualization</h3>
-    <h2 class="subtitle">Overwhelmed by Data? Let the Expertise of the Regentquant Team Guide You Through Key Insights!</h2>
-    <div class="capital-trend-container"><a href="Capital%20Trend/Capital%20Trend%20Visualization%20(Top%205%20Net%20Inflow%20&%20Top%205%20Net%20Outflow).pdf" class="rectangle-fill"><img src="LOGO/pdf-icon.svg" alt="PDF logo">Top 5 Net Inflow & Top 5 Net Outflow</a><br></div>
 <h3 class="asset-type"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
   <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
 </svg>Trending Tickers</h3>
@@ -512,11 +506,7 @@ border-radius: 3px;
 
 import time
 
-s = time.time()
-main()
-dashboard()
-e = time.time()
-print(e - s)
+
 
 def upgrade_ui():
     dir = '/Users/curryyao/Library/Mobile Documents/com~apple~CloudDocs/[GIT] official-website/Capital Trend/ETFS'
@@ -956,5 +946,9 @@ to: totalDataPoints - 1,
                 file_read.write(final)
                 print(file)
 
-
+s = time.time()
+main()
+dashboard()
+e = time.time()
+print(e - s)
 upgrade_ui()

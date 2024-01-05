@@ -465,11 +465,11 @@ border-radius: 3px;
 <h3 class="asset-type"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
   <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
 </svg>Trending Tickers</h3>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-qqq.html" class="rectangle-fill"><img src="LOGO/ETFS/QQQ.svg" alt="QQQ logo">QQQ</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-spy.html" class="rectangle-fill"><img src="LOGO/ETFS/SPY.svg" alt="SPY logo">SPY</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-tsla.html" class="rectangle-fill"><img src="LOGO/ETFS/TSLA.svg" alt="TSLA logo">TSLA</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-nvda.html" class="rectangle-fill"><img src="LOGO/ETFS/NVDA.svg" alt="NVDA logo">NVDA</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-aapl.html" class="rectangle-fill"><img src="LOGO/ETFS/AAPL.svg" alt="AAPL logo">AAPL</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-qqq.html" target="_blank" class="rectangle-fill"><img src="LOGO/ETFS/QQQ.svg" alt="QQQ logo">QQQ</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-spy.html" target="_blank" class="rectangle-fill"><img src="LOGO/ETFS/SPY.svg" alt="SPY logo">SPY</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-tsla.html" target="_blank" class="rectangle-fill"><img src="LOGO/ETFS/TSLA.svg" alt="TSLA logo">TSLA</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-nvda.html" target="_blank" class="rectangle-fill"><img src="LOGO/ETFS/NVDA.svg" alt="NVDA logo">NVDA</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-aapl.html" target="_blank" class="rectangle-fill"><img src="LOGO/ETFS/AAPL.svg" alt="AAPL logo">AAPL</a><br></div>
     <h3 class='asset-type'>ETFs</h3>\n'''.replace("@replace_time",
                                                   datetime.now(pytz.timezone('America/New_York')).strftime(
                                                       '%Y-%m-%d %H:%M:%S'))
@@ -477,7 +477,7 @@ border-radius: 3px;
 
         if "html" in i:
             ticker = i.split('.html')[0].split('-')[-1]
-            s = '<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-@replace_ticker_lower.html" class="rectangle-fill"><img src="LOGO/ETFS/@replace_ticker_upper.svg" alt="@replace_ticker_upper logo">@replace_ticker_upper</a><br></div>'.replace(
+            s = '<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-@replace_ticker_lower.html" target="_blank" class="rectangle-fill"><img src="LOGO/ETFS/@replace_ticker_upper.svg" alt="@replace_ticker_upper logo">@replace_ticker_upper</a><br></div>'.replace(
                 "@replace_ticker_upper", ticker.upper()).replace("@replace_ticker_lower", ticker.lower())
             fs = f"{fs}{s}\n"
 
@@ -487,7 +487,7 @@ border-radius: 3px;
 
         if "html" in i:
             ticker = i.split('.html')[0].split('-')[-1]
-            s = '<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-@replace_ticker_lower.html" class="rectangle-fill"><img src="LOGO/ETFS/@replace_ticker_upper.svg" alt="@replace_ticker_upper logo">@replace_ticker_upper</a><br></div>'.replace(
+            s = '<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-@replace_ticker_lower.html" target="_blank" class="rectangle-fill"><img src="LOGO/ETFS/@replace_ticker_upper.svg" alt="@replace_ticker_upper logo">@replace_ticker_upper</a><br></div>'.replace(
                 "@replace_ticker_upper", ticker.upper()).replace("@replace_ticker_lower", ticker.lower())
             fs = f"{fs}{s}\n"
 

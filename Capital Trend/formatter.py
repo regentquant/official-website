@@ -467,7 +467,7 @@ border-radius: 3px;
 </svg>Trending Tickers</h3>
 <div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-qqq.html" class="rectangle-fill"><img src="LOGO/ETFS/QQQ.svg" alt="QQQ logo">QQQ</a><br></div>
 <div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-spy.html" class="rectangle-fill"><img src="LOGO/ETFS/SPY.svg" alt="SPY logo">SPY</a><br></div>
-<div class="capital-trend-container"><a href="Capital%20Trend/ETFS/capital-trend-tsla.html" class="rectangle-fill"><img src="LOGO/ETFS/TSLA.svg" alt="TSLA logo">TSLA</a><br></div>
+<div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-tsla.html" class="rectangle-fill"><img src="LOGO/ETFS/TSLA.svg" alt="TSLA logo">TSLA</a><br></div>
 <div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-nvda.html" class="rectangle-fill"><img src="LOGO/ETFS/NVDA.svg" alt="NVDA logo">NVDA</a><br></div>
 <div class="capital-trend-container"><a href="Capital%20Trend/STOCKS/capital-trend-aapl.html" class="rectangle-fill"><img src="LOGO/ETFS/AAPL.svg" alt="AAPL logo">AAPL</a><br></div>
     <h3 class='asset-type'>ETFs</h3>\n'''.replace("@replace_time",

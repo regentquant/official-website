@@ -284,7 +284,7 @@ const baselineSeries = chart.addBaselineSeries({
      ]);
 
         const totalDataPoints = data.length;
-       const visibleRange = Math.min(30, totalDataPoints);
+       const visibleRange = Math.min(60, totalDataPoints);
        chart.timeScale().setVisibleLogicalRange({
          from: totalDataPoints - visibleRange,
          to: totalDataPoints - 1,
@@ -694,7 +694,7 @@ border-radius: 3px;
                              });
 
 const totalDataPoints = data.length;
-const visibleRange = Math.min(30, totalDataPoints);
+const visibleRange = Math.min(60, totalDataPoints);
 chart.timeScale().setVisibleLogicalRange({
 from: totalDataPoints - visibleRange,
 to: totalDataPoints - 1,
@@ -913,7 +913,7 @@ border-radius: 3px;
                              });
 
 const totalDataPoints = data.length;
-const visibleRange = Math.min(30, totalDataPoints);
+const visibleRange = Math.min(60, totalDataPoints);
 chart.timeScale().setVisibleLogicalRange({
 from: totalDataPoints - visibleRange,
 to: totalDataPoints - 1,

@@ -234,4 +234,5 @@ border-radius: 3px;
         file.write(fs)
     file.close()
 
-dashboard()
+
+writing_to_html()

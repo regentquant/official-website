@@ -1,11 +1,17 @@
-
-cover_name = "Barrons_20231225.jpeg"
-google_link = "https://drive.google.com/open?id=1fHUA1sgmn-o1szWgFw3ZqN_oNiLrUmyv&usp=drive_copy"
+import pyperclip
+cover_name = "The_New_Yorker_20240101.jpeg"
+google_link = "https://drive.google.com/open?id=1_z8OAeXD-BfPvp0yZ2Vf6f7CaaVr52Hj&usp=drive_copy"
 date = f"{cover_name.split('.')[0].split('_')[-1][:4]}-{cover_name.split('.')[0].split('_')[-1][4:6]}-{cover_name.split('.')[0].split('_')[-1][6:8]}"
 print(date)
 
 if "Barrons" in cover_name:
     publisher = "Barron's"
+elif "Bloomberg" in cover_name:
+    publisher = "Bloomberg Businessweek"
+elif "Economist" in cover_name:
+    publisher = "The Economist"
+elif "Yorker" in cover_name:
+    publisher = "The New Yorker"
 
 template = f'''    <!-- File Start -->
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">

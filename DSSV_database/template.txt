@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ticker Daily Short Volume</title>
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <script src="lightweight-charts.standalone.production.js"></script>
+    </head>
+    <style>
+        #container {
+        width: 100vw;  /* 100% of the viewport's width */
+        height: 100vh; /* 100% of the viewport's height */
+        padding: 0;    /* No padding */
+        }
+        body {
+        margin: 0;        /* No margin around the 
+        <body>
+            */
+            padding: 0;       /* No padding inside the 
+            <body>
+                */
+                background: #141721;
+                overflow: hidden; /* Hide scrollbars */
+                }
+                #description {
+                font-family: "Roboto", sans-serif;
+                color: #D2D4DC;
+                margin: 0px;
+                padding-top: 10px;
+                padding-left: 10px;
+                padding-bottom: 10px;
+                }
+                #position {
+                color: white;
+                }
+                @font-face {
+                font-family: 'SairaCondensed';
+                src: url('../../fonts/SairaCondensed-Light.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+                }
+    </style>
+    <body>
+    <!-- Fund NAV Chart -->
+    <div id="large"><div id="container"></div></div>
+    <script type="text/javascript">
+        // Lightweight Charts™ Example: Price and Volume
+        // https://tradingview.github.io/lightweight-charts/tutorials/how_to/price-and-volume
+        // Lightweight Charts™ Example: Series Markers
+        // https://tradingview.github.io/lightweight-charts/tutorials/how_to/series-markers
+        // Lightweight Charts™ Example: Price and Volume
+        // https://tradingview.github.io/lightweight-charts/tutorials/how_to/price-and-volume
+        
+        const chartOptions = {
+           layout: {
+               textColor: 'white',
+               background: "transparent",
+           },
+           rightPriceScale: {
+               borderVisible: false,
+           },
+               grid: {
+           vertLines: {
+             color: 'rgba(36, 40, 50, 1)', // Your desired color for vertical grid lines (x-axis)
+           },
+           horzLines: {
+             color: 'rgba(36, 40, 50, 1)', // Your desired color for horizontal grid lines (y-axis)
+           }}
+        };
+        /** @type {import('lightweight-charts').IChartApi} */
+        const chart = LightweightCharts.createChart(document.getElementById('container'), chartOptions);
+        
+        const areaSeries = chart.addCandlestickSeries({
+           topColor: '#2962FF',
+           bottomColor: 'transparent',
+           lineColor: '#2962FF',
+           lineWidth: 2,
+        });
+        areaSeries.priceScale().applyOptions({
+           scaleMargins: {
+               // positioning the price scale for the area series
+               top: 0.1,
+               bottom: 0.4,
+           },
+        });
+        
+        const volumeSeries = chart.addHistogramSeries({
+           color: '#26a69a',
+           priceFormat: {
+               type: 'volume',
+           },
+           priceScaleId: '', // set as an overlay by setting a blank priceScaleId
+           // set the positioning of the volume series
+           scaleMargins: {
+               top: 0.7, // highest point of the series will be 70% away from the top
+               bottom: 0,
+           },
+        });
+        volumeSeries.priceScale().applyOptions({
+           scaleMargins: {
+               top: 0.7, // highest point of the series will be 70% away from the top
+               bottom: 0,
+           },
+        
+        });
+        price_data = [];
+        areaSeries.setData(price_data);
+        
+        // setting the data for the volume series.
+        // note: we are defining each bars color as part of the data
+        volumeSeries.setData([]);
+        
+        chart.timeScale().fitContent();
+
+        const totalDataPoints = price_data.length;
+        const visibleRange = Math.min(100, totalDataPoints);
+        chart.timeScale().setVisibleLogicalRange({
+        from: totalDataPoints - visibleRange,
+        to: totalDataPoints - 1,
+        });
+        chart.applyOptions({
+                    layout: {
+                        fontFamily: "'Saira Condensed', sans-serif",
+                    },
+                });
+        chart.applyOptions({
+    watermark: {
+        visible: true,
+        fontSize: 40,
+        horzAlign: 'center',
+        vertAlign: 'center',
+        color: 'rgba(148, 152, 161, 0.3)',
+        text: 'Ticker',
+        fontFamily: "'Saira Condensed', sans-serif",
+    },
+});
+                 
+    </script>
+    </body>
+</html>

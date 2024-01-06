@@ -212,12 +212,13 @@ border-radius: 3px;
                                                       '%Y-%m-%d %H:%M:%S'))
 
 
-    etfs = [i for i in underlying_list if "ETF" in i]
-    stocks = [i for i in underlying_list if "STOCK" in i]
+    etfs = sorted([i for i in underlying_list if "ETF" in i])
+    stocks = sorted([i for i in underlying_list if "STOCK" in i])
 
     for i in etfs:
         s = f"""<div class="capital-trend-container"><a href="DSSV_database/dssv-{i.replace('ETF:','')}.html" target="_blank" class="rectangle-fill"><img src="LOGO/ETFS/{i.replace('ETF:','')}.svg" alt="{i.replace('ETF:','')} logo">{i.replace('ETF:','')}</a><br></div>"""
         fs = f"{fs}{s}\n"
+    fs = f"{fs}<h3 class='asset-type'>STOCKs</h3>\n"
     for i in stocks:
         s = f"""<div class="capital-trend-container"><a href="DSSV_database/dssv-{i.replace('STOCK:','')}.html" target="_blank" class="rectangle-fill"><img src="LOGO/ETFS/{i.replace('STOCK:','')}.svg" alt="{i.replace('STOCK:','')} logo">{i.replace('STOCK:','')}</a><br></div>"""
         fs = f"{fs}{s}\n"
@@ -234,5 +235,4 @@ border-radius: 3px;
         file.write(fs)
     file.close()
 
-
-writing_to_html()
+dashboard()

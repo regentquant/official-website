@@ -3,15 +3,13 @@ import os
 from datetime import datetime
 import pyperclip
 import pytz
-underlying_list = ['ETF:SPY', 'ETF:QQQ', 'STOCK:TSLA', 'STOCK:NVDA', 'STOCK:AAPL', 'STOCK:MSFT', 'STOCK:GOOG', 'STOCK:AMZN', 'STOCK:NVDA', 'STOCK:META', 'STOCK:TSLA', 'ETF:AAPB', 'ETF:ARKK', 'ETF:DIA', 'ETF:FNGU', 'ETF:HYG', 'ETF:IWM', 'ETF:QQQM', 'ETF:SOXL', 'ETF:SOXS', 'ETF:SQQQ', 'ETF:TECL', 'ETF:TLT', 'ETF:TQQQ', 'ETF:TSLL', 'ETF:UPRO', 'ETF:UVXY', 'ETF:VOO', 'ETF:SVXY', 'STOCK:LULU', 'STOCK:GS', 'STOCK:NFLX', 'STOCK:GOOGL', 'STOCK:JPM', 'STOCK:NVO', 'STOCK:SVXY', 'STOCK:BABA', 'STOCK:UNH', 'STOCK:AVGO', 'STOCK:JNJ', 'STOCK:CRM', 'STOCK:LMT', 'STOCK:BAC', 'STOCK:CSCO', 'STOCK:V', 'STOCK:TSM', 'STOCK:COIN', 'STOCK:COST', 'STOCK:LLY', 'STOCK:KO', 'STOCK:INTC', 'STOCK:UBER', 'STOCK:AMD']
+underlying_list = ['ETF:SPY', 'ETF:QQQ', 'STOCK:AAPL', 'STOCK:MSFT', 'STOCK:GOOG', 'STOCK:AMZN', 'STOCK:NVDA', 'STOCK:META', 'STOCK:TSLA', 'ETF:AAPB', 'ETF:ARKK', 'ETF:DIA', 'ETF:FNGU', 'ETF:HYG', 'ETF:IWM', 'ETF:QQQM', 'ETF:SOXL', 'ETF:SOXS', 'ETF:SQQQ', 'ETF:TECL', 'ETF:TLT', 'ETF:TQQQ', 'ETF:TSLL', 'ETF:UPRO', 'ETF:UVXY', 'ETF:VOO', 'ETF:SVXY', 'STOCK:LULU', 'STOCK:GS', 'STOCK:NFLX', 'STOCK:GOOGL', 'STOCK:JPM', 'STOCK:NVO', 'STOCK:SVXY', 'STOCK:BABA', 'STOCK:UNH', 'STOCK:AVGO', 'STOCK:JNJ', 'STOCK:CRM', 'STOCK:LMT', 'STOCK:BAC', 'STOCK:CSCO', 'STOCK:V', 'STOCK:TSM', 'STOCK:COIN', 'STOCK:COST', 'STOCK:LLY', 'STOCK:KO', 'STOCK:INTC', 'STOCK:UBER', 'STOCK:AMD']
 
 dir = "/Users/curryyao/Downloads/Daily Short Sale Volume"
 
 def download_data_from_finra():
 
-    date_list = '''2023-12-19
-    2023-12-20
-    2023-12-21'''.split('\n')
+    date_list = '''2024-01-08'''.split('\n')
 
     for date in date_list:
         date_identifier = f"{date[:4]}{date[5:7]}{date[8:10]}"
@@ -214,7 +212,6 @@ border-radius: 3px;
 
     etfs = sorted([i for i in underlying_list if "ETF" in i])
     stocks = sorted([i for i in underlying_list if "STOCK" in i])
-
     for i in etfs:
         s = f"""<div class="capital-trend-container"><a href="DSSV_database/dssv-{i.replace('ETF:','')}.html" target="_blank" class="rectangle-fill"><img src="LOGO/ETFS/{i.replace('ETF:','')}.svg" alt="{i.replace('ETF:','')} logo">{i.replace('ETF:','')}</a><br></div>"""
         fs = f"{fs}{s}\n"
@@ -235,5 +232,50 @@ border-radius: 3px;
         file.write(fs)
     file.close()
 
+def update_daily_short_and_ohlc(date):
+    file_dir = f"/Users/curryyao/Downloads/Daily Short Sale Volume/CNMSshvol{date.replace('-','')}.txt"
+    with open(file_dir, "r") as f:
+        content = [i.strip() for i in f.readlines()]
+    dir = "/Users/curryyao/Library/Mobile Documents/com~apple~CloudDocs/[GIT] official-website/DSSV_database/DSSV"
+    ohlc_dir = "/Users/curryyao/Library/Mobile Documents/com~apple~CloudDocs/[GIT] official-website/DSSV_database/OHLC"
 
-writing_to_html()
+    # Updating Daily Short
+
+    for file in os.listdir(dir):
+        if file.endswith(".txt"):
+            ohlc_file = f"{ohlc_dir}/{file}"
+            with open(ohlc_file, "r") as f:
+
+                c = f.read()
+            if f"{date}|" in c:
+                continue
+            else:
+                ticker = (file.split(':')[1].replace('.txt',''))
+
+                for i in content:
+                    if f"|{ticker}|" in i:
+                        tmp_list = i.split('|')
+                        new_entry = f"{tmp_list[0]}|{tmp_list[1]}|{tmp_list[2]}"
+                        with open(f"{dir}/{file}", "r") as f:
+                            c = f.read()
+                            new_c = f"{c}\n{new_entry}"
+                        with open(f"{dir}/{file}", "w") as f:
+                            f.write(new_c)
+
+
+                # get data from polygon
+                api = f"https://api.polygon.io/v2/aggs/ticker/{ticker}/range/1/day/{date}/{date}?adjusted=true&sort=asc&limit=120&apiKey=ezBrk47F0tOiUtSZU7KevlNnxEEwPgIs"
+                data = requests.get(api).json()['results']
+                date = datetime.utcfromtimestamp(int(data[0]['t']) / 1000).strftime('%Y-%m-%d')
+                new_entry = (f"{date}|{data[0]['o']}|{data[0]['h']}|{data[0]['l']}|{data[0]['c']}")
+                with open(f"{ohlc_file}", "r") as f:
+                    c = f.read()
+                with open(f"{ohlc_file}", "w") as f:
+                    final_entry = f"{c}\n{new_entry}"
+                    f.write(final_entry)
+
+
+#update_daily_short_and_ohlc("2024-01-08")
+
+
+dashboard()
